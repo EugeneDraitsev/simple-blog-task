@@ -1,0 +1,15 @@
+image: node:latest
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - yarn global add surge
+            - yarn
+            - yarn test
+            - yarn lint
+            - yarn build
+            - surge build simple-mobx-blog.surge.sh
+            - yarn build-storybook
+            - surge storybook-static simple-mobx-blog-storybook.surge.sh
