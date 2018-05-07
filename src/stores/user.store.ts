@@ -1,10 +1,18 @@
-import { observable } from 'mobx'
+import { action, observable } from 'mobx'
+import { persist } from 'mobx-persist'
 import { UserModel } from '../models'
 
 export class UserStore {
-  @observable public user: UserModel
+  @persist('object') @observable public user: UserModel
 
-  constructor(user: UserModel) {
+  constructor(user?: UserModel) {
+    if (user) {
+      this.user = user
+    }
+  }
+
+  @action
+  public setUser = (user: UserModel): void => {
     this.user = user
   }
 }

@@ -15,15 +15,18 @@ import theme from './styles/themes/default.theme'
 configure({ enforceActions: true })
 const history = createBrowserHistory()
 
-const stores = createStores(history)
+const createRoot = async () => {
+  const stores = await createStores(history)
 
-ReactDOM.render(
-  <Provider {...stores}>
-    <ThemeProvider theme={theme}>
-      <RootContainer history={history} />
-    </ThemeProvider>
-  </Provider>,
-  document.getElementById('root') as HTMLElement,
-)
+  ReactDOM.render(
+    <Provider {...stores}>
+      <ThemeProvider theme={theme}>
+        <RootContainer history={history} />
+      </ThemeProvider>
+    </Provider>,
+    document.getElementById('root') as HTMLElement,
+  )
+}
 
+createRoot()
 registerServiceWorker()

@@ -3,7 +3,12 @@ import { injectGlobal } from 'styled-components'
 // tslint:disable-next-line:no-unused-expression
 injectGlobal`
 html, body, #root {
-  height: calc(100% - 70px);
+  height: 100%;
+}
+
+#root {
+  margin-top: -70px;
+  padding-top: 70px;
 }
 
 body {

@@ -1,8 +1,9 @@
 import { action, observable } from 'mobx'
+import { persist } from 'mobx-persist'
 import { PostModel } from '../models'
 
 export class FeedStore {
-  @observable public feed: PostModel[]
+  @persist('list', PostModel) @observable public feed: PostModel[] = []
 
   constructor(feed: PostModel[]) {
     this.feed = feed
@@ -10,7 +11,7 @@ export class FeedStore {
 
   @action
   public addPost = (item: PostModel): void => {
-    this.feed.push(new PostModel(item.text, item.title, item.author))
+    this.feed.push(item)
   }
 
   @action

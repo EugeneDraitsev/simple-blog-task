@@ -8,10 +8,7 @@ import { MenuLink, Header } from './components'
 
 const PageContent = styled.div`
    margin-top: 70px;
-   width: calc(100vw - 300px);
-   @media (max-width: 800px) {
-     width: 100vw;
-   }
+   width: 100%;
 `
 const SidebarContent = styled.div`
   flex: 1;
