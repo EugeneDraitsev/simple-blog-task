@@ -15,11 +15,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: #F3F3F3;
+  background: #EDEEF0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .bm-menu-wrap {

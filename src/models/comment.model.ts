@@ -1,18 +1,37 @@
-import { observable } from 'mobx'
+import { computed, observable } from 'mobx'
+import { persist } from 'mobx-persist'
+import * as moment from 'moment'
+import { stores } from '../'
+import { STORE_USERS } from '../constants'
+import { UserModel } from './user.model'
 
 export class CommentModel {
   public static generateId() {
-    return this.nextId = this.nextId + 1
+    return this.nextId = (this.nextId || 0) + 1
   }
 
-  private static nextId = 1
+  private static nextId = 0
 
-  public readonly id: number
-  @observable public text: string
-  @observable public title: string
+  @persist @observable public readonly id: number
+  @persist @observable public text: string
+  @persist @observable public authorId: number
+  @persist @observable public postId: number
+  @persist('object') @observable public date: Date
 
-  constructor(text: string, title: string) {
+  @computed get author(): UserModel {
+    const users: UserModel[] = stores[STORE_USERS].users
+    return users.find(user => user.id === this.authorId) || stores[STORE_USERS].user
+  }
+
+  @computed get formattedDate() {
+    return moment(this.date).format('DD.MM.YYYY HH:mm')
+  }
+
+  constructor(text: string, authorId: number, postId: number) {
     this.id = CommentModel.generateId()
     this.text = text
+    this.authorId = authorId
+    this.postId = postId
+    this.date = new Date()
   }
 }

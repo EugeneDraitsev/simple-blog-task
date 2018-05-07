@@ -8,15 +8,22 @@ import { ThemeProvider } from 'styled-components'
 
 import RootContainer from './containers/root.container'
 import registerServiceWorker from './registerServiceWorker'
-import { createStores } from './stores'
+import { createStores, IStores } from './stores'
 import './styles/global.styles'
 import theme from './styles/themes/default.theme'
 
 configure({ enforceActions: true })
 const history = createBrowserHistory()
+export let stores: IStores
+
+history.listen(() => {
+  if (window && window.scrollTo) {
+    window.scrollTo(0, 0)
+  }
+})
 
 const createRoot = async () => {
-  const stores = await createStores(history)
+  stores = await createStores(history)
 
   ReactDOM.render(
     <Provider {...stores}>

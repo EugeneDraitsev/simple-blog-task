@@ -1,5 +1,6 @@
 export * from './sidebar.store'
 export * from './router.store'
 export * from './create-store'
-export * from './user.store'
+export * from './users.store'
 export * from './feed.store'
+export * from './comments.store'

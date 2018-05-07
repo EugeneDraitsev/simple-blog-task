@@ -2,12 +2,12 @@ import { inject, observer } from 'mobx-react'
 import * as React from 'react'
 import styled from 'styled-components'
 import { FeedPost } from '../components/post'
-import { STORE_FEED, STORE_USER } from '../constants'
-import { FeedStore, UserStore } from '../stores/'
+import { STORE_FEED, STORE_USERS } from '../constants'
+import { FeedStore, UsersStore } from '../stores/'
 
 interface IFeedProps {
   feed: FeedStore
-  user: UserStore
+  user: UsersStore
 }
 
 const Wrapper = styled.div`
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   };
 `
 
-@inject(stores => ({ feed: stores[STORE_FEED], user: stores[STORE_USER] }))
+@inject(stores => ({ feed: stores[STORE_FEED], user: stores[STORE_USERS] }))
 @observer
 class FeedContainer extends React.Component<IFeedProps> {
   public render() {

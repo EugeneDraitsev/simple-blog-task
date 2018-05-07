@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 const Button = styled.div`
   padding: 20px;
   color: rgb(1, 85, 147);
-  font-family: weld-light, sans-serif;
   font-size: 40px;
   text-align: center;
   text-decoration: underline;
@@ -42,7 +41,6 @@ const AnimatedPopup = styled(Popup)`
  transform: ${(props) => props.isOpen ? 'translate(-50%, -50%) scale(1)' : 'translate(-100vw, -50%) scale(0) '};
  transition: all 0.3s;
 `
-
 
 export class PopupStory extends React.Component {
   state = {

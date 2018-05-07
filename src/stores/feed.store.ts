@@ -15,6 +15,16 @@ export class FeedStore {
   }
 
   @action
+  public addViews = (id: number): void => {
+    this.feed = this.feed.map((post) => {
+      if (post.id === id) {
+        post.views = post.views + 1
+      }
+      return post
+    })
+  }
+
+  @action
   public editPost = (id: number, data: Partial<PostModel>): void => {
     this.feed = this.feed.map((post) => {
       if (post.id === id) {
@@ -30,7 +40,7 @@ export class FeedStore {
   }
 
   @action
-  public deleteTodo = (id: number): void => {
+  public deletePost = (id: number): void => {
     this.feed = this.feed.filter(post => post.id !== id)
   }
 }

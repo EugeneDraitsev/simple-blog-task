@@ -1,11 +1,13 @@
 import { computed, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 import * as moment from 'moment'
+import { STORE_COMMENTS, STORE_USERS } from '../constants'
 import { CommentModel, UserModel } from './'
+import { stores } from './../'
 
 export class PostModel {
   public static generateId() {
-    return this.nextId = this.nextId + 1
+    return this.nextId = (this.nextId || 0) + 1
   }
 
   private static nextId = 0
@@ -13,10 +15,19 @@ export class PostModel {
   @persist @observable public readonly id: number
   @persist @observable public title: string
   @persist @observable public text: string
-  @persist('object') @observable public date: Date
-  @persist('object') @observable public author: UserModel
-  @persist('list') @observable public comments: CommentModel[] = []
+  @persist @observable public authorId: number
   @persist @observable public views: number
+  @persist('object') @observable public date: Date
+
+  @computed get comments(): CommentModel[] {
+    const comments: CommentModel[] = stores[STORE_COMMENTS].comments
+    return comments.filter(comment => comment.postId === this.id)
+  }
+
+  @computed get author(): UserModel {
+    const users: UserModel[] = stores[STORE_USERS].users
+    return users.find(user => user.id === this.authorId) || stores[STORE_USERS].user
+  }
 
   @computed get textPreview() {
     const formattedStory = this.formatPost()
@@ -40,11 +51,11 @@ export class PostModel {
     return moment(this.date).format('DD.MM.YYYY HH:mm')
   }
 
-  constructor(title: string, text: string, author: UserModel) {
+  constructor(title: string, text: string, authorId: number) {
     this.id = PostModel.generateId()
     this.title = title
     this.text = text
-    this.author = author
+    this.authorId = authorId
     this.views = 0
     this.date = new Date()
   }

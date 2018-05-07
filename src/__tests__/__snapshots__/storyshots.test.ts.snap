@@ -77,7 +77,6 @@ exports[`Storyshots Popup Popup with animation 1`] = `
 .c1 {
   padding: 20px;
   color: rgb(1,85,147);
-  font-family: weld-light,sans-serif;
   font-size: 40px;
   text-align: center;
   -webkit-text-decoration: underline;
@@ -249,7 +248,6 @@ exports[`Storyshots Popup Popup with overlay 1`] = `
 .c1 {
   padding: 20px;
   color: rgb(1,85,147);
-  font-family: weld-light,sans-serif;
   font-size: 40px;
   text-align: center;
   -webkit-text-decoration: underline;
@@ -414,7 +412,6 @@ exports[`Storyshots Popup Popup with title 1`] = `
 .c1 {
   padding: 20px;
   color: rgb(1,85,147);
-  font-family: weld-light,sans-serif;
   font-size: 40px;
   text-align: center;
   -webkit-text-decoration: underline;
@@ -578,7 +575,6 @@ exports[`Storyshots Popup Simple popup 1`] = `
 .c1 {
   padding: 20px;
   color: rgb(1,85,147);
-  font-family: weld-light,sans-serif;
   font-size: 40px;
   text-align: center;
   -webkit-text-decoration: underline;

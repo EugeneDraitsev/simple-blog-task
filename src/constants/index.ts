@@ -1,4 +1,5 @@
+export const STORE_COMMENTS = 'comments'
 export const STORE_FEED = 'feed'
 export const STORE_SIDEBAR = 'sidebar'
 export const STORE_ROUTER = 'router'
-export const STORE_USER = 'user'
+export const STORE_USERS = 'users'

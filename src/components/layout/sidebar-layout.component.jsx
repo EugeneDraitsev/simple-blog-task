@@ -3,7 +3,7 @@ import * as React from 'react'
 import { push as Menu } from 'react-burger-menu'
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
-import { STORE_ROUTER, STORE_SIDEBAR, STORE_USER } from '../../constants'
+import { STORE_ROUTER, STORE_SIDEBAR, STORE_USERS } from '../../constants'
 import { MenuLink, Header } from './components'
 
 const PageContent = styled.div`
@@ -52,7 +52,7 @@ class Layout extends React.Component {
 
   render() {
     const sidebar = this.props[STORE_SIDEBAR]
-    const { user } = this.props[STORE_USER]
+    const { user } = this.props[STORE_USERS]
     const { children } = this.props
     const { isOpen, isSmallScreen, closeSidebar, openSidebar } = sidebar
     const links = this.links.filter(link => link.show)
@@ -86,4 +86,4 @@ class Layout extends React.Component {
 // @inject(STORE_SIDEBAR, STORE_ROUTER)
 // @withRouter
 // @observer
-export const SidebarLayout = inject(STORE_SIDEBAR, STORE_ROUTER, STORE_USER)((withRouter(observer(Layout))))
+export const SidebarLayout = inject(STORE_SIDEBAR, STORE_ROUTER, STORE_USERS)((withRouter(observer(Layout))))
