@@ -30,7 +30,7 @@ const Title = styled.div`
 `
 const Text = styled.div`
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 300;
   line-height: 20px;
 `
 const Footer = styled.div`
@@ -51,7 +51,7 @@ const Icon = styled.div`
 `
 const Value = styled.div`
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 300;
 `
 
 export class FeedPost extends React.Component<IUserInfo> {

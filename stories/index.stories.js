@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { PopupStory } from './popup.story'
-import '../src/styles/css/index.css'
+import '../src/styles/global.styles'
 
 storiesOf('Popup', module)
   .add('Simple popup', () => <PopupStory />)
