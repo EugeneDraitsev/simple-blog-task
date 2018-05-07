@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   padding: 20px 20px 0 20px;
   @media (max-width: 800px) {
     width: calc(100% - 20px);
-    padding: 10px 10px 0 10px;
+    padding: 20px 10px 0 10px;
   };
 `
 

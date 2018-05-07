@@ -1,4 +1,3 @@
-/* tslint:disable max-line-length */
 import * as React from 'react'
 import styled from 'styled-components'
 import closeSvg from '../../styles/images/close.svg'

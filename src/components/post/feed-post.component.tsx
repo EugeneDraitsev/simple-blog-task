@@ -18,10 +18,10 @@ const Wrapper = styled(Card)`
   width: 900px;
   max-width: calc(100vw - 40px);
   height: auto;
-  margin: 0 20px 30px 20px;
+  margin: 0 20px 20px 20px;
   padding: 20px;
   @media (max-width: 800px) {
-     margin: 0 0 30px 0;
+     margin: 0 0 20px 0;
   };
 `
 const Title = styled.div`

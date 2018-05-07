@@ -31,16 +31,9 @@ const HeaderLink = styled(MenuLink)`
   padding-left: 0;
   width: 140px;
   height: 70px;
-  border-bottom: none;
-  border-top: none;
-  border-left: 1px solid rgba(0,0,0,0);
-  border-right: 1px solid rgba(0,0,0,0);
+  border: none;
   &.active {
     background-color: rgba(0,0,0,0.2);
-    border-bottom: none;
-    border-top: none;
-    border-left: 1px solid rgba(0,0,0,0.2);
-    border-right: 1px solid rgba(0,0,0,0.2);
   }
   &:focus {
    outline: none;
@@ -49,7 +42,7 @@ const HeaderLink = styled(MenuLink)`
     display: none;
     position: absolute;
     left: 0;
-    top: 65px;
+    top: 66px;
     content: '';
     width: 100%;
     height: 5px;
