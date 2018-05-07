@@ -10,6 +10,8 @@ pipelines:
             - yarn test
             - yarn lint
             - yarn build
+            - cp build/index.html build/200.html
             - surge build simple-mobx-blog.surge.sh
             - yarn build-storybook
+            - cp storybook-static/index.html storybook-static/200.html
             - surge storybook-static simple-mobx-blog-storybook.surge.sh

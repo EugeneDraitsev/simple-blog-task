@@ -38,6 +38,9 @@ const Textarea = styled.textarea`
   margin: 0;
   resize: none;
   outline: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: none;
 `
 const Footer = styled.div`
   margin-top: 10px;
