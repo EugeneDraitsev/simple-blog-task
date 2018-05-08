@@ -38,7 +38,6 @@ storiesOf('Buttons', module)
 
 storiesOf('Modal', module)
   .addDecorator(StyledDecorator)
-  .add('Simple modal', () => <ModalStory />)
   .add('Modal with overlay', () => <ModalStory overlay />)
   .add('Modal with title', () => <ModalStory overlay title="test title" />)
   .add('Modal with animation', () => <ModalStory animated overlay title="test title" />)
