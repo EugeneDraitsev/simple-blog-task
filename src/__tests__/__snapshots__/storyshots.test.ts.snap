@@ -878,3 +878,139 @@ exports[`Storyshots Modal Modal with title 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Spinner Spinners 🌀 1`] = `
+.c1 {
+  -webkit-animation: iVXCSc 2s linear infinite;
+  animation: iVXCSc 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  width: 100%;
+  margin: auto;
+}
+
+.c2 {
+  -webkit-animation: jVqWEn 1.5s ease-in-out infinite;
+  animation: jVqWEn 1.5s ease-in-out infinite;
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke: #349884;
+}
+
+.c3 {
+  -webkit-animation: jVqWEn 1.5s ease-in-out infinite;
+  animation: jVqWEn 1.5s ease-in-out infinite;
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke: red;
+}
+
+.c0 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="c0"
+>
+  <svg
+    className="c1"
+    style={
+      Object {
+        "height": 50,
+        "width": 50,
+      }
+    }
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="c2"
+      color=""
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth={5}
+    />
+  </svg>
+  <svg
+    className="c1"
+    style={
+      Object {
+        "height": 50,
+        "width": 50,
+      }
+    }
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="c2"
+      color=""
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth={1}
+    />
+  </svg>
+  <svg
+    className="c1"
+    style={
+      Object {
+        "height": 100,
+        "width": 100,
+      }
+    }
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="c2"
+      color=""
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth={5}
+    />
+  </svg>
+  <svg
+    className="c1"
+    style={
+      Object {
+        "height": 50,
+        "width": 50,
+      }
+    }
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="c3"
+      color="red"
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth={5}
+    />
+  </svg>
+</div>
+`;
