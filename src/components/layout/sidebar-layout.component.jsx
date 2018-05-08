@@ -9,6 +9,8 @@ import { MenuLink, Header } from './components'
 const PageContent = styled.div`
    margin-top: 70px;
    width: 100%;
+   background: ${p => p.theme.colors.basicBackground};
+   min-height: calc(100vh - 70px);
 `
 const SidebarContent = styled.div`
   flex: 1;

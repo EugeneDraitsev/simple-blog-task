@@ -2,7 +2,7 @@ import { inject, observer } from 'mobx-react'
 import { opacify } from 'polished'
 import * as React from 'react'
 import styled from 'styled-components'
-import { Button } from '../'
+import { PrimaryButton } from '../'
 import { STORE_COMMENTS } from '../../constants'
 import { CommentModel, PostModel, UserModel } from '../../models'
 import { CommentsStore } from '../../stores'
@@ -93,7 +93,7 @@ export class AddComment extends React.Component<IPostProps> {
         />
         <Footer>
           <Counter>{comment.length} / 1000</Counter>
-          <Button disabled={!comment.length} onClick={this.addComment}>Add Comment</Button>
+          <PrimaryButton disabled={!comment.length} onClick={this.addComment}>Add Comment</PrimaryButton>
         </Footer>
       </Wrapper>
     )

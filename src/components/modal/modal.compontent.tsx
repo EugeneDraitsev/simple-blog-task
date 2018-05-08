@@ -1,6 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import closeSvg from '../../styles/images/close.svg'
 
 interface IVisible {
   isOpen: boolean
@@ -11,31 +10,32 @@ const Wrapper = styled.div`
   display: inline-block;
   visibility: ${(props: IVisible) => props.isOpen ? 'visible' : 'hidden'};
   max-width: 80vw;
+  width: 400px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(255, 255, 255);
-  border-radius: 2px;
-  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
   padding: 20px;
+  z-index: 4;
 `
 const Header = styled.div`
   display: flex;
   margin-bottom: 20px;
+  align-items: center;
 `
 const HeaderTitle = styled.div`
-  color: rgb(1, 85, 147);
   font-family: weld-light, sans-serif;
   font-size: 40px;
 `
 const Separator = styled.div`
   flex: 1;
 `
-const CloseButton = styled.div`
-  background: url('${closeSvg}') center center;
+const Icon = styled.div`
+  font-size: 40px;
+  line-height: 40px;
   cursor: pointer;
-  width: 46px;
-  height: 46px;
+  margin: 0 10px;
 `
 const Overlay = styled.div`
   display: inline-block;
@@ -48,6 +48,7 @@ const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
   transition: opacity 0.3s;
+  z-index: 3;
 `
 
 export interface IPopupProps {
@@ -61,7 +62,7 @@ export interface IPopupProps {
   onRequestClose?: () => void
 }
 
-export class Popup extends React.PureComponent<IPopupProps> {
+export class Modal extends React.PureComponent<IPopupProps> {
   public static defaultProps = {
     closeOnEsc: true,
     closeOnOverlay: true,
@@ -95,7 +96,7 @@ export class Popup extends React.PureComponent<IPopupProps> {
               {title}
             </HeaderTitle>}
             <Separator />
-            <CloseButton onClick={onRequestClose} />
+            <Icon className="material-icons" onClick={onRequestClose}>close</Icon>
           </Header>
           <div className="greeting">
             {children}

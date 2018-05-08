@@ -1,20 +1,154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Popup Popup with animation 1`] = `
+exports[`Storyshots Buttons Simple buttons 1`] = `
+.c1 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+
+.c1:hover {
+  background: #cdcdcd;
+}
+
+.c1[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
+}
+
+.c3 {
+  background: #ca5a5a;
+  color: #FFFFFF;
+}
+
+.c3:hover {
+  background: #b63b3b;
+}
+
+.c3[disabled] {
+  background: #e3a7a7;
+  cursor: auto;
+}
+
+.c2 {
+  background: #349884;
+  color: #FFFFFF;
+}
+
+.c2:hover {
+  background: #277263;
+}
+
+.c2[disabled] {
+  background: #67cbb7;
+  cursor: auto;
+}
+
+.c0 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    Default
+  </button>
+  <button
+    className="c2 c1"
+  >
+    Primary
+  </button>
+  <button
+    className="c3 c1"
+  >
+    Danger
+  </button>
+  <button
+    className="c1"
+    disabled={true}
+  >
+    Disabled
+  </button>
+  <button
+    className="c2 c1"
+    disabled={true}
+  >
+    Disabled
+  </button>
+  <button
+    className="c3 c1"
+    disabled={true}
+  >
+    Disabled
+  </button>
+  <button
+    className="c1"
+  >
+    🍔 Emoji
+  </button>
+  <button
+    className="c2 c1"
+  >
+    🍔 Emoji
+  </button>
+</div>
+`;
+
+exports[`Storyshots Modal Modal with animation 1`] = `
 .c4 {
   position: fixed;
   display: inline-block;
   visibility: hidden;
   max-width: 80vw;
+  width: 400px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   background-color: rgb(255,255,255);
-  border-radius: 2px;
-  border: 1px solid rgb(0,0,0);
+  border-radius: 4px;
   padding: 20px;
+  z-index: 4;
 }
 
 .c5 {
@@ -23,10 +157,13 @@ exports[`Storyshots Popup Popup with animation 1`] = `
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c6 {
-  color: rgb(1,85,147);
   font-family: weld-light,sans-serif;
   font-size: 40px;
 }
@@ -38,10 +175,10 @@ exports[`Storyshots Popup Popup with animation 1`] = `
 }
 
 .c8 {
-  background: url('') center center;
+  font-size: 40px;
+  line-height: 40px;
   cursor: pointer;
-  width: 46px;
-  height: 46px;
+  margin: 0 10px;
 }
 
 .c2 {
@@ -56,6 +193,7 @@ exports[`Storyshots Popup Popup with animation 1`] = `
   height: 100vh;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  z-index: 3;
 }
 
 .c0 {
@@ -79,8 +217,6 @@ exports[`Storyshots Popup Popup with animation 1`] = `
   color: rgb(1,85,147);
   font-size: 40px;
   text-align: center;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -92,26 +228,19 @@ exports[`Storyshots Popup Popup with animation 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .c10 {
-  width: 270px;
-  height: 200px;
-  background: url('test-image.jpg') center center;
-}
-
-.c11 {
-  width: 160px;
   padding: 0 5px;
-  text-align: center;
   font-size: 16px;
 }
 
@@ -152,9 +281,11 @@ exports[`Storyshots Popup Popup with animation 1`] = `
           className="c7"
         />
         <div
-          className="c8"
+          className="material-icons c8"
           onClick={[Function]}
-        />
+        >
+          close
+        </div>
       </div>
       <div
         className="greeting"
@@ -164,11 +295,8 @@ exports[`Storyshots Popup Popup with animation 1`] = `
         >
           <div
             className="c10"
-          />
-          <div
-            className="c11"
           >
-            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
+            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
           </div>
         </div>
       </div>
@@ -177,42 +305,52 @@ exports[`Storyshots Popup Popup with animation 1`] = `
 </div>
 `;
 
-exports[`Storyshots Popup Popup with overlay 1`] = `
-.c3 {
+exports[`Storyshots Modal Modal with buttons 1`] = `
+.c4 {
   position: fixed;
   display: inline-block;
   visibility: hidden;
   max-width: 80vw;
+  width: 400px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   background-color: rgb(255,255,255);
-  border-radius: 2px;
-  border: 1px solid rgb(0,0,0);
+  border-radius: 4px;
   padding: 20px;
+  z-index: 4;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c5 {
+.c6 {
+  font-family: weld-light,sans-serif;
+  font-size: 40px;
+}
+
+.c7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c6 {
-  background: url('') center center;
+.c8 {
+  font-size: 40px;
+  line-height: 40px;
   cursor: pointer;
-  width: 46px;
-  height: 46px;
+  margin: 0 10px;
 }
 
 .c2 {
@@ -227,6 +365,107 @@ exports[`Storyshots Popup Popup with overlay 1`] = `
   height: 100vh;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  z-index: 3;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c3 {
+  -webkit-transform: translate(-100vw,-50%) scale(0);
+  -ms-transform: translate(-100vw,-50%) scale(0);
+  transform: translate(-100vw,-50%) scale(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: flex-end;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.c11 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c12 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+
+.c12:hover {
+  background: #cdcdcd;
+}
+
+.c12[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
+}
+
+.c13 {
+  background: #ca5a5a;
+  color: #FFFFFF;
+}
+
+.c13:hover {
+  background: #b63b3b;
+}
+
+.c13[disabled] {
+  background: #e3a7a7;
+  cursor: auto;
 }
 
 .c0 {
@@ -250,8 +489,156 @@ exports[`Storyshots Popup Popup with overlay 1`] = `
   color: rgb(1,85,147);
   font-size: 40px;
   text-align: center;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Click to open popup
+  </div>
+  <div>
+    <div
+      className="c2"
+      onClick={[Function]}
+    />
+    <div
+      className="c3 c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          Are you sure?
+        </div>
+        <div
+          className="c7"
+        />
+        <div
+          className="material-icons c8"
+          onClick={[Function]}
+        >
+          close
+        </div>
+      </div>
+      <div
+        className="greeting"
+      >
+        <div
+          className="c9"
+        >
+          Are you really want to delete your post?
+          <div
+            className="c10"
+          >
+            <div
+              className="c11"
+            />
+            <button
+              className="c12"
+              onClick={[Function]}
+            >
+              Cancel
+            </button>
+            <button
+              className="c13 c12"
+              onClick={[Function]}
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Modal Modal with overlay 1`] = `
+.c3 {
+  position: fixed;
+  display: inline-block;
+  visibility: hidden;
+  max-width: 80vw;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: rgb(255,255,255);
+  border-radius: 4px;
+  padding: 20px;
+  z-index: 4;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 {
+  font-size: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.c2 {
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 3;
+}
+
+.c0 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  padding: 20px;
+  color: rgb(1,85,147);
+  font-size: 40px;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -263,26 +650,19 @@ exports[`Storyshots Popup Popup with overlay 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .c8 {
-  width: 270px;
-  height: 200px;
-  background: url('test-image.jpg') center center;
-}
-
-.c9 {
-  width: 160px;
   padding: 0 5px;
-  text-align: center;
   font-size: 16px;
 }
 
@@ -310,9 +690,11 @@ exports[`Storyshots Popup Popup with overlay 1`] = `
           className="c5"
         />
         <div
-          className="c6"
+          className="material-icons c6"
           onClick={[Function]}
-        />
+        >
+          close
+        </div>
       </div>
       <div
         className="greeting"
@@ -322,11 +704,8 @@ exports[`Storyshots Popup Popup with overlay 1`] = `
         >
           <div
             className="c8"
-          />
-          <div
-            className="c9"
           >
-            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
+            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
           </div>
         </div>
       </div>
@@ -335,21 +714,22 @@ exports[`Storyshots Popup Popup with overlay 1`] = `
 </div>
 `;
 
-exports[`Storyshots Popup Popup with title 1`] = `
+exports[`Storyshots Modal Modal with title 1`] = `
 .c3 {
   position: fixed;
   display: inline-block;
   visibility: hidden;
   max-width: 80vw;
+  width: 400px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   background-color: rgb(255,255,255);
-  border-radius: 2px;
-  border: 1px solid rgb(0,0,0);
+  border-radius: 4px;
   padding: 20px;
+  z-index: 4;
 }
 
 .c4 {
@@ -358,10 +738,13 @@ exports[`Storyshots Popup Popup with title 1`] = `
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c5 {
-  color: rgb(1,85,147);
   font-family: weld-light,sans-serif;
   font-size: 40px;
 }
@@ -373,10 +756,10 @@ exports[`Storyshots Popup Popup with title 1`] = `
 }
 
 .c7 {
-  background: url('') center center;
+  font-size: 40px;
+  line-height: 40px;
   cursor: pointer;
-  width: 46px;
-  height: 46px;
+  margin: 0 10px;
 }
 
 .c2 {
@@ -391,6 +774,7 @@ exports[`Storyshots Popup Popup with title 1`] = `
   height: 100vh;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  z-index: 3;
 }
 
 .c0 {
@@ -414,8 +798,6 @@ exports[`Storyshots Popup Popup with title 1`] = `
   color: rgb(1,85,147);
   font-size: 40px;
   text-align: center;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -427,26 +809,19 @@ exports[`Storyshots Popup Popup with title 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .c9 {
-  width: 270px;
-  height: 200px;
-  background: url('test-image.jpg') center center;
-}
-
-.c10 {
-  width: 160px;
   padding: 0 5px;
-  text-align: center;
   font-size: 16px;
 }
 
@@ -479,9 +854,11 @@ exports[`Storyshots Popup Popup with title 1`] = `
           className="c6"
         />
         <div
-          className="c7"
+          className="material-icons c7"
           onClick={[Function]}
-        />
+        >
+          close
+        </div>
       </div>
       <div
         className="greeting"
@@ -491,11 +868,8 @@ exports[`Storyshots Popup Popup with title 1`] = `
         >
           <div
             className="c9"
-          />
-          <div
-            className="c10"
           >
-            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
+            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
           </div>
         </div>
       </div>
@@ -504,21 +878,22 @@ exports[`Storyshots Popup Popup with title 1`] = `
 </div>
 `;
 
-exports[`Storyshots Popup Simple popup 1`] = `
+exports[`Storyshots Modal Simple modal 1`] = `
 .c3 {
   position: fixed;
   display: inline-block;
   visibility: hidden;
   max-width: 80vw;
+  width: 400px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   background-color: rgb(255,255,255);
-  border-radius: 2px;
-  border: 1px solid rgb(0,0,0);
+  border-radius: 4px;
   padding: 20px;
+  z-index: 4;
 }
 
 .c4 {
@@ -527,6 +902,10 @@ exports[`Storyshots Popup Simple popup 1`] = `
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c5 {
@@ -536,10 +915,10 @@ exports[`Storyshots Popup Simple popup 1`] = `
 }
 
 .c6 {
-  background: url('') center center;
+  font-size: 40px;
+  line-height: 40px;
   cursor: pointer;
-  width: 46px;
-  height: 46px;
+  margin: 0 10px;
 }
 
 .c2 {
@@ -554,6 +933,7 @@ exports[`Storyshots Popup Simple popup 1`] = `
   height: 100vh;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  z-index: 3;
 }
 
 .c0 {
@@ -577,8 +957,6 @@ exports[`Storyshots Popup Simple popup 1`] = `
   color: rgb(1,85,147);
   font-size: 40px;
   text-align: center;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -590,26 +968,19 @@ exports[`Storyshots Popup Simple popup 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .c8 {
-  width: 270px;
-  height: 200px;
-  background: url('test-image.jpg') center center;
-}
-
-.c9 {
-  width: 160px;
   padding: 0 5px;
-  text-align: center;
   font-size: 16px;
 }
 
@@ -637,9 +1008,11 @@ exports[`Storyshots Popup Simple popup 1`] = `
           className="c5"
         />
         <div
-          className="c6"
+          className="material-icons c6"
           onClick={[Function]}
-        />
+        >
+          close
+        </div>
       </div>
       <div
         className="greeting"
@@ -649,11 +1022,8 @@ exports[`Storyshots Popup Simple popup 1`] = `
         >
           <div
             className="c8"
-          />
-          <div
-            className="c9"
           >
-            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
+            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
           </div>
         </div>
       </div>

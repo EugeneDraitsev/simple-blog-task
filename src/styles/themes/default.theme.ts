@@ -17,7 +17,23 @@ const colors = {
   spinner: '#349884',
 }
 
+const buttons = {
+  danger: {
+    background: '#ca5a5a',
+    color: '#FFFFFF',
+  },
+  default: {
+    background: '#E6E6E6',
+    color: '#828282',
+  },
+  primary: {
+    background: '#349884',
+    color: '#FFFFFF',
+  },
+}
+
 export default {
+  buttons,
   colors,
   headerGradient: `linear-gradient(90deg, ${colors.mainGradient1} 0%, ${colors.mainGradient2} 50%, ${colors.mainGradient1} 100%)`,
   sidebarGradient: `linear-gradient(0deg, ${colors.mainGradient1} 0%, ${colors.mainGradient2} 50%, ${colors.mainGradient1} 100%);`,

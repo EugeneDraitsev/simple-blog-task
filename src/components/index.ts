@@ -1,7 +1,7 @@
 export * from './common'
+export * from './modal'
 export * from './controls'
 export * from './card'
 export * from './layout'
 export * from './user'
 export * from './post'
-// export * from './editor'

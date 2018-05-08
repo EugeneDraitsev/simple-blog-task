@@ -41,6 +41,7 @@ const Title = styled.div`
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  word-break: break-all;
   line-height: 54px;
   max-height: 162px;
 `

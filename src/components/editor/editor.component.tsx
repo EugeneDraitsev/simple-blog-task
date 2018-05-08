@@ -1,10 +1,9 @@
-import { debounce } from 'lodash'
 import * as React from 'react'
-import { toast, ToastContainer } from 'react-toastify'
+import { Slide, toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Draft, { draftToHtml, draftToRaw, htmlToDraft } from 'react-wysiwyg-typescript'
 import styled from 'styled-components'
-import { Button, Card } from '../'
+import { Card, PrimaryButton } from '../'
 import { PostModel, UserModel } from '../../models'
 
 interface IEditProps {
@@ -38,6 +37,16 @@ const Wrapper = styled(Card)`
     overflow: hidden;
     width: 100%;
   }
+  .Toastify__toast-body, .Toastify__toast, .Toastify__close-button {
+    color: ${props => props.theme.colors.primaryText};
+    background: ${props => props.theme.colors.primaryBackground};
+  }
+  .Toastify__toast-body {
+    margin-left: 10px;
+  }
+  .Toastify__close-button  {
+    opacity: 1;
+  }
 `
 const Title = styled.input`
   width: calc(100% - 23px);
@@ -63,6 +72,7 @@ class PostEdit extends React.Component<IEditProps> {
     editorState: htmlToDraft(this.props.post.text),
     title: this.props.post.title,
   }
+  public toastId: number
 
   public onSaveClick = () => {
     const { savePost } = this.props
@@ -70,13 +80,15 @@ class PostEdit extends React.Component<IEditProps> {
     const text = draftToHtml(JSON.parse(draftToRaw(editorState)))
 
     savePost(text, title)
-    toast('Saved!', {
-      autoClose: 3000,
-      closeOnClick: true,
-      hideProgressBar: true,
-      pauseOnHover: true,
-      position: 'top-right',
-    })
+    if (!toast.isActive(this.toastId)) {
+      this.toastId = toast('Saved!', {
+        autoClose: 3222222000,
+        closeOnClick: true,
+        hideProgressBar: true,
+        pauseOnHover: true,
+        position: 'top-right',
+      })
+    }
   }
 
   public render() {
@@ -88,7 +100,7 @@ class PostEdit extends React.Component<IEditProps> {
 
     return (
       <Wrapper>
-        <ToastContainer />
+        <ToastContainer transition={Slide} />
         <Title maxLength={120} value={title} onChange={e => this.setState({ title: e.target.value })} />
         <Draft
           editorState={editorState}
@@ -96,7 +108,7 @@ class PostEdit extends React.Component<IEditProps> {
           toolbar={toolbar}
         />
         <Buttons>
-          <Button disabled={!editorState || !title} onClick={debounce(this.onSaveClick, 300)}>Save</Button>
+          <PrimaryButton disabled={!editorState || !title} onClick={this.onSaveClick}>Save</PrimaryButton>
         </Buttons>
       </Wrapper>
     )

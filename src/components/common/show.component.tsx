@@ -5,9 +5,9 @@ interface IShow {
   if: boolean
 }
 
-export const Show: React.SFC<IShow> = (props) => {
+export const Show: React.SFC<IShow> = (props): any => {
   if (props.if) {
-    return <div>{props.children}</div>
+    return props.children
   }
   return null
 }

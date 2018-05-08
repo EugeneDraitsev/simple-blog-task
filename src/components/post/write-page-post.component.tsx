@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { Button, Card } from '../'
+import { Card, DangerButton, DeleteModal, PrimaryButton } from '../'
 import { PostModel, UserModel } from '../../models'
 import { CommentViewsInfo } from '../post/comment-views-info.component'
 
@@ -20,7 +20,6 @@ const Wrapper = styled(Card)`
   height: auto;
   margin: 0 20px 20px 20px;
   padding: 20px;
-  cursor: pointer;
   transition: all 0.5s;
   border: 1px solid transparent;
   flex-wrap: wrap;
@@ -45,6 +44,13 @@ const CommentInfo = styled(CommentViewsInfo)`
 `
 
 export class WritePagePost extends React.Component<IWritePagePost> {
+  public state = {
+    isOpen: false,
+  }
+
+  public openModal = () => this.setState({ isOpen: true })
+  public closeModal = () => this.setState({ isOpen: false })
+
   public render() {
     const { className, post } = this.props
 
@@ -53,10 +59,13 @@ export class WritePagePost extends React.Component<IWritePagePost> {
         <Title>{post.title}</Title>
         <Flex />
         <CommentInfo post={post} />
-        <Button background="#ca5a5a">Delete</Button>
+        <DangerButton onClick={this.openModal}>Delete</DangerButton>
         <NavLink to={`edit/${post.id}`}>
-          <Button>Edit</Button>
+          <PrimaryButton>Edit</PrimaryButton>
         </NavLink>
+        <DeleteModal isOpen={this.state.isOpen} onRequestClose={this.closeModal}>
+          Are you really want to delete your post?
+        </DeleteModal>
       </Wrapper>
     )
   }

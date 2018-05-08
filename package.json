@@ -37,8 +37,7 @@
     "react-scripts-ts": "2.15.1",
     "react-toastify": "^4.0.1",
     "react-wysiwyg-typescript": "^1.0.2",
-    "styled-components": "^3.2.6",
-    "styled-components-ts": "^0.0.14"
+    "styled-components": "^3.2.6"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.3",

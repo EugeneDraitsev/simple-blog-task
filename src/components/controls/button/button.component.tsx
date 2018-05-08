@@ -1,21 +1,15 @@
 import { darken, lighten } from 'polished'
 import styled from 'styled-components'
-import styledTS from 'styled-components-ts'
 
-interface IButton {
-  background?: string,
-  theme?: { colors: { controlsBackground: string, controlsColor: string } }
-}
-
-export const Button = styledTS<IButton>(styled.button)`
+export const Button = styled.button`
   cursor: pointer;
   display: inline-block;
   min-height: 1em;
   outline: 0;
   border: none;
   vertical-align: baseline;
-  background: ${({ background, theme }: IButton) => background || theme!.colors.controlsBackground};
-  color: ${({ theme, color }) => color || theme.colors.controlsColor};
+  background: ${({ theme }) => theme.buttons.default.background};
+  color: ${({ theme, color }) => color || theme.buttons.default.color};
   font-family: Roboto, sans-serif;
   padding: 20px;
   text-shadow: none;
@@ -31,11 +25,38 @@ export const Button = styledTS<IButton>(styled.button)`
   transition: 0.3s background-color;
 
   &:hover {
-    background: ${({ background, theme }: IButton) => darken(0.1, background || theme!.colors.controlsBackground)};
+    background: ${({ theme }) => darken(0.1, theme.buttons.default.background)};
   }
 
   &[disabled] {
-    background: ${({ background, theme }: IButton) => lighten(0.4, background || theme!.colors.controlsBackground)};
+    background: ${({ theme }) => darken(0.4, theme.buttons.default.background)};
+    color: ${({ theme }) => lighten(0.4, theme.buttons.default.color)};
+    cursor: auto;
+  }
+`
+
+export const DangerButton = styled(Button)`
+  background: ${({ theme }) => theme.buttons.danger.background};
+  color: ${({ theme, color }) => color || theme.buttons.danger.color};
+  &:hover {
+    background: ${({ theme }) => darken(0.1, theme.buttons.danger.background)};
+  }
+
+  &[disabled] {
+    background: ${({ theme }) => lighten(0.2, theme.buttons.danger.background)};
+    cursor: auto;
+  }
+`
+
+export const PrimaryButton = styled(Button)`
+  background: ${({ theme }) => theme.buttons.primary.background};
+  color: ${({ theme, color }) => color || theme.buttons.primary.color};
+  &:hover {
+    background: ${({ theme }) => darken(0.1, theme.buttons.primary.background)};
+  }
+
+  &[disabled] {
+    background: ${({ theme }) => lighten(0.2, theme.buttons.primary.background)};
     cursor: auto;
   }
 `

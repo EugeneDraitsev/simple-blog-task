@@ -29,6 +29,7 @@ const Wrapper = styled(Card)`
 const Title = styled.div`
   font-size: 48px;
   text-transform: capitalize;
+  word-break: break-all;
 `
 const Text = styled.div`
   font-size: 16px;
