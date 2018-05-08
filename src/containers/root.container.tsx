@@ -3,9 +3,24 @@ import * as React from 'react'
 import * as Loadable from 'react-loadable'
 import { Router } from 'react-router'
 import { Redirect, Route, Switch } from 'react-router-dom'
-import { SidebarLayout } from '../components'
+import styled from 'styled-components'
+import { SidebarLayout, Spinner } from '../components'
 
-const Loading = () => <div />
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 70px);
+  color: ${props => props.theme.colors.primaryText}
+`
+
+const Loading = () => (
+  <Wrapper>
+    <Spinner />
+  </Wrapper>
+)
 
 const FeedRoute = Loadable({
   loader: () => import('./feed.container'),

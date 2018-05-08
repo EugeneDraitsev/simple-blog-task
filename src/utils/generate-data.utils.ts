@@ -5,8 +5,8 @@ import { CommentModel, PostModel, UserModel } from '../models'
 import { CommentsStore, FeedStore, UsersStore } from '../stores'
 
 const USERS = 5
-const POSTS = 10
-const COMMENTS = [1, 4]
+const POSTS = 15
+const COMMENTS = [0, 4]
 
 export const generateInitialData = async () => {
   // Load or generate stores
@@ -60,7 +60,7 @@ const getFeedStore = async () => {
 
     // put data into feed
     titles.forEach((title, i) =>
-      feedStore.addPost(new PostModel(title, texts[i], random(1, USERS))))
+      feedStore.addPost(new PostModel(title, texts[i], i ? random(1, USERS) : 1)))
   }
 
   return feedStore

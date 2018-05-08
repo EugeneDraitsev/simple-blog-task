@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { storiesOf } from '@storybook/react'
 
 import { ModalStory, ButtonsModalStory } from './modal.story'
-import { Button, DangerButton, PrimaryButton } from '../src/components'
+import { Button, DangerButton, PrimaryButton, Spinner } from '../src/components'
 import Theme from '../src/styles/themes/default.theme'
 import '../src/styles/global.styles'
 
@@ -42,3 +42,15 @@ storiesOf('Modal', module)
   .add('Modal with title', () => <ModalStory overlay title="test title" />)
   .add('Modal with animation', () => <ModalStory animated overlay title="test title" />)
   .add('Modal with buttons', () => <ButtonsModalStory />)
+
+storiesOf('Spinner', module)
+  .addDecorator(StyledDecorator)
+  .add('Spinners 🌀', () => (
+    <StoriesWrapper>
+      <Spinner />
+      <Spinner strokeWidth={1} />
+      <Spinner width={100} height={100} />
+      <Spinner color="red" />
+    </StoriesWrapper>
+  ))
+
