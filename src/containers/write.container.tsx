@@ -5,8 +5,7 @@ import { WritePagePost } from '../components/post'
 import { STORE_FEED, STORE_USERS } from '../constants'
 import { PostModel, UserModel } from '../models'
 
-interface IPostProps {
-  match: { params: { id: string } },
+interface IWriteProps {
   feed: PostModel[]
   user: UserModel
 }
@@ -29,7 +28,7 @@ const Wrapper = styled.div`
   user: stores[STORE_USERS].user,
 }))
 @observer
-class WriteContainer extends React.Component<IPostProps> {
+class WriteContainer extends React.Component<IWriteProps> {
   public render() {
     const { feed, user } = this.props
     const usersPosts = feed.filter(post => post.author.id === user.id)

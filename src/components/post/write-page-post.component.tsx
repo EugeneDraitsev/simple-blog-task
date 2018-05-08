@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button, Card } from '../'
 import { PostModel, UserModel } from '../../models'
@@ -30,9 +31,14 @@ const Wrapper = styled(Card)`
 const Title = styled.div`
   font-size: 30px;
   text-transform: capitalize;
+  @media (max-width: 800px) {
+     width: 100%;
+     margin-bottom: 20px;
+  };
 `
 const Flex = styled.div`
-  flex: 1
+  flex: 1;
+  min-width: 10px;
 `
 const CommentInfo = styled(CommentViewsInfo)`
   margin-right: 20px;
@@ -47,7 +53,10 @@ export class WritePagePost extends React.Component<IWritePagePost> {
         <Title>{post.title}</Title>
         <Flex />
         <CommentInfo post={post} />
-        <Button>Edit</Button>
+        <Button background="#ca5a5a">Delete</Button>
+        <NavLink to={`edit/${post.id}`}>
+          <Button>Edit</Button>
+        </NavLink>
       </Wrapper>
     )
   }

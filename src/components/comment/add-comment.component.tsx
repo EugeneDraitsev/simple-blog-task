@@ -1,4 +1,5 @@
 import { inject, observer } from 'mobx-react'
+import { opacify } from 'polished'
 import * as React from 'react'
 import styled from 'styled-components'
 import { Button } from '../'
@@ -40,7 +41,7 @@ const Textarea = styled.textarea`
   outline: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border: none;
+  border: ${props => `1px solid ${opacify(0.6, props.theme.colors.secondaryText)}`};
 `
 const Footer = styled.div`
   margin-top: 10px;

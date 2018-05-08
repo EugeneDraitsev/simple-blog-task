@@ -60,7 +60,7 @@ const getFeedStore = async () => {
 
     // put data into feed
     titles.forEach((title, i) =>
-      feedStore.addPost(new PostModel(title, texts[i], random(0, USERS - 1))))
+      feedStore.addPost(new PostModel(title, texts[i], random(1, USERS))))
   }
 
   return feedStore
@@ -84,7 +84,7 @@ const getCommentsStore = async (usersStore: UsersStore, feedStore: FeedStore) =>
 
       // put data into comments
       postCommentsText.forEach(x =>
-        commentsStore.addComment(new CommentModel(x, random(0, USERS - 1), post.id)))
+        commentsStore.addComment(new CommentModel(x, random(1, USERS), post.id)))
 
     })
   }

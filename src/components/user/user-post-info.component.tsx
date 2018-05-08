@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Show } from '../common'
 import { Avatar } from './'
 
-interface IUserInfo {
+interface IUserPostInfo {
   avatar: string
   name: string
   isYou: boolean
@@ -44,7 +44,7 @@ const You = styled.div`
   margin-left: 5px;
 `
 
-export const UserPostInfo: React.SFC<IUserInfo> =
+export const UserPostInfo: React.SFC<IUserPostInfo> =
   ({ className, avatar, name, isYou, formattedDate }) => (
     <Wrapper className={className}>
       <Avatar>{avatar}</Avatar>

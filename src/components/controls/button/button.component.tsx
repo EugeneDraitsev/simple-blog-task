@@ -1,14 +1,20 @@
 import { darken, lighten } from 'polished'
 import styled from 'styled-components'
+import styledTS from 'styled-components-ts'
 
-export const Button = styled.button`
+interface IButton {
+  background?: string,
+  theme?: { colors: { controlsBackground: string, controlsColor: string } }
+}
+
+export const Button = styledTS<IButton>(styled.button)`
   cursor: pointer;
   display: inline-block;
   min-height: 1em;
   outline: 0;
   border: none;
   vertical-align: baseline;
-  background: ${({ theme }) => theme.colors.controlsBackground};
+  background: ${({ background, theme }: IButton) => background || theme!.colors.controlsBackground};
   color: ${({ theme, color }) => color || theme.colors.controlsColor};
   font-family: Roboto, sans-serif;
   padding: 20px;
@@ -25,11 +31,11 @@ export const Button = styled.button`
   transition: 0.3s background-color;
 
   &:hover {
-    background: ${({ theme }) => darken(0.1, theme.colors.controlsBackground)};
+    background: ${({ background, theme }: IButton) => darken(0.1, background || theme!.colors.controlsBackground)};
   }
 
   &[disabled] {
-    background: ${({ theme }) => lighten(0.4, theme.colors.controlsBackground)};
+    background: ${({ background, theme }: IButton) => lighten(0.4, background || theme!.colors.controlsBackground)};
     cursor: auto;
   }
 `

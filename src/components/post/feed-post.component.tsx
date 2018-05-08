@@ -36,6 +36,13 @@ const Wrapper = styled(Card)`
 const Title = styled.div`
   font-size: 48px;
   text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 54px;
+  max-height: 162px;
 `
 const Text = styled.div`
   font-size: 16px;

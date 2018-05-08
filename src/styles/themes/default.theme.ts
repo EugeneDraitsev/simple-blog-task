@@ -12,6 +12,7 @@ const colors = {
   primary: '#349884',
   primaryBackground: '#F8F8F8',
   primaryText: '#000000',
+  secondaryBackground: '#d9d9d9',
   secondaryText: '#828282',
   spinner: '#349884',
 }
