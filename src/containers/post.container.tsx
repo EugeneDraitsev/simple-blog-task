@@ -25,9 +25,6 @@ const Wrapper = styled.div`
     padding: 20px 10px 0 10px;
   };
 `
-const Hidden = styled.div`
-  visibility: hidden;
-`
 
 @inject(stores => ({
   comments: stores[STORE_COMMENTS].comments,
@@ -48,7 +45,6 @@ class PostContainer extends React.Component<IPostProps> {
 
     return (
       <Wrapper>
-        <Hidden>{comments.length}</Hidden>
         <SinglePost key={post.id} post={post} user={user} comments={comments} />
       </Wrapper>
     )

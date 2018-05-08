@@ -24,6 +24,9 @@ const ButtonWrapper = styled.div`
 const Flex = styled.div`
   flex: 1;
 `
+const CancelButton = styled(Button)`
+ margin-right: 10px;
+`
 
 export interface IDeleteModal {
   isOpen: boolean
@@ -34,11 +37,17 @@ export interface IDeleteModal {
   className?: string
   children?: React.ReactChild
   onRequestClose?: () => void
+  onDelete?: () => void
+}
+
+const deleteFunc = (onRequestClose: () => void, onDelete: () => void) => {
+  onRequestClose()
+  onDelete()
 }
 
 export class DeleteModal extends React.PureComponent<IDeleteModal> {
   public render() {
-    const { children, onRequestClose, isOpen } = this.props
+    const { children, onRequestClose, isOpen, onDelete } = this.props
 
     return (
       <AnimatedModal isOpen={isOpen} onRequestClose={onRequestClose} overlay title="Are you sure?" {...this.props}>
@@ -46,8 +55,8 @@ export class DeleteModal extends React.PureComponent<IDeleteModal> {
           {children}
           <ButtonWrapper>
             <Flex />
-            <Button onClick={onRequestClose}>Cancel</Button>
-            <DangerButton onClick={onRequestClose}>Delete</DangerButton>
+            <CancelButton onClick={onRequestClose}>Cancel</CancelButton>
+            <DangerButton onClick={() => deleteFunc(onRequestClose!, onDelete!)}>Delete</DangerButton>
           </ButtonWrapper>
         </ModalContent>
       </AnimatedModal>

@@ -11,7 +11,7 @@ export class CommentsStore {
 
   @action
   public addComment = (item: CommentModel): void => {
-    this.comments.push(item)
+    this.comments = [...this.comments, item]
   }
 
   @action

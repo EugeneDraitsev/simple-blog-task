@@ -25,8 +25,7 @@ const Header = styled.div`
   align-items: center;
 `
 const HeaderTitle = styled.div`
-  font-family: weld-light, sans-serif;
-  font-size: 40px;
+  font-size: 32px;
 `
 const Separator = styled.div`
   flex: 1;

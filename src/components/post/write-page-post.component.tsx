@@ -9,6 +9,7 @@ interface IWritePagePost {
   post: PostModel
   user: UserModel
   className?: string
+  removePost: (id: number) => void
 }
 
 const Wrapper = styled(Card)`
@@ -42,6 +43,9 @@ const Flex = styled.div`
 const CommentInfo = styled(CommentViewsInfo)`
   margin-right: 20px;
 `
+const DeleteButton = styled(DangerButton)`
+  margin-right: 10px;
+`
 
 export class WritePagePost extends React.Component<IWritePagePost> {
   public state = {
@@ -50,6 +54,10 @@ export class WritePagePost extends React.Component<IWritePagePost> {
 
   public openModal = () => this.setState({ isOpen: true })
   public closeModal = () => this.setState({ isOpen: false })
+  public removePost = () => {
+    const { removePost, post } = this.props
+    removePost(post.id)
+  }
 
   public render() {
     const { className, post } = this.props
@@ -59,11 +67,11 @@ export class WritePagePost extends React.Component<IWritePagePost> {
         <Title>{post.title}</Title>
         <Flex />
         <CommentInfo post={post} />
-        <DangerButton onClick={this.openModal}>Delete</DangerButton>
+        <DeleteButton onClick={this.openModal}>Delete</DeleteButton>
         <NavLink to={`edit/${post.id}`}>
           <PrimaryButton>Edit</PrimaryButton>
         </NavLink>
-        <DeleteModal isOpen={this.state.isOpen} onRequestClose={this.closeModal}>
+        <DeleteModal isOpen={this.state.isOpen} onDelete={this.removePost} onRequestClose={this.closeModal}>
           Are you really want to delete your post?
         </DeleteModal>
       </Wrapper>

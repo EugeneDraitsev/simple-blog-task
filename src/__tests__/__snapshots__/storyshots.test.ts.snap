@@ -164,8 +164,7 @@ exports[`Storyshots Modal Modal with animation 1`] = `
 }
 
 .c6 {
-  font-family: weld-light,sans-serif;
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .c7 {
@@ -306,6 +305,59 @@ exports[`Storyshots Modal Modal with animation 1`] = `
 `;
 
 exports[`Storyshots Modal Modal with buttons 1`] = `
+.c13 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+
+.c13:hover {
+  background: #cdcdcd;
+}
+
+.c13[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
+}
+
+.c14 {
+  background: #ca5a5a;
+  color: #FFFFFF;
+}
+
+.c14:hover {
+  background: #b63b3b;
+}
+
+.c14[disabled] {
+  background: #e3a7a7;
+  cursor: auto;
+}
+
 .c4 {
   position: fixed;
   display: inline-block;
@@ -336,8 +388,7 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
 }
 
 .c6 {
-  font-family: weld-light,sans-serif;
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .c7 {
@@ -416,56 +467,7 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
 }
 
 .c12 {
-  cursor: pointer;
-  display: inline-block;
-  min-height: 1em;
-  outline: 0;
-  border: none;
-  vertical-align: baseline;
-  background: #E6E6E6;
-  color: #828282;
-  font-family: Roboto,sans-serif;
-  padding: 20px;
-  text-shadow: none;
-  font-weight: 700;
-  line-height: 1em;
-  font-size: 14px;
-  font-style: normal;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
-  text-transform: uppercase;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: 0.3s background-color;
-  transition: 0.3s background-color;
-}
-
-.c12:hover {
-  background: #cdcdcd;
-}
-
-.c12[disabled] {
-  background: #808080;
-  color: #e8e8e8;
-  cursor: auto;
-}
-
-.c13 {
-  background: #ca5a5a;
-  color: #FFFFFF;
-}
-
-.c13:hover {
-  background: #b63b3b;
-}
-
-.c13[disabled] {
-  background: #e3a7a7;
-  cursor: auto;
+  margin-right: 10px;
 }
 
 .c0 {
@@ -541,13 +543,13 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
               className="c11"
             />
             <button
-              className="c12"
+              className="c12 c13"
               onClick={[Function]}
             >
               Cancel
             </button>
             <button
-              className="c13 c12"
+              className="c14 c13"
               onClick={[Function]}
             >
               Delete
@@ -745,8 +747,7 @@ exports[`Storyshots Modal Modal with title 1`] = `
 }
 
 .c5 {
-  font-family: weld-light,sans-serif;
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .c6 {

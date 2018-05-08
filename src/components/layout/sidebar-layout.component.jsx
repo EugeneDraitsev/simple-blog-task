@@ -35,6 +35,7 @@ class Layout extends React.Component {
   links = [
     { show: true, title: 'Feed', to: '/feed' },
     { show: true, title: 'Write', to: '/write' },
+    { show: true, title: 'Settings', to: '/settings' },
   ]
 
   componentDidMount() {

@@ -32,6 +32,11 @@ const ErrorRoute = Loadable({
   loading: Loading,
 })
 
+const SettingsRoute = Loadable({
+  loader: () => import('./settings.container'),
+  loading: Loading,
+})
+
 interface IProps {
   history: History
 }
@@ -47,6 +52,7 @@ export default class RootContainer extends React.PureComponent<IProps> {
             <Route exact path="/write" component={WriteRoute} />
             <Route exact path="/post/:id" component={PostRoute} />
             <Route exact path="/edit/:id" component={EditRoute} />
+            <Route exact path="/settings" component={SettingsRoute} />
             <Route component={ErrorRoute} />
           </Switch>
         </SidebarLayout>
