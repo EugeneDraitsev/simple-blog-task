@@ -8,7 +8,7 @@ const colors = {
   controlsBackground: '#349884',
   controlsColor: '#FFFFFF',
   mainGradient1: '#43C6AC',
-  mainGradient2: '#F8FFAE',
+  mainGradient2: '#2488b7',
   primary: '#349884',
   primaryBackground: '#F8F8F8',
   primaryText: '#000000',

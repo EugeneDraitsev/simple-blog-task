@@ -6,16 +6,18 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 90px);
   color: ${props => props.theme.colors.primaryText}
+  padding: 10px
 `
 const Title = styled.div`
   font-size: 44px;
   font-weight: 300;
+  text-align: center;
 `
 const Text = styled.div`
   font-size: 24px;
+  text-align: center;
 `
 
 const SettingsContainer: React.SFC = () => (

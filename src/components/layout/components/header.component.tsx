@@ -16,9 +16,6 @@ const Wrapper = styled.div`
   padding: 0 0 0 20px;
   background: ${props => props.theme.headerGradient};
   z-index: 3;
-  @media (max-width: 800px) {
-    background: ${props => props.theme.colors.primary};
-  };
 `
 const Links = styled.div`
   display: flex;
