@@ -8,10 +8,12 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${p => p.theme.colors.primaryBackground};
+  color: ${p => p.theme.colors.primaryText};
 `
 const Button = styled.div`
   padding: 20px;
-  color: rgb(1, 85, 147);
+  color: ${p => p.theme.colors.primaryText};
   font-size: 40px;
   text-align: center;
   cursor: pointer;

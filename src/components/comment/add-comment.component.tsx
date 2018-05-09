@@ -42,6 +42,8 @@ const Textarea = styled.textarea`
   -moz-box-shadow: none;
   box-shadow: none;
   border: ${props => `1px solid ${opacify(0.6, props.theme.colors.secondaryText)}`};
+  background: ${props => props.theme.colors.activeBackground};
+  color: ${props => props.theme.colors.primaryText};
 `
 const Footer = styled.div`
   margin-top: 10px;

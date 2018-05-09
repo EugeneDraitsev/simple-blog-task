@@ -1,6 +1,5 @@
 import { computed, observable } from 'mobx'
 import { persist } from 'mobx-persist'
-import * as moment from 'moment'
 import { STORE_COMMENTS, STORE_USERS } from '../constants'
 import { CommentModel, UserModel } from './'
 import { stores } from './../'
@@ -26,7 +25,6 @@ export class StoryModel {
 
   @computed get author(): UserModel {
     const users: UserModel[] = stores[STORE_USERS].users
-    console.log(stores[STORE_USERS].users)
     return users.find(user => user.id === this.authorId) || stores[STORE_USERS].user
   }
 
@@ -49,7 +47,14 @@ export class StoryModel {
   }
 
   @computed get formattedDate() {
-    return moment(this.date).format('DD.MM.YYYY HH:mm')
+    const date = new Date(this.date)
+    const day = String(date.getDate()).padStart(2, '0')
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    const year = String(date.getFullYear())
+    const hours = String(date.getHours()).padStart(2, '0')
+    const minutes = String(date.getMinutes()).padStart(2, '0')
+    const formatted = `${day}.${month}.${year} ${hours}:${minutes}`
+    return formatted
   }
 
   constructor(title: string, text: string, authorId: number) {

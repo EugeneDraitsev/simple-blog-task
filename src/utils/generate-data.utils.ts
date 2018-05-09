@@ -43,11 +43,7 @@ const getUsersStore = async () => {
         .value(),
     )
 
-    console.log(names)
-    console.log(capitalizedNames)
-
     capitalizedNames.forEach(name => usersStore.addUser(new UserModel(name)))
-    console.log(usersStore.users)
   }
 
   return usersStore

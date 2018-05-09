@@ -4,19 +4,31 @@ import { ThemeProvider } from 'styled-components'
 import { storiesOf } from '@storybook/react'
 
 import { ButtonsModalStory, ModalStory } from './modal.story'
+import getStoriesStory from './stories.story'
+import getUserStory from './user.story'
+import getCommentsStory from './comments.story'
 import { Spinner, Button, DangerButton, PrimaryButton } from '../src/components'
-import Theme from '../src/styles/themes/default.theme'
+import light from '../src/styles/themes/light.theme'
+import dark from '../src/styles/themes/dark.theme'
 import '../src/styles/global.styles'
 
 const StoriesWrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${p => p.theme.colors.primaryBackground};
+  color: ${p => p.theme.colors.primaryText};
 `
 
 const StyledDecorator = story => (
-  <ThemeProvider theme={Theme}>
+  <ThemeProvider theme={light}>
+    {story()}
+  </ThemeProvider>
+)
+
+const DarkStyledDecorator = story => (
+  <ThemeProvider theme={dark}>
     {story()}
   </ThemeProvider>
 )
@@ -54,3 +66,18 @@ storiesOf('Spinner', module)
     </StoriesWrapper>
   ))
 
+getUserStory()
+getStoriesStory()
+getCommentsStory()
+
+storiesOf('Dark theme', module)
+  .addDecorator(DarkStyledDecorator)
+  .add('Dark modal', () => <ButtonsModalStory />)
+  .add('Dark spinners 🌀', () => (
+    <StoriesWrapper>
+      <Spinner />
+      <Spinner strokeWidth={1} />
+      <Spinner width={100} height={100} />
+      <Spinner color="red" />
+    </StoriesWrapper>
+  ))

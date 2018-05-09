@@ -1,7 +1,7 @@
 import { inject, observer } from 'mobx-react'
 import * as React from 'react'
 import styled from 'styled-components'
-import { Avatar, Card, PrimaryButton } from '../components'
+import { Avatar, Button, Card, PrimaryButton } from '../components'
 import { STORE_USERS } from '../constants'
 import { UserModel } from '../models'
 import { UsersStore } from '../stores'
@@ -58,6 +58,7 @@ const NameInput = styled.input`
   text-transform: capitalize;
   outline: none;
   background: ${props => props.theme.colors.primaryBackground};
+  color: ${props => props.theme.colors.primaryText};
   border: ${props => `1px solid ${props.theme.colors.secondaryBackground}`};
   max-width: calc(100% - 80px);
 `
@@ -68,7 +69,17 @@ const AvatarContainer = styled.div`
   align-items: center;
   justify-content: center;
 `
+const ThemeContainer = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+`
 const ChangeIcon = styled(PrimaryButton)`
+  margin-left: 10px;
+`
+const DarkButton = styled(PrimaryButton)`
   margin-left: 10px;
 `
 
@@ -80,6 +91,11 @@ const ChangeIcon = styled(PrimaryButton)`
 class SettingsContainer extends React.Component<IWriteProps> {
   public state = {
     name: this.props.user.name,
+  }
+
+  public setTheme = (theme: string) => {
+    const { usersStore } = this.props
+    usersStore.setTheme(theme)
   }
 
   public render() {
@@ -100,6 +116,10 @@ class SettingsContainer extends React.Component<IWriteProps> {
             <Avatar>{user.avatar}</Avatar>
             <ChangeIcon onClick={() => usersStore.generateAvatar()}>Generate new</ChangeIcon>
           </AvatarContainer>
+          <ThemeContainer>
+            <Button onClick={() => this.setTheme('light')}>Light theme</Button>
+            <DarkButton onClick={() => this.setTheme('dark')}>Dark Theme</DarkButton>
+          </ThemeContainer>
         </Content>
       </Wrapper>
     )

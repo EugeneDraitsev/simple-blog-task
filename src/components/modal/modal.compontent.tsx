@@ -14,7 +14,8 @@ const Wrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(255, 255, 255);
+  background-color: ${p => p.theme.colors.primaryBackground};
+  color: ${p => p.theme.colors.primaryText};
   border-radius: 4px;
   padding: 20px;
   z-index: 4;
@@ -43,7 +44,7 @@ const Overlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${p => p.theme.colors.overlay};
   width: 100vw;
   height: 100vh;
   transition: opacity 0.3s;

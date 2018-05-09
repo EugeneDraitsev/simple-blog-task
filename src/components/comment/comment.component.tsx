@@ -1,7 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Card, UserPostInfo } from '../'
+import { UserPostInfo } from '../'
 import { CommentModel, UserModel } from '../../models'
+import { Card } from '../card/'
 
 interface IComment {
   comment: CommentModel

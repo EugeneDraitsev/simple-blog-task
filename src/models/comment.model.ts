@@ -1,6 +1,5 @@
 import { computed, observable } from 'mobx'
 import { persist } from 'mobx-persist'
-import * as moment from 'moment'
 import { stores } from '../'
 import { STORE_USERS } from '../constants'
 import { UserModel } from './user.model'
@@ -24,7 +23,14 @@ export class CommentModel {
   }
 
   @computed get formattedDate() {
-    return moment(this.date).format('DD.MM.YYYY HH:mm')
+    const date = new Date(this.date)
+    const day = String(date.getDate()).padStart(2, '0')
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    const year = String(date.getFullYear())
+    const hours = String(date.getHours()).padStart(2, '0')
+    const minutes = String(date.getMinutes()).padStart(2, '0')
+    const formatted = `${day}.${month}.${year} ${hours}:${minutes}`
+    return formatted
   }
 
   constructor(text: string, authorId: number, storyId: number) {

@@ -18,10 +18,12 @@ export class UserModel {
   @persist @observable public readonly id: number
   @persist @observable public name: string
   @persist @observable public avatar: string
+  @persist @observable public theme: string
 
   constructor(name: string) {
     this.id = UserModel.generateId()
     this.name = name
     this.avatar = UserModel.generateAvatar()
+    this.theme = 'light'
   }
 }

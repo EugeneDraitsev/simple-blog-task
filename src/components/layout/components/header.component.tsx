@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   align-items: center;
   height: 70px;
   width: 100%;
-  box-shadow: 0 2px 8px rgba(210, 210, 210, 0.5);
+  box-shadow: ${props => props.theme.headerShadow};
   padding: 0 0 0 20px;
   background: ${props => props.theme.headerGradient};
   z-index: 3;

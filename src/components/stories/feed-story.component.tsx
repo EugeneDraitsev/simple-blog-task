@@ -26,7 +26,7 @@ const Wrapper = styled(Card)`
   transition: all 0.5s;
   border: 1px solid transparent;
   &:hover {
-    background: ${props => lighten(1, props.theme.colors.primaryBackground)};
+    background: ${props => lighten(0.1, props.theme.colors.primaryBackground)};
     border: ${props => `1px solid ${lighten(0.2, props.theme.colors.primary)}`};
   }
   @media (max-width: 800px) {

@@ -69,7 +69,7 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
 }
 
 .c0 {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -82,6 +82,8 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background-color: #F8F8F8;
+  color: #000000;
 }
 
 <div
@@ -133,6 +135,689 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
 </div>
 `;
 
+exports[`Storyshots Comments Simple Comments 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F8F8F8;
+  color: #000000;
+  box-shadow: 0 1px 0 0 #d7d8db,0 0 0 1px #e3e4e8;
+  border-radius: 2px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: calc(100vw - 40px);
+  height: auto;
+  margin: 0 20px 20px 20px;
+  padding: 20px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.c12 {
+  font-size: 16px;
+  max-width: calc(100% - 64px);
+  font-weight: 300;
+  line-height: 20px;
+  margin-left: 64px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 175px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 115px;
+}
+
+.c9 {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100px;
+  white-space: nowrap;
+}
+
+.c11 {
+  font-size: 12px;
+  color: #828282;
+}
+
+.c10 {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c6 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
+.c1 {
+  min-height: calc(100vh - 20px);
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 {
+  width: 800px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (max-width:800px) {
+  .c2 {
+    margin: 0 0 20px 0;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          🌿
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            Author
+          </div>
+          <div
+            className="c10"
+          >
+            (you)
+          </div>
+        </div>
+        <div
+          className="c11"
+        >
+          09.05.2018 03:17
+        </div>
+      </div>
+    </div>
+    <div
+      className="c12"
+    >
+      Nisi aute ex esse fugiat ipsum qui deserunt est mollit ullamco aliquip irure. Commodo cillum reprehenderit laborum sit.
+    </div>
+  </div>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          🐦
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            Est
+          </div>
+        </div>
+        <div
+          className="c11"
+        >
+          09.05.2018 03:17
+        </div>
+      </div>
+    </div>
+    <div
+      className="c12"
+    >
+      Voluptate magna sint exercitation tempor. Sint nulla enim irure voluptate Lorem incididunt et occaecat nostrud sit quis laborum.
+    </div>
+  </div>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          🐟
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            Id Amet
+          </div>
+        </div>
+        <div
+          className="c11"
+        >
+          09.05.2018 03:17
+        </div>
+      </div>
+    </div>
+    <div
+      className="c12"
+    >
+      Laborum Lorem duis eiusmod minim irure sit reprehenderit esse ea nisi duis nostrud mollit. Sit sunt commodo labore quis elit incididunt veniam culpa Lorem dolore labore culpa.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dark theme Dark modal 1`] = `
+.c13 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+
+.c13:hover {
+  background: #cdcdcd;
+}
+
+.c13[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
+}
+
+.c14 {
+  background: #ca5a5a;
+  color: #FFFFFF;
+}
+
+.c14:hover {
+  background: #b63b3b;
+}
+
+.c14[disabled] {
+  background: #e3a7a7;
+  cursor: auto;
+}
+
+.c4 {
+  position: fixed;
+  display: inline-block;
+  visibility: hidden;
+  max-width: 80vw;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: #303030;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+  z-index: 4;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  font-size: 32px;
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c8 {
+  font-size: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.c2 {
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,0.5);
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 3;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c3 {
+  -webkit-transform: translate(-100vw,-50%) scale(0);
+  -ms-transform: translate(-100vw,-50%) scale(0);
+  transform: translate(-100vw,-50%) scale(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: flex-end;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.c11 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c12 {
+  margin-right: 10px;
+}
+
+.c0 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #303030;
+  color: #ffffff;
+}
+
+.c1 {
+  padding: 20px;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Click to open popup
+  </div>
+  <div>
+    <div
+      className="c2"
+      onClick={[Function]}
+    />
+    <div
+      className="c3 c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          Are you sure?
+        </div>
+        <div
+          className="c7"
+        />
+        <div
+          className="material-icons c8"
+          onClick={[Function]}
+        >
+          close
+        </div>
+      </div>
+      <div
+        className="greeting"
+      >
+        <div
+          className="c9"
+        >
+          Are you really want to delete your post?
+          <div
+            className="c10"
+          >
+            <div
+              className="c11"
+            />
+            <button
+              className="c12 c13"
+              onClick={[Function]}
+            >
+              Cancel
+            </button>
+            <button
+              className="c14 c13"
+              onClick={[Function]}
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dark theme Dark spinners 🌀 1`] = `
+.c1 {
+  -webkit-animation: iVXCSc 2s linear infinite;
+  animation: iVXCSc 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  width: 100%;
+  margin: auto;
+}
+
+.c2 {
+  -webkit-animation: jVqWEn 1.5s ease-in-out infinite;
+  animation: jVqWEn 1.5s ease-in-out infinite;
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke: #349884;
+}
+
+.c3 {
+  -webkit-animation: jVqWEn 1.5s ease-in-out infinite;
+  animation: jVqWEn 1.5s ease-in-out infinite;
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke: red;
+}
+
+.c0 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #303030;
+  color: #ffffff;
+}
+
+<div
+  className="c0"
+>
+  <svg
+    className="c1"
+    style={
+      Object {
+        "height": 50,
+        "width": 50,
+      }
+    }
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="c2"
+      color=""
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth={5}
+    />
+  </svg>
+  <svg
+    className="c1"
+    style={
+      Object {
+        "height": 50,
+        "width": 50,
+      }
+    }
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="c2"
+      color=""
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth={1}
+    />
+  </svg>
+  <svg
+    className="c1"
+    style={
+      Object {
+        "height": 100,
+        "width": 100,
+      }
+    }
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="c2"
+      color=""
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth={5}
+    />
+  </svg>
+  <svg
+    className="c1"
+    style={
+      Object {
+        "height": 50,
+        "width": 50,
+      }
+    }
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="c3"
+      color="red"
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth={5}
+    />
+  </svg>
+</div>
+`;
+
 exports[`Storyshots Modal Modal with animation 1`] = `
 .c4 {
   position: fixed;
@@ -145,7 +830,8 @@ exports[`Storyshots Modal Modal with animation 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background-color: rgb(255,255,255);
+  background-color: #F8F8F8;
+  color: #000000;
   border-radius: 4px;
   padding: 20px;
   z-index: 4;
@@ -209,11 +895,13 @@ exports[`Storyshots Modal Modal with animation 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background-color: #F8F8F8;
+  color: #000000;
 }
 
 .c1 {
   padding: 20px;
-  color: rgb(1,85,147);
+  color: #000000;
   font-size: 40px;
   text-align: center;
   cursor: pointer;
@@ -369,7 +1057,8 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background-color: rgb(255,255,255);
+  background-color: #F8F8F8;
+  color: #000000;
   border-radius: 4px;
   padding: 20px;
   z-index: 4;
@@ -484,11 +1173,13 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background-color: #F8F8F8;
+  color: #000000;
 }
 
 .c1 {
   padding: 20px;
-  color: rgb(1,85,147);
+  color: #000000;
   font-size: 40px;
   text-align: center;
   cursor: pointer;
@@ -574,7 +1265,8 @@ exports[`Storyshots Modal Modal with title 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background-color: rgb(255,255,255);
+  background-color: #F8F8F8;
+  color: #000000;
   border-radius: 4px;
   padding: 20px;
   z-index: 4;
@@ -638,11 +1330,13 @@ exports[`Storyshots Modal Modal with title 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background-color: #F8F8F8;
+  color: #000000;
 }
 
 .c1 {
   padding: 20px;
-  color: rgb(1,85,147);
+  color: #000000;
   font-size: 40px;
   text-align: center;
   cursor: pointer;
@@ -737,7 +1431,8 @@ exports[`Storyshots Modal Simple modal 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  background-color: rgb(255,255,255);
+  background-color: #F8F8F8;
+  color: #000000;
   border-radius: 4px;
   padding: 20px;
   z-index: 4;
@@ -797,11 +1492,13 @@ exports[`Storyshots Modal Simple modal 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background-color: #F8F8F8;
+  color: #000000;
 }
 
 .c1 {
   padding: 20px;
-  color: rgb(1,85,147);
+  color: #000000;
   font-size: 40px;
   text-align: center;
   cursor: pointer;
@@ -910,7 +1607,7 @@ exports[`Storyshots Spinner Spinners 🌀 1`] = `
 }
 
 .c0 {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -923,6 +1620,8 @@ exports[`Storyshots Spinner Spinners 🌀 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background-color: #F8F8F8;
+  color: #000000;
 }
 
 <div
@@ -1012,5 +1711,1180 @@ exports[`Storyshots Spinner Spinners 🌀 1`] = `
       strokeWidth={5}
     />
   </svg>
+</div>
+`;
+
+exports[`Storyshots Story Single story 1`] = `
+.c24 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+
+.c24:hover {
+  background: #cdcdcd;
+}
+
+.c24[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
+}
+
+.c23 {
+  background: #349884;
+  color: #FFFFFF;
+}
+
+.c23:hover {
+  background: #277263;
+}
+
+.c23[disabled] {
+  background: #67cbb7;
+  cursor: auto;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F8F8F8;
+  color: #000000;
+  box-shadow: 0 1px 0 0 #d7d8db,0 0 0 1px #e3e4e8;
+  border-radius: 2px;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  height: auto;
+  padding: 0 20px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.c20 {
+  width: calc(100% - 20px);
+  overflow: hidden;
+  min-height: 50px;
+  padding: 10px;
+  font-family: Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  resize: none;
+  outline: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #828282;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.c21 {
+  margin-top: 10px;
+  width: calc(100% + 2px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c22 {
+  margin-right: 20px;
+  font-size: 12px;
+  color: #828282;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 175px;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 115px;
+}
+
+.c11 {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100px;
+  white-space: nowrap;
+}
+
+.c13 {
+  font-size: 12px;
+  color: #828282;
+}
+
+.c12 {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c8 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  width: 900px;
+  max-width: calc(100vw - 40px);
+  height: auto;
+  margin: 0 20px 20px 20px;
+  padding: 20px;
+}
+
+.c3 {
+  font-size: 48px;
+  text-transform: capitalize;
+  word-break: break-all;
+}
+
+.c4 {
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.c17 {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.c18 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #828282;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.c15 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0 10px;
+}
+
+.c16 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.c0 {
+  min-height: calc(100vh - 20px);
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width:800px) {
+  .c19 {
+    width: 100%;
+    padding: 0 2px;
+    margin: 0;
+  }
+}
+
+@media (max-width:800px) {
+  .c1 {
+    margin: 0 0 20px 0;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3"
+    >
+      Sint Excepteur Duis
+    </div>
+    <div
+      className="c4"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>Laborum Lorem duis eiusmod minim irure sit reprehenderit esse ea nisi duis nostrud mollit. Sit sunt commodo labore quis elit incididunt veniam culpa Lorem dolore labore culpa. Voluptate dolore adipisicing dolore sint id id anim cupidatat nulla pariatur exercitation laborum irure. Excepteur sit dolor qui pariatur anim eu esse.</p><p>Ipsum aute labore culpa laboris laborum. Tempor velit incididunt fugiat laboris culpa amet aliqua ad est elit do laboris nulla Lorem. Est magna eiusmod irure duis Lorem culpa nostrud do cupidatat exercitation.</p><p>Laborum amet laborum eiusmod officia tempor laborum culpa Lorem dolore sit. Eiusmod quis aliquip ea labore minim nisi culpa sit ullamco quis in velit. Occaecat aliquip fugiat sint dolore in et dolor ad. Esse minim pariatur sit ea ullamco proident. Ipsum et amet excepteur qui aliqua qui aliqua laboris sit amet anim nisi exercitation exercitation. Lorem labore qui velit laborum ex irure dolore adipisicing.</p><p>Nostrud exercitation occaecat nisi officia ipsum et nisi incididunt ad. Ex nostrud occaecat proident eiusmod anim culpa officia aute. Dolor nostrud ex aliquip sunt. Commodo esse voluptate sit quis excepteur aliquip ea eu pariatur.</p><p>Laboris mollit eiusmod labore ullamco non mollit incididunt ullamco voluptate anim id adipisicing. Tempor eu occaecat aliquip nostrud eiusmod ipsum magna labore aute. Dolor proident amet excepteur Lorem deserunt consectetur sit in officia id mollit excepteur. Veniam occaecat adipisicing anim consectetur enim magna excepteur elit in ex Lorem est qui. Anim officia in reprehenderit exercitation in nisi cillum Lorem tempor velit excepteur anim. Excepteur adipisicing exercitation nulla commodo duis cillum quis dolor culpa nostrud esse. In ullamco sint elit velit id ut elit fugiat pariatur exercitation do esse adipisicing veniam.</p><p>Deserunt occaecat anim ipsum ex. Ullamco ea ullamco nulla dolor elit incididunt voluptate ex anim voluptate minim. Occaecat minim in pariatur ex enim elit deserunt dolor magna sit amet velit dolor commodo. Proident veniam sit aute ipsum veniam ipsum consectetur dolor eiusmod proident.</p><p>Ipsum exercitation ut non nulla. Lorem voluptate amet ad quis est velit fugiat exercitation reprehenderit. Et ut minim esse aliquip enim proident incididunt amet. Nulla qui ad eu deserunt aliquip.</p><p>Minim duis nisi voluptate elit cillum minim officia id proident nostrud aliqua quis. Voluptate mollit Lorem dolore nulla reprehenderit. Magna cillum proident sint mollit duis duis consectetur labore laborum dolor. Duis anim do esse dolore non velit in adipisicing est proident dolore mollit. Culpa labore cupidatat est excepteur Lorem consequat pariatur consectetur qui anim.</p><p>In exercitation cillum exercitation elit do non commodo culpa sint sunt nostrud est aute ea. Duis fugiat reprehenderit duis occaecat irure occaecat consequat nostrud culpa fugiat commodo dolore voluptate. Ipsum occaecat enim cupidatat exercitation. Enim anim consectetur exercitation eu labore fugiat labore nostrud proident nostrud amet in. Cupidatat labore veniam duis nulla ad aute quis eiusmod. Laboris sunt sint sint nostrud sit magna eu sit dolore.</p><p>Dolor irure laboris ad reprehenderit aute id non non aute anim officia. Id reprehenderit nostrud nulla culpa occaecat nulla exercitation reprehenderit laborum sunt culpa velit duis eu. Nostrud in velit in excepteur ex eiusmod. Quis laboris deserunt consectetur commodo quis nulla est sunt eu qui enim in.</p><p>Tempor ea mollit magna nulla aute sunt labore ea qui sunt sunt do aute. Reprehenderit id nostrud pariatur dolore ut et in ut est id fugiat duis id est. Sint do quis culpa amet commodo ad sit voluptate eiusmod nisi id laborum qui. Consequat culpa fugiat pariatur duis eu aute reprehenderit aliqua irure.</p><p>Sint ullamco exercitation sit veniam enim reprehenderit aliqua ut laborum cillum deserunt. Incididunt velit sint nulla veniam reprehenderit voluptate culpa voluptate qui ipsum nulla. Occaecat esse do exercitation tempor do eu nostrud aute enim veniam dolor ullamco et. Dolor excepteur labore occaecat ea. Enim enim laboris culpa in aute anim. Labore amet duis ex est. Qui officia consequat non ad.</p>",
+        }
+      }
+    />
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <div
+            className="c8"
+          >
+            🌿
+          </div>
+        </div>
+        <div
+          className="c9"
+        >
+          <div
+            className="c10"
+          >
+            <div
+              className="c11"
+            >
+              Author
+            </div>
+            <div
+              className="c12"
+            >
+              (you)
+            </div>
+          </div>
+          <div
+            className="c13"
+          >
+            09.05.2018 03:17
+          </div>
+        </div>
+      </div>
+      <div
+        className="c14"
+      >
+        <div
+          className="material-icons c15"
+        >
+          comment
+        </div>
+        <div
+          className="c16"
+        >
+          3
+        </div>
+        <div
+          className="material-icons c15"
+        >
+          remove_red_eye
+        </div>
+        <div
+          className="c16"
+        >
+          14
+        </div>
+      </div>
+    </div>
+    <div
+      className="c17"
+    />
+    <div
+      className="c18"
+    >
+      There are no comments here yet.
+    </div>
+    <div
+      className="c19"
+    >
+      <textarea
+        className="c20"
+        onChange={[Function]}
+        value=""
+      />
+      <div
+        className="c21"
+      >
+        <div
+          className="c22"
+        >
+          0
+           / 1000
+        </div>
+        <button
+          className="c23 c24"
+          disabled={true}
+          onClick={[Function]}
+        >
+          Add Comment
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Story Story info 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F8F8F8;
+  color: #000000;
+  box-shadow: 0 1px 0 0 #d7d8db,0 0 0 1px #e3e4e8;
+  border-radius: 2px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 175px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 115px;
+}
+
+.c10 {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100px;
+  white-space: nowrap;
+}
+
+.c12 {
+  font-size: 12px;
+  color: #828282;
+}
+
+.c11 {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c7 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.c14 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0 10px;
+}
+
+.c15 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.c1 {
+  min-height: calc(100vh - 20px);
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 {
+  width: 400px;
+}
+
+.c2 {
+  padding: 20px;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          >
+            🌿
+          </div>
+        </div>
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            <div
+              className="c10"
+            >
+              Author
+            </div>
+            <div
+              className="c11"
+            >
+              (you)
+            </div>
+          </div>
+          <div
+            className="c12"
+          >
+            09.05.2018 03:17
+          </div>
+        </div>
+      </div>
+      <div
+        className="c13"
+      >
+        <div
+          className="material-icons c14"
+        >
+          comment
+        </div>
+        <div
+          className="c15"
+        >
+          3
+        </div>
+        <div
+          className="material-icons c14"
+        >
+          remove_red_eye
+        </div>
+        <div
+          className="c15"
+        >
+          14
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots User Avatar 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 33px;
+  min-height: 33px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: lime;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 33px;
+  min-height: 33px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: lightblue;
+}
+
+.c2 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
+.c4 {
+  line-height: 24px;
+  font-size: 24px;
+}
+
+.c0 {
+  min-height: calc(100vh - 20px);
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      🐊
+    </div>
+  </div>
+  <div
+    className="c3"
+  >
+    <div
+      className="c4"
+    >
+      🐣
+    </div>
+  </div>
+  <div
+    className="c5"
+  >
+    <div
+      className="c2"
+    >
+      🌔
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <div
+      className="c4"
+    >
+      🌎
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots User User info 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  min-width: 200px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  color: #FFFFFF;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c6 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
+.c1 {
+  min-height: calc(100vh - 20px);
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  background: #349884;
+  margin-top: 20px;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    >
+      Eugene
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        🦖
+      </div>
+    </div>
+  </div>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4"
+    >
+      Very long name Very long nameVery long nameVery long name
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        🐉
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots User User post info 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 175px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 115px;
+}
+
+.c7 {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100px;
+  white-space: nowrap;
+}
+
+.c9 {
+  font-size: 12px;
+  color: #828282;
+}
+
+.c8 {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c4 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
+.c1 {
+  min-height: calc(100vh - 20px);
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        ⚽
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          User
+        </div>
+        <div
+          className="c8"
+        >
+          (you)
+        </div>
+      </div>
+      <div
+        className="c9"
+      >
+        09.05.2018 03:17
+      </div>
+    </div>
+  </div>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        ⛄
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          Looooong name
+        </div>
+        <div
+          className="c8"
+        >
+          (you)
+        </div>
+      </div>
+      <div
+        className="c9"
+      >
+        09.05.2018 03:17
+      </div>
+    </div>
+  </div>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        🐥
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          Not you
+        </div>
+      </div>
+      <div
+        className="c9"
+      >
+        09.05.2018 03:17
+      </div>
+    </div>
+  </div>
 </div>
 `;

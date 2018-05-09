@@ -31,4 +31,10 @@ export class UsersStore {
     this.user.name = name
     this.users[0] = this.user
   }
+
+  @action public setTheme = (theme: string) => {
+    this.user.theme = theme
+    this.users[0] = this.user
+  }
+
 }

@@ -5,31 +5,33 @@ interface IAvatar {
   children?: React.ReactChild
   small?: boolean
   className?: string
+  background?: string
 }
 
 interface ISmall {
   small?: boolean
   className?: string
   theme?: { colors: { activeText: string, avatarBackground: string } }
+  background?: string
 }
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: ${(p: ISmall) => p.small ? '40px' : '50px'};
+  min-width: ${(p: ISmall) => p.small ? '33px' : '50px'};
   min-height: ${(p: ISmall) => p.small ? '33px' : '50px'};
   border: 2px solid ${(p: ISmall) => p!.theme!.colors.activeText};
   border-radius: 50%;
-  background-color: ${(p: ISmall) => p!.theme!.colors.avatarBackground};
+  background-color: ${(p: ISmall) => p.background || p!.theme!.colors.avatarBackground};
 `
 const Icon = styled.div`
   line-height: ${(p: ISmall) => p.small ? '24px' : '32px'}; ;
   font-size: ${(p: ISmall) => p.small ? '24px' : '32px'};
 `
 
-export const Avatar: React.SFC<IAvatar> = ({ className, small, children }) => (
-  <Wrapper className={className} small={small}>
+export const Avatar: React.SFC<IAvatar> = ({ className, small, background, children }) => (
+  <Wrapper background={background} className={className} small={small}>
     <Icon small={small}>{children}</Icon>
   </Wrapper>
 )

@@ -60,6 +60,7 @@ const Title = styled.input`
   outline: none;
   background: ${props => props.theme.colors.primaryBackground};
   border: ${props => `1px solid ${props.theme.colors.secondaryBackground}`};
+  color: ${props => props.theme.colors.primaryText};
 `
 const Buttons = styled.div`
   margin-top: 10px;
