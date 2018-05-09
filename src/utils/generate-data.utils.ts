@@ -25,7 +25,7 @@ const getUsersStore = async () => {
   const usersStore = await usersResult
   await usersResult.rehydrate()
 
-  if (!usersStore.user) {
+  if (!usersStore.user || !usersStore.user.theme) {
     const user = new UserModel('Eugene')
     usersStore.setUser(user)
   }
