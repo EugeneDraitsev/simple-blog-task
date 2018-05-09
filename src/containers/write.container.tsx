@@ -2,35 +2,44 @@ import { inject, observer } from 'mobx-react'
 import * as React from 'react'
 import styled from 'styled-components'
 import { Show } from '../components/common'
-import { WritePagePost } from '../components/post'
-import { STORE_FEED, STORE_USERS } from '../constants'
-import { PostModel, UserModel } from '../models'
-import { FeedStore } from '../stores'
+import { PrimaryButton } from '../components/controls/button'
+import { WritePageStory } from '../components/stories'
+import { STORE_FEED, STORE_ROUTER, STORE_USERS } from '../constants'
+import { StoryModel, UserModel } from '../models'
+import { FeedStore, RouterStore } from '../stores'
 
 interface IWriteProps {
-  feed: PostModel[]
+  feed: StoryModel[]
   feedStore: FeedStore
+  router: RouterStore
   user: UserModel
 }
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   width: calc(100% - 40px);
+  min-height: calc(100vh - 90px);
   padding: 20px 20px 0 20px;
   @media (max-width: 800px) {
     width: calc(100% - 20px);
     padding: 20px 10px 0 10px;
   };
 `
+const StoriesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+`
 const Text = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: calc(100vh - 90px);
   font-size: 25px;
   font-weight: 300;
 `
@@ -38,34 +47,42 @@ const Text = styled.div`
 @inject(stores => ({
   feed: stores[STORE_FEED].feed,
   feedStore: stores[STORE_FEED],
+  router: stores[STORE_ROUTER],
   user: stores[STORE_USERS].user,
 }))
 @observer
 class WriteContainer extends React.Component<IWriteProps> {
+  public addNewStory = () => {
+    const { user, router, feedStore } = this.props
+    const newStory = new StoryModel('', '', user.id)
+    feedStore.addDraftStory(newStory)
+    router.push(`/edit/${newStory.id}`)
+  }
+
   public render() {
     const { feed, user, feedStore } = this.props
-    const usersPosts = feed.filter(post => post.author.id === user.id)
+    const usersPosts = feed.filter(story => story.author.id === user.id)
 
     return (
       <Wrapper>
-        <Show if={Boolean(usersPosts.length)}>
-          <div>
-            {usersPosts.map(post => (
-              <WritePagePost
-                removePost={feedStore.deletePost}
-                key={post.id}
-                post={post}
-                user={user}
-              />
-            ))}
-          </div>
-        </Show>
-        <Show if={!Boolean(usersPosts.length)}>
-          <Text>You have no any stories😿  <br />
-            Possibility to add new stories is under construction<br />
-            To generate new stories you can clear local storage
-          </Text>
-        </Show>
+        <PrimaryButton onClick={this.addNewStory}>Add New Story 📝</PrimaryButton>
+        <StoriesWrapper>
+          <Show if={Boolean(usersPosts.length)}>
+            <div>
+              {usersPosts.map(story => (
+                <WritePageStory
+                  removePost={feedStore.deleteStory}
+                  key={story.id}
+                  story={story}
+                  user={user}
+                />
+              ))}
+            </div>
+          </Show>
+          <Show if={!Boolean(usersPosts.length)}>
+            <Text>You don't have any stories yet</Text>
+          </Show>
+        </StoriesWrapper>
       </Wrapper>
     )
   }

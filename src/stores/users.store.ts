@@ -19,6 +19,16 @@ export class UsersStore {
 
   @action
   public addUser = (user: UserModel): void => {
-    this.users.push(user)
+    this.users = [...this.users, user]
+  }
+
+  @action public generateAvatar = () => {
+    this.user.avatar = UserModel.generateAvatar()
+    this.users[0] = this.user
+  }
+
+  @action public changeName = (name: string) => {
+    this.user.name = name
+    this.users[0] = this.user
   }
 }

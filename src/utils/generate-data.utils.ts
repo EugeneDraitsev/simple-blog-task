@@ -1,11 +1,11 @@
-import { isEmpty, random, times } from 'lodash'
+import { capitalize, chain, isEmpty, random, times } from 'lodash'
 import * as loremIpsum from 'lorem-ipsum'
 import { create } from 'mobx-persist'
-import { CommentModel, PostModel, UserModel } from '../models'
+import { CommentModel, StoryModel, UserModel } from '../models'
 import { CommentsStore, FeedStore, UsersStore } from '../stores'
 
 const USERS = 5
-const POSTS = 15
+const STORIES = 15
 const COMMENTS = [0, 4]
 
 export const generateInitialData = async () => {
@@ -35,7 +35,18 @@ const getUsersStore = async () => {
     const names = times(USERS).map(() =>
       loremIpsum(({ count: random(1, 3), units: 'words' })))
 
-    names.forEach(name => usersStore.addUser(new UserModel(name)))
+    const capitalizedNames = names.map(x =>
+      chain(x)
+        .split(' ')
+        .map(capitalize)
+        .join(' ')
+        .value(),
+    )
+
+    console.log(names)
+    console.log(capitalizedNames)
+
+    capitalizedNames.forEach(name => usersStore.addUser(new UserModel(name)))
     console.log(usersStore.users)
   }
 
@@ -52,15 +63,15 @@ const getFeedStore = async () => {
 
   if (isEmpty(feedStore.feed)) {
     // generate start feed data
-    const texts = times(POSTS).map(() => loremIpsum(
+    const texts = times(STORIES).map(() => loremIpsum(
       { count: random(6, 17), format: 'html', units: 'paragraphs' }))
 
-    const titles = times(POSTS).map(() =>
+    const titles = times(STORIES).map(() =>
       loremIpsum(({ count: Math.round(3 * Math.random()) + 1, units: 'words' })))
 
     // put data into feed
     titles.forEach((title, i) =>
-      feedStore.addPost(new PostModel(title, texts[i], i ? random(1, USERS) : 1)))
+      feedStore.addStory(new StoryModel(title, texts[i], i ? random(1, USERS) : 1)))
   }
 
   return feedStore
@@ -76,15 +87,15 @@ const getCommentsStore = async (usersStore: UsersStore, feedStore: FeedStore) =>
   await commentsResult.rehydrate()
 
   if (isEmpty(commentsStore.comments)) {
-    feedStore.feed.forEach((post) => {
+    feedStore.feed.forEach((story) => {
       const amount = random(COMMENTS[0], COMMENTS[1])
 
-      const postCommentsText = times(amount).map(() =>
+      const storyCommentsText = times(amount).map(() =>
         loremIpsum(({ count: random(2, 3), units: 'sentences' })))
 
       // put data into comments
-      postCommentsText.forEach(x =>
-        commentsStore.addComment(new CommentModel(x, random(1, USERS), post.id)))
+      storyCommentsText.forEach(x =>
+        commentsStore.addComment(new CommentModel(x, random(1, USERS), story.id)))
 
     })
   }

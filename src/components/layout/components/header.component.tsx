@@ -4,6 +4,20 @@ import { UserInfo } from '../../'
 import { UserModel } from '../../../models'
 import { MenuLink } from './'
 
+interface ILink {
+  to: string
+  title: string
+  onClick?: () => void
+}
+
+interface IHeaderProps {
+  links: ILink[],
+  user: UserModel,
+  isSmallScreen: boolean
+  openSidebar: () => void
+  closeSidebar: () => void
+}
+
 const Wrapper = styled.div`
   position: fixed;
   top: 0;
@@ -62,20 +76,6 @@ const Flex = styled.div`
   flex: 1;
 `
 
-interface ILink {
-  to: string
-  title: string
-  onClick?: () => void
-}
-
-interface IMenuLinkProps {
-  links: ILink[],
-  user: UserModel,
-  isSmallScreen: boolean
-  openSidebar: () => void
-  closeSidebar: () => void
-}
-
 const getLinks = (links: ILink[], closeSidebar: () => void, isSmallScreen: boolean) => {
   if (!isSmallScreen) {
     return (
@@ -93,7 +93,7 @@ const onLogoClick = (isSmallScreen: boolean, openSidebar: () => void) => {
   }
 }
 
-export const Header: React.SFC<IMenuLinkProps> = ({ links, user, isSmallScreen, closeSidebar, openSidebar }) => {
+export const Header: React.SFC<IHeaderProps> = ({ links, user, isSmallScreen, closeSidebar, openSidebar }) => {
   return (
     <Wrapper>
       <Logo onClick={() => onLogoClick(isSmallScreen, openSidebar)} />

@@ -3,11 +3,11 @@ import * as React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Card } from '../'
-import { PostModel, UserModel } from '../../models'
-import { PostInfo } from './'
+import { StoryModel, UserModel } from '../../models'
+import { StoryInfo } from './'
 
 interface IUserInfo {
-  post: PostModel
+  story: StoryModel
   user: UserModel
   className?: string
 }
@@ -44,24 +44,30 @@ const Title = styled.div`
   word-break: break-all;
   line-height: 54px;
   max-height: 162px;
+  max-width: 100%;
 `
 const Text = styled.div`
   font-size: 16px;
+  max-width: 100%;
   font-weight: 300;
   line-height: 20px;
 `
+const StyledLink = styled(NavLink)`
+  display: block;
+  max-width: 100%;
+`
 
-export class FeedPost extends React.Component<IUserInfo> {
+export class FeedStory extends React.Component<IUserInfo> {
   public render() {
-    const { className, post, user } = this.props
+    const { className, story, user } = this.props
 
     return (
       <Wrapper className={className}>
-        <NavLink to={`/post/${post.id}`}>
-          <Title>{post.title}</Title>
-          <Text dangerouslySetInnerHTML={{ __html: post.textPreview }} />
-          <PostInfo post={post} user={user} />
-        </NavLink>
+        <StyledLink to={`/story/${story.id}`}>
+          <Title>{story.title}</Title>
+          <Text dangerouslySetInnerHTML={{ __html: story.textPreview }} />
+          <StoryInfo story={story} user={user} />
+        </StyledLink>
       </Wrapper>
     )
   }

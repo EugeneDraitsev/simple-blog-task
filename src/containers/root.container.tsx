@@ -28,7 +28,7 @@ const FeedRoute = Loadable({
 })
 
 const PostRoute = Loadable({
-  loader: () => import('./post.container'),
+  loader: () => import('./story.container'),
   loading: Loading,
 })
 
@@ -65,7 +65,7 @@ export default class RootContainer extends React.PureComponent<IProps> {
             <Route exact path="/" render={() => <Redirect to="/feed" />} />
             <Route exact path="/feed" component={FeedRoute} />
             <Route exact path="/write" component={WriteRoute} />
-            <Route exact path="/post/:id" component={PostRoute} />
+            <Route exact path="/story/:id" component={PostRoute} />
             <Route exact path="/edit/:id" component={EditRoute} />
             <Route exact path="/settings" component={SettingsRoute} />
             <Route component={ErrorRoute} />

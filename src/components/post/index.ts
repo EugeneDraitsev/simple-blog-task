@@ -1,5 +1,0 @@
-export * from './feed-post.component'
-export * from './single-post.component'
-export * from './post-info.component'
-export * from './comment-views-info.component'
-export * from './write-page-post.component'

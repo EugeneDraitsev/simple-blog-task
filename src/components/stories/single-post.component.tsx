@@ -1,12 +1,13 @@
+import { isEmpty } from 'lodash'
 import * as React from 'react'
 import styled from 'styled-components'
-import { Card } from '../'
-import { CommentModel, PostModel, UserModel } from '../../models'
+import { Card, Show } from '../'
+import { CommentModel, StoryModel, UserModel } from '../../models'
 import { AddComment, Comment } from '../comment'
-import { PostInfo } from './'
+import { StoryInfo } from './'
 
 interface ISinglePost {
-  post: PostModel
+  story: StoryModel
   user: UserModel
   comments: CommentModel[]
   className?: string
@@ -32,29 +33,43 @@ const Title = styled.div`
   word-break: break-all;
 `
 const Text = styled.div`
+  max-width: 100%;
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
 `
 const Comments = styled.div`
   margin-top: 30px;
+  width: 100%;
+`
+const NoComments = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: ${p => p.theme.colors.secondaryText};
 `
 
-export class SinglePost extends React.Component<ISinglePost> {
+export class SingleStory extends React.Component<ISinglePost> {
   public render() {
-    const { className, post, user, comments } = this.props
+    const { className, story, user, comments } = this.props
+    const storyComments = comments.filter(x => x.storyId === story.id)
 
     return (
       <Wrapper className={className}>
-        <Title>{post.title}</Title>
-        <Text dangerouslySetInnerHTML={{ __html: post.text }} />
-        <PostInfo post={post} user={user} />
+        <Title>{story.title}</Title>
+        <Text dangerouslySetInnerHTML={{ __html: story.text }} />
+        <StoryInfo story={story} user={user} />
         <Comments>
-          {comments.filter(x => x.postId === post.id).map(comment =>
+          {storyComments.map(comment =>
             <Comment key={comment.id} comment={comment} user={user} />)
           }
         </Comments>
-        <AddComment post={post} user={user} />
+        <Show if={isEmpty(storyComments)}>
+          <NoComments>
+            There are no comments here yet.
+          </NoComments>
+        </Show>
+        <AddComment story={story} user={user} />
       </Wrapper>
     )
   }

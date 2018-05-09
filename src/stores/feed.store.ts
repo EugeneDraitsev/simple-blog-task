@@ -1,46 +1,57 @@
 import { action, observable } from 'mobx'
 import { persist } from 'mobx-persist'
-import { PostModel } from '../models'
+import { StoryModel } from '../models'
 
 export class FeedStore {
-  @persist('list', PostModel) @observable public feed: PostModel[] = []
+  @persist('list', StoryModel) @observable public feed: StoryModel[] = []
+  @observable public draftStories: StoryModel[] = []
 
-  constructor(feed: PostModel[]) {
+  constructor(feed: StoryModel[]) {
     this.feed = feed
   }
 
   @action
-  public addPost = (item: PostModel): void => {
-    this.feed.push(item)
+  public addStory = (item: StoryModel): void => {
+    this.feed = [...this.feed, item]
+  }
+
+  @action
+  public addDraftStory = (item: StoryModel): void => {
+    this.draftStories = [...this.draftStories, item]
   }
 
   @action
   public addViews = (id: number): void => {
-    this.feed = this.feed.map((post) => {
-      if (post.id === id) {
-        post.views = post.views + 1
+    this.feed = this.feed.map((story) => {
+      if (story.id === id) {
+        story.views = story.views + 1
       }
-      return post
+      return story
     })
   }
 
   @action
-  public editPost = (id: number, data: Partial<PostModel>): void => {
-    this.feed = this.feed.map((post) => {
-      if (post.id === id) {
+  public editStory = (id: number, data: Partial<StoryModel>): void => {
+    this.feed = this.feed.map((story) => {
+      if (story.id === id) {
         if (typeof data.text === 'string') {
-          post.text = data.text
+          story.text = data.text
         }
         if (typeof data.title === 'string') {
-          post.title = data.title
+          story.title = data.title
         }
       }
-      return post
+      return story
     })
   }
 
   @action
-  public deletePost = (id: number): void => {
-    this.feed = this.feed.filter(post => post.id !== id)
+  public deleteStory = (id: number): void => {
+    this.feed = this.feed.filter(story => story.id !== id)
+  }
+
+  @action
+  public deleteDraftStory = (id: number): void => {
+    this.feed = this.feed.filter(story => story.id !== id)
   }
 }

@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   background-color: ${(p: ISmall) => p!.theme!.colors.avatarBackground};
 `
 const Icon = styled.div`
-  margin-top: 3px;
+  line-height: ${(p: ISmall) => p.small ? '24px' : '32px'}; ;
   font-size: ${(p: ISmall) => p.small ? '24px' : '32px'};
 `
 

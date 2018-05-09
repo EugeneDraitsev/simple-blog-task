@@ -15,7 +15,7 @@ export class CommentModel {
   @persist @observable public readonly id: number
   @persist @observable public text: string
   @persist @observable public authorId: number
-  @persist @observable public postId: number
+  @persist @observable public storyId: number
   @persist('object') @observable public date: Date
 
   @computed get author(): UserModel {
@@ -27,11 +27,11 @@ export class CommentModel {
     return moment(this.date).format('DD.MM.YYYY HH:mm')
   }
 
-  constructor(text: string, authorId: number, postId: number) {
+  constructor(text: string, authorId: number, storyId: number) {
     this.id = CommentModel.generateId()
     this.text = text
     this.authorId = authorId
-    this.postId = postId
+    this.storyId = storyId
     this.date = new Date()
   }
 }

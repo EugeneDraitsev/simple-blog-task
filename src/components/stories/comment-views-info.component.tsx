@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { PostModel } from '../../models'
+import { StoryModel } from '../../models'
 
 interface ICommentViewsInfo {
-  post: PostModel
+  story: StoryModel
   className?: string
 }
 
@@ -24,11 +24,11 @@ const Value = styled.div`
 `
 
 export const CommentViewsInfo: React.SFC<ICommentViewsInfo> =
-  ({ className, post }) => (
+  ({ className, story }) => (
     <Wrapper className={className}>
       <Icon className="material-icons">comment</Icon>
-      <Value>{post.comments.length}</Value>
+      <Value>{story.comments.length}</Value>
       <Icon className="material-icons">remove_red_eye</Icon>
-      <Value>{post.views}</Value>
+      <Value>{story.views}</Value>
     </Wrapper>
   )

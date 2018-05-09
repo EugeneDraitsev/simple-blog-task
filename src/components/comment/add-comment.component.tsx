@@ -4,13 +4,13 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { PrimaryButton } from '../'
 import { STORE_COMMENTS } from '../../constants'
-import { CommentModel, PostModel, UserModel } from '../../models'
+import { CommentModel, StoryModel, UserModel } from '../../models'
 import { CommentsStore } from '../../stores'
 
-interface IPostProps {
+interface IAddComment {
   commentsStore?: CommentsStore
   user: UserModel
-  post: PostModel
+  story: StoryModel
 }
 
 const Wrapper = styled.div`
@@ -58,7 +58,7 @@ const Counter = styled.div`
 
 @inject(stores => ({ commentsStore: stores[STORE_COMMENTS] }))
 @observer
-export class AddComment extends React.Component<IPostProps> {
+export class AddComment extends React.Component<IAddComment> {
   public state = {
     comment: '',
   }
@@ -74,10 +74,10 @@ export class AddComment extends React.Component<IPostProps> {
   }
 
   public addComment = () => {
-    const { commentsStore, user, post } = this.props
+    const { commentsStore, user, story } = this.props
     const { comment } = this.state
 
-    commentsStore!.addComment(new CommentModel(comment, user.id, post.id))
+    commentsStore!.addComment(new CommentModel(comment, user.id, story.id))
     this.setState({ comment: '' })
 
   }

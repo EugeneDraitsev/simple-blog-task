@@ -4,10 +4,10 @@ import 'react-toastify/dist/ReactToastify.css'
 import Draft, { draftToHtml, draftToRaw, htmlToDraft } from 'react-wysiwyg-typescript'
 import styled from 'styled-components'
 import { Card, PrimaryButton } from '../'
-import { PostModel, UserModel } from '../../models'
+import { StoryModel, UserModel } from '../../models'
 
 interface IEditProps {
-  post: PostModel
+  story: StoryModel
   user: UserModel
   savePost: (text: string, title: string) => void
 }
@@ -37,6 +37,9 @@ const Wrapper = styled(Card)`
     overflow: hidden;
     width: 100%;
   }
+  .public-DraftEditor-content {
+    overflow: hidden;
+  }
   .Toastify__toast-body, .Toastify__toast, .Toastify__close-button {
     color: ${props => props.theme.colors.primaryText};
     background: ${props => props.theme.colors.primaryBackground};
@@ -58,7 +61,6 @@ const Title = styled.input`
   background: ${props => props.theme.colors.primaryBackground};
   border: ${props => `1px solid ${props.theme.colors.secondaryBackground}`};
 `
-
 const Buttons = styled.div`
   margin-top: 10px;
   display: flex;
@@ -67,10 +69,10 @@ const Buttons = styled.div`
   width: 100%;
 `
 
-class PostEdit extends React.Component<IEditProps> {
+class StoryEdit extends React.Component<IEditProps> {
   public state = {
-    editorState: htmlToDraft(this.props.post.text),
-    title: this.props.post.title,
+    editorState: htmlToDraft(this.props.story.text),
+    title: this.props.story.title,
   }
   public toastId: number
 
@@ -82,7 +84,7 @@ class PostEdit extends React.Component<IEditProps> {
     savePost(text, title)
     if (!toast.isActive(this.toastId)) {
       this.toastId = toast('Saved!', {
-        autoClose: 3222222000,
+        autoClose: 3000,
         closeOnClick: true,
         hideProgressBar: true,
         pauseOnHover: true,
@@ -115,4 +117,4 @@ class PostEdit extends React.Component<IEditProps> {
   }
 }
 
-export default PostEdit
+export default StoryEdit

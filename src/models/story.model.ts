@@ -5,7 +5,7 @@ import { STORE_COMMENTS, STORE_USERS } from '../constants'
 import { CommentModel, UserModel } from './'
 import { stores } from './../'
 
-export class PostModel {
+export class StoryModel {
   public static generateId() {
     return this.nextId = (this.nextId || 0) + 1
   }
@@ -21,11 +21,12 @@ export class PostModel {
 
   @computed get comments(): CommentModel[] {
     const comments: CommentModel[] = stores[STORE_COMMENTS].comments
-    return comments.filter(comment => comment.postId === this.id)
+    return comments.filter(comment => comment.storyId === this.id)
   }
 
   @computed get author(): UserModel {
     const users: UserModel[] = stores[STORE_USERS].users
+    console.log(stores[STORE_USERS].users)
     return users.find(user => user.id === this.authorId) || stores[STORE_USERS].user
   }
 
@@ -52,7 +53,7 @@ export class PostModel {
   }
 
   constructor(title: string, text: string, authorId: number) {
-    this.id = PostModel.generateId()
+    this.id = StoryModel.generateId()
     this.title = title
     this.text = text
     this.authorId = authorId

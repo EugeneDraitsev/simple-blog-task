@@ -25,6 +25,7 @@ const Wrapper = styled(Card)`
 `
 const Text = styled.div`
   font-size: 16px;
+  max-width: calc(100% - 64px);
   font-weight: 300;
   line-height: 20px;
   margin-left: 64px;

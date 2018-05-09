@@ -3,18 +3,18 @@ import * as React from 'react'
 import * as Loadable from 'react-loadable'
 import styled from 'styled-components'
 import { STORE_FEED, STORE_ROUTER, STORE_USERS } from '../constants'
-import { PostModel, UserModel } from '../models'
+import { StoryModel, UserModel } from '../models'
 import { FeedStore, RouterStore } from '../stores'
 
 interface IEditProps {
-  match: { params: { id: string } },
-  feed: PostModel[],
+  feed: StoryModel[],
   feedStore: FeedStore
-  user: UserModel
+  match: { params: { id: string } },
   router: RouterStore
+  user: UserModel
 }
 
-const PostEdit = Loadable({
+const StoryEdit = Loadable({
   loader: () => import('../components/editor/editor.component'),
   loading: () => <div />,
 })
@@ -42,34 +42,41 @@ const Wrapper = styled.div`
 class EditContainer extends React.Component<IEditProps> {
   public componentDidMount() {
     const { user, router } = this.props
-    const post = this.findPost()
+    const story = this.findPost()
 
-    if (!post || post.authorId !== user.id) {
+    if (!story || story.authorId !== user.id) {
       return router.push('/404')
     }
   }
 
   public savePost = (text: string, title: string): void => {
-    const post = this.findPost()
-    this.props.feedStore.editPost(post!.id, { title, text })
+    const { feedStore } = this.props
+    const story = this.findPost()
+
+    if (feedStore.draftStories.map(x => x.id).includes(story!.id)) {
+      feedStore.deleteDraftStory(story!.id)
+      feedStore.addStory(story!)
+    }
+
+    this.props.feedStore.editStory(story!.id, { title, text })
   }
 
   public render() {
     const { user } = this.props
-    const post = this.findPost()
+    const story = this.findPost()
 
     return (
       <Wrapper>
-        <PostEdit savePost={this.savePost} post={post!} user={user} />
+        <StoryEdit savePost={this.savePost} story={story!} user={user} />
       </Wrapper>
     )
   }
 
   private findPost = () => {
-    const { feed, match } = this.props
+    const { feed, match, feedStore: { draftStories } } = this.props
 
     const id = Number(match.params.id)
-    return feed.find(x => x!.id === id)
+    return feed.find(x => x!.id === id) || draftStories.find(x => x!.id === id)
   }
 }
 

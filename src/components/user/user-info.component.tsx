@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react'
 import * as React from 'react'
 import styled from 'styled-components'
 import { UserModel } from '../../models'
@@ -22,13 +23,18 @@ const Name = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-transform: capitalize;
 `
 
-export const UserInfo: React.SFC<IUserInfo> = ({ user, className }) => {
-  return (
-    <Wrapper className={className}>
-      <Name>{user.name}</Name>
-      <Avatar>{user.avatar}</Avatar>
-    </Wrapper>
-  )
+@observer
+export class UserInfo extends React.Component<IUserInfo> {
+  public render() {
+    const { user, className } = this.props
+    return (
+      <Wrapper className={className}>
+        <Name>{user.name}</Name>
+        <Avatar>{user.avatar}</Avatar>
+      </Wrapper>
+    )
+  }
 }

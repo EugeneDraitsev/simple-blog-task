@@ -1,10 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { CommentViewsInfo, UserPostInfo } from '../'
-import { PostModel, UserModel } from '../../models'
+import { StoryModel, UserModel } from '../../models'
 
 interface IPostInfo {
-  post: PostModel
+  story: StoryModel
   user: UserModel
   className?: string
 }
@@ -17,19 +17,19 @@ const Wrapper = styled.div`
   width: 100%;
 `
 
-export class PostInfo extends React.Component<IPostInfo> {
+export class StoryInfo extends React.Component<IPostInfo> {
   public render() {
-    const { className, post, user } = this.props
+    const { className, story, user } = this.props
 
     return (
       <Wrapper className={className}>
         <UserPostInfo
-          name={post.author.name}
-          avatar={post.author.avatar}
-          formattedDate={post.formattedDate}
-          isYou={post.author.id === user.id}
+          name={story.author.name}
+          avatar={story.author.avatar}
+          formattedDate={story.formattedDate}
+          isYou={story.author.id === user.id}
         />
-        <CommentViewsInfo post={post}/>
+        <CommentViewsInfo story={story}/>
       </Wrapper>
     )
   }

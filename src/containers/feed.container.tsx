@@ -1,7 +1,7 @@
 import { inject, observer } from 'mobx-react'
 import * as React from 'react'
 import styled from 'styled-components'
-import { FeedPost } from '../components/post'
+import { FeedStory } from '../components/stories'
 import { STORE_FEED, STORE_USERS } from '../constants'
 import { FeedStore, UsersStore } from '../stores/'
 
@@ -31,7 +31,7 @@ class FeedContainer extends React.Component<IFeedProps> {
 
     return (
       <Wrapper>
-        {feed.map(post => <FeedPost key={post.id} post={post} user={user} />)}
+        {feed.map(story => <FeedStory key={story.id} story={story} user={user} />)}
       </Wrapper>
     )
   }
