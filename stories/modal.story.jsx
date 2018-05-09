@@ -1,7 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { DeleteModal, Modal, Show } from './../src/components'
+import { Show } from './../src/components/common'
+import { Modal } from './../src/components/modal/modal.compontent'
+import { DeleteModal } from './../src/components/modal/delete-modal.compontent'
 
 const Wrapper = styled.div`
   height: 100vh;

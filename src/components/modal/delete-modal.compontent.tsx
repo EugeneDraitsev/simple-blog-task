@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Button, DangerButton } from '../'
+import { Button, DangerButton } from '../controls/button'
 import { Modal } from './modal.compontent'
 
 const ModalContent = styled.div`

@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 import { storiesOf } from '@storybook/react'
 
-import { ModalStory, ButtonsModalStory } from './modal.story'
-import { Button, DangerButton, PrimaryButton, Spinner } from '../src/components'
+import { ButtonsModalStory, ModalStory } from './modal.story'
+import { Button, DangerButton, PrimaryButton } from '../src/components/controls/button'
+import { Spinner } from '../src/components/common/'
 import Theme from '../src/styles/themes/default.theme'
 import '../src/styles/global.styles'
 
@@ -38,7 +39,7 @@ storiesOf('Buttons', module)
 
 storiesOf('Modal', module)
   .addDecorator(StyledDecorator)
-  .add('Modal with overlay', () => <ModalStory overlay />)
+  .add('Simple modal', () => <ModalStory overlay />)
   .add('Modal with title', () => <ModalStory overlay title="test title" />)
   .add('Modal with animation', () => <ModalStory animated overlay title="test title" />)
   .add('Modal with buttons', () => <ButtonsModalStory />)
