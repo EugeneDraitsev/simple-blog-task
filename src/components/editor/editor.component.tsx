@@ -27,8 +27,11 @@ const Wrapper = styled(Card)`
   @media (max-width: 800px) {
      margin: 0 0 20px 0;
   }
-  .rdw-editor-wrapper, .rdw-editor-toolbar, .rdw-option-wrapper, .rdw-dropdown-selectedtext {
+  .rdw-editor-wrapper, .rdw-editor-toolbar, .rdw-dropdown-selectedtext {
     background: ${props => props.theme.colors.primaryBackground};
+  }
+  .rdw-option-wrapper {
+    background: ${props => props.theme.colors.avatarBackground};
   }
   .rdw-editor-toolbar {
     margin-bottom: 10px;

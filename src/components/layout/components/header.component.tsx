@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { UserInfo } from '../../'
 import { UserModel } from '../../../models'
@@ -75,6 +76,9 @@ const Logo = styled.div`
 const Flex = styled.div`
   flex: 1;
 `
+const Link = styled(NavLink)`
+  cursor: pointer;
+`
 
 const getLinks = (links: ILink[], closeSidebar: () => void, isSmallScreen: boolean) => {
   if (!isSmallScreen) {
@@ -99,7 +103,9 @@ export const Header: React.SFC<IHeaderProps> = ({ links, user, isSmallScreen, cl
       <Logo onClick={() => onLogoClick(isSmallScreen, openSidebar)} />
       {getLinks(links, closeSidebar, isSmallScreen)}
       <Flex />
-      <UserInfo user={user} />
+      <Link to="settings">
+        <UserInfo user={user} />
+      </Link>
     </Wrapper>
   )
 }

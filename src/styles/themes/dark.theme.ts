@@ -13,6 +13,7 @@ const colors = {
   overlay: 'rgba(255, 255, 255, 0.5)',
   primary: '#349884',
   primaryBackground: '#303030',
+  primaryBorder: '#424242',
   primaryText: '#ffffff',
   secondaryBackground: '#d9d9d9',
   secondaryText: '#cecece',
