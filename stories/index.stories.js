@@ -4,8 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { storiesOf } from '@storybook/react'
 
 import { ButtonsModalStory, ModalStory } from './modal.story'
-import { Button, DangerButton, PrimaryButton } from '../src/components/controls/button'
-import { Spinner } from '../src/components/common/'
+import { Spinner, Button, DangerButton, PrimaryButton } from '../src/components'
 import Theme from '../src/styles/themes/default.theme'
 import '../src/styles/global.styles'
 
