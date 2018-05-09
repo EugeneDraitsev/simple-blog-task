@@ -305,59 +305,6 @@ exports[`Storyshots Modal Modal with animation 1`] = `
 `;
 
 exports[`Storyshots Modal Modal with buttons 1`] = `
-.c13 {
-  cursor: pointer;
-  display: inline-block;
-  min-height: 1em;
-  outline: 0;
-  border: none;
-  vertical-align: baseline;
-  background: #E6E6E6;
-  color: #828282;
-  font-family: Roboto,sans-serif;
-  padding: 20px;
-  text-shadow: none;
-  font-weight: 700;
-  line-height: 1em;
-  font-size: 14px;
-  font-style: normal;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
-  text-transform: uppercase;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: 0.3s background-color;
-  transition: 0.3s background-color;
-}
-
-.c13:hover {
-  background: #cdcdcd;
-}
-
-.c13[disabled] {
-  background: #808080;
-  color: #e8e8e8;
-  cursor: auto;
-}
-
-.c14 {
-  background: #ca5a5a;
-  color: #FFFFFF;
-}
-
-.c14:hover {
-  background: #b63b3b;
-}
-
-.c14[disabled] {
-  background: #e3a7a7;
-  cursor: auto;
-}
-
 .c4 {
   position: fixed;
   display: inline-block;
@@ -417,6 +364,59 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   z-index: 3;
+}
+
+.c13 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+
+.c13:hover {
+  background: #cdcdcd;
+}
+
+.c13[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
+}
+
+.c14 {
+  background: #ca5a5a;
+  color: #FFFFFF;
+}
+
+.c14:hover {
+  background: #b63b3b;
+}
+
+.c14[disabled] {
+  background: #e3a7a7;
+  cursor: auto;
 }
 
 .c9 {
@@ -554,160 +554,6 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
             >
               Delete
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Modal Modal with overlay 1`] = `
-.c3 {
-  position: fixed;
-  display: inline-block;
-  visibility: hidden;
-  max-width: 80vw;
-  width: 400px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  background-color: rgb(255,255,255);
-  border-radius: 4px;
-  padding: 20px;
-  z-index: 4;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 20px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c5 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  font-size: 40px;
-  line-height: 40px;
-  cursor: pointer;
-  margin: 0 10px;
-}
-
-.c2 {
-  display: inline-block;
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0,0.5);
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  z-index: 3;
-}
-
-.c0 {
-  height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 {
-  padding: 20px;
-  color: rgb(1,85,147);
-  font-size: 40px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-}
-
-.c8 {
-  padding: 0 5px;
-  font-size: 16px;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-    onClick={[Function]}
-  >
-    Click to open popup
-  </div>
-  <div>
-    <div
-      className="c2"
-      onClick={[Function]}
-    />
-    <div
-      className="c3"
-    >
-      <div
-        className="c4"
-      >
-        <div
-          className="c5"
-        />
-        <div
-          className="material-icons c6"
-          onClick={[Function]}
-        >
-          close
-        </div>
-      </div>
-      <div
-        className="greeting"
-      >
-        <div
-          className="c7"
-        >
-          <div
-            className="c8"
-          >
-            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
           </div>
         </div>
       </div>
@@ -869,6 +715,160 @@ exports[`Storyshots Modal Modal with title 1`] = `
         >
           <div
             className="c9"
+          >
+            Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Modal Simple modal 1`] = `
+.c3 {
+  position: fixed;
+  display: inline-block;
+  visibility: hidden;
+  max-width: 80vw;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: rgb(255,255,255);
+  border-radius: 4px;
+  padding: 20px;
+  z-index: 4;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 {
+  font-size: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.c2 {
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 3;
+}
+
+.c0 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  padding: 20px;
+  color: rgb(1,85,147);
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c8 {
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Click to open popup
+  </div>
+  <div>
+    <div
+      className="c2"
+      onClick={[Function]}
+    />
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <div
+          className="c5"
+        />
+        <div
+          className="material-icons c6"
+          onClick={[Function]}
+        >
+          close
+        </div>
+      </div>
+      <div
+        className="greeting"
+      >
+        <div
+          className="c7"
+        >
+          <div
+            className="c8"
           >
             Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
           </div>
