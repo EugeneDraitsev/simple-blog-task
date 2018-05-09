@@ -103,7 +103,7 @@ export const Header: React.SFC<IHeaderProps> = ({ links, user, isSmallScreen, cl
       <Logo onClick={() => onLogoClick(isSmallScreen, openSidebar)} />
       {getLinks(links, closeSidebar, isSmallScreen)}
       <Flex />
-      <Link to="settings">
+      <Link to="/settings">
         <UserInfo user={user} />
       </Link>
     </Wrapper>

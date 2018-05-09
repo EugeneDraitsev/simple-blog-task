@@ -12,7 +12,8 @@ export class FeedStore {
 
   @action
   public addStory = (item: StoryModel): void => {
-    this.feed = [...this.feed, item]
+    this.feed.unshift(item)
+    this.feed = [...this.feed]
   }
 
   @action

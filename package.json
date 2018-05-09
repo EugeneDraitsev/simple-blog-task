@@ -18,6 +18,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "core-js": "^2.5.6",
     "history": "^4.7.2",
     "lodash": "^4.17.10",
     "lorem-ipsum": "^1.0.4",

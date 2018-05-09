@@ -1,3 +1,5 @@
+import 'core-js'
+
 import { createBrowserHistory } from 'history'
 import { configure } from 'mobx'
 import { inject, observer, Provider } from 'mobx-react'

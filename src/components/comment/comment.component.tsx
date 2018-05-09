@@ -30,6 +30,7 @@ const Text = styled.div`
   font-weight: 300;
   line-height: 20px;
   margin-left: 64px;
+  word-break: break-all;
 `
 
 export const Comment: React.SFC<IComment> =
