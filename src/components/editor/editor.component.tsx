@@ -22,7 +22,6 @@ const Wrapper = styled(Card)`
   height: auto;
   margin: 0 20px 20px 20px;
   padding: 20px;
-  transition: all 0.5s;
   border: 1px solid transparent;
   @media (max-width: 800px) {
      margin: 0 0 20px 0;

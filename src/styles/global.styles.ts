@@ -15,6 +15,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  &.disable-transitions {
+    #page-wrap {
+      * {
+        transition: none !important;
+      }
+    }
+  }
 }
 
 a {

@@ -14,7 +14,9 @@ interface IThemeToggle {
 export class ThemeToggle extends React.Component<IThemeToggle> {
   public toggleTheme = () => {
     const { usersStore } = this.props
+    document.body.classList.add('disable-transitions')
     usersStore!.toggleTheme()
+    setTimeout(() => document.body.classList.remove('disable-transitions'), 300)
   }
 
   public render() {
