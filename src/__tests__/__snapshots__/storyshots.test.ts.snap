@@ -2542,6 +2542,7 @@ exports[`Storyshots Toggle Awesome toggle 🌚🌞 1`] = `
   border-radius: 40px;
   z-index: 2;
   opacity: 0;
+  cursor: pointer;
 }
 
 .c2:checked ~ .c3 {
