@@ -1,8 +1,8 @@
 import { inject, observer } from 'mobx-react'
 import * as React from 'react'
-import * as Loadable from 'react-loadable'
 import styled from 'styled-components'
-import { Loading } from '../components'
+
+import StoryEdit from '../components/editor/editor.component'
 import { STORE_FEED, STORE_ROUTER, STORE_USERS } from '../constants'
 import { StoryModel, UserModel } from '../models'
 import { FeedStore, RouterStore } from '../stores'
@@ -14,11 +14,6 @@ interface IEditProps {
   router: RouterStore
   user: UserModel
 }
-
-const StoryEdit = Loadable({
-  loader: () => import('../components/editor/editor.component'),
-  loading: Loading,
-})
 
 const Wrapper = styled.div`
   display: flex;

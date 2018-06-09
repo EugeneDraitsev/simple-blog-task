@@ -5,7 +5,7 @@ import { createStores } from '../src/stores'
 import { createBrowserHistory } from 'history'
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /.stories.js$/)
+const req = require.context('../stories', true, /.stories.jsx$/)
 
 
 const createRoot = async () => {
