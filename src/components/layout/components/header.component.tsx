@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { UserInfo } from '../../'
+import { Show, ThemeToggle, UserInfo } from '../../'
 import { UserModel } from '../../../models'
+import menu from '../images/menu.svg'
 import { MenuLink } from './'
 
 interface ILink {
@@ -64,10 +65,10 @@ const HeaderLink = styled(MenuLink)`
     display: block;
   }
 `
-const Logo = styled.div`
-  height: 70px;
-  width: 90px;
-  background: url("/images/logo.svg") center no-repeat;
+const MenuButton = styled.div`
+  min-height: 35px;
+  min-width: 35px;
+  background: url(${menu}) center no-repeat;
   background-size: contain;
   @media (max-width: 800px) {
     cursor: pointer;
@@ -78,6 +79,9 @@ const Flex = styled.div`
 `
 const Link = styled(NavLink)`
   cursor: pointer;
+`
+const StyledToggle = styled(ThemeToggle)`
+  transform: scale(0.6);
 `
 
 const getLinks = (links: ILink[], closeSidebar: () => void, isSmallScreen: boolean) => {
@@ -91,16 +95,15 @@ const getLinks = (links: ILink[], closeSidebar: () => void, isSmallScreen: boole
   return null
 }
 
-const onLogoClick = (isSmallScreen: boolean, openSidebar: () => void) => {
-  if (isSmallScreen) {
-    openSidebar()
-  }
-}
-
 export const Header: React.SFC<IHeaderProps> = ({ links, user, isSmallScreen, closeSidebar, openSidebar }) => {
   return (
     <Wrapper>
-      <Logo onClick={() => onLogoClick(isSmallScreen, openSidebar)} />
+      <Show if={isSmallScreen}>
+        <MenuButton onClick={openSidebar} />
+      </Show>
+      <Show if={!isSmallScreen}>
+        <StyledToggle />
+      </Show>
       {getLinks(links, closeSidebar, isSmallScreen)}
       <Flex />
       <Link to="/settings">

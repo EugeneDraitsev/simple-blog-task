@@ -7,7 +7,7 @@ import { ButtonsModalStory, ModalStory } from './modal.story'
 import getStoriesStory from './stories.story'
 import getUserStory from './user.story'
 import getCommentsStory from './comments.story'
-import { Spinner, Button, DangerButton, PrimaryButton } from '../src/components'
+import { Spinner, Button, DangerButton, PrimaryButton, Toggle } from '../src/components'
 import light from '../src/styles/themes/light.theme'
 import dark from '../src/styles/themes/dark.theme'
 import '../src/styles/global.styles'
@@ -45,6 +45,14 @@ storiesOf('Buttons', module)
       <DangerButton disabled>Disabled</DangerButton>
       <Button>🍔 Emoji</Button>
       <PrimaryButton>🍔 Emoji</PrimaryButton>
+    </StoriesWrapper>
+  ))
+
+storiesOf('Toggle', module)
+  .addDecorator(StyledDecorator)
+  .add('Awesome toggle 🌚🌞', () => (
+    <StoriesWrapper>
+      <Toggle />
     </StoriesWrapper>
   ))
 

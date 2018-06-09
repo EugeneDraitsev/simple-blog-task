@@ -37,4 +37,8 @@ export class UsersStore {
     this.users[0] = this.user
   }
 
+  @action public toggleTheme = () => {
+    this.user.theme = this.user.theme === 'light' ? 'dark' : 'light'
+    this.users[0] = this.user
+  }
 }

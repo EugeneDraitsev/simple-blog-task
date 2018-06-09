@@ -3,8 +3,9 @@ import * as React from 'react'
 import { push as Menu } from 'react-burger-menu'
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
+import { ThemeToggle } from '../'
 import { STORE_ROUTER, STORE_SIDEBAR, STORE_USERS } from '../../constants'
-import { MenuLink, Header } from './components'
+import { Header, MenuLink } from './components'
 
 const PageContent = styled.div`
    margin-top: 70px;
@@ -29,23 +30,31 @@ const Links = styled.div`
   height: calc(100% - 20px);
   background: ${props => props.theme.sidebarGradient};
 `
+const ToggleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+`
 
-class Layout extends React.Component {
-  mql = window.matchMedia('(min-width: 801px)')
-  links = [
+@inject(STORE_SIDEBAR, STORE_ROUTER, STORE_USERS)
+@observer
+export class Layout extends React.Component {
+  public mql = window.matchMedia('(min-width: 801px)')
+  public links = [
     { show: true, title: 'Feed', to: '/feed' },
     { show: true, title: 'Write', to: '/write' },
     { show: true, title: 'Settings', to: '/settings' },
   ]
 
-  componentDidMount() {
+  public componentDidMount() {
     const sidebar = this.props[STORE_SIDEBAR]
     const { handleMediaQueryChanged } = sidebar
     this.mql.addListener(handleMediaQueryChanged)
     handleMediaQueryChanged(this.mql)
   }
 
-  componentWillUnmount() {
+  public componentWillUnmount() {
     const sidebar = this.props[STORE_SIDEBAR]
     const { handleMediaQueryChanged } = sidebar
     if (this.mql) {
@@ -53,7 +62,7 @@ class Layout extends React.Component {
     }
   }
 
-  render() {
+  public render() {
     const sidebar = this.props[STORE_SIDEBAR]
     const { user } = this.props[STORE_USERS]
     const { children } = this.props
@@ -71,11 +80,20 @@ class Layout extends React.Component {
         >
           <SidebarContent>
             <Links>
+              <ToggleWrapper>
+                <ThemeToggle />
+              </ToggleWrapper>
               {links.map(link => <MenuLink closeSidebar={closeSidebar} key={link.title} link={link} />)}
             </Links>
           </SidebarContent>
         </Menu>
-        <Header isSmallScreen={isSmallScreen} links={links} openSidebar={openSidebar} user={user} />
+        <Header
+          isSmallScreen={isSmallScreen}
+          links={links}
+          openSidebar={openSidebar}
+          closeSidebar={closeSidebar}
+          user={user}
+        />
         <div id="page-wrap">
           <PageContent>
             {children}
@@ -86,7 +104,4 @@ class Layout extends React.Component {
   }
 }
 
-// @inject(STORE_SIDEBAR, STORE_ROUTER)
-// @withRouter
-// @observer
-export const SidebarLayout = inject(STORE_SIDEBAR, STORE_ROUTER, STORE_USERS)((withRouter(observer(Layout))))
+export const SidebarLayout = withRouter<any>(Layout)

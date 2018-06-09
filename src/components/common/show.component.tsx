@@ -2,11 +2,11 @@ import * as React from 'react'
 
 interface IShow {
   children?: React.ReactChild
-  if: boolean
+  if: any
 }
 
 export const Show: React.SFC<IShow> = (props): any => {
-  if (props.if) {
+  if (Boolean(props.if)) {
     return props.children
   }
   return null

@@ -55,6 +55,7 @@ const Text = styled.div`
 const StyledLink = styled(NavLink)`
   display: block;
   max-width: 100%;
+  width: 100%;
 `
 
 export class FeedStory extends React.Component<IUserInfo> {
