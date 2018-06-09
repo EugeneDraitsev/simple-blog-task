@@ -97,6 +97,7 @@ const Input = styled.input`
   border-radius: 40px;
   z-index: 2;
   opacity: 0;
+  cursor: pointer;
   &:checked {
     ~ ${Background} {
       background-color: #484848;

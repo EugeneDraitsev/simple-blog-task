@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Show, ThemeToggle, UserInfo } from '../../'
 import { UserModel } from '../../../models'
-import menu from '../images/menu.svg'
 import { MenuLink } from './'
 
 interface ILink {
@@ -66,13 +65,9 @@ const HeaderLink = styled(MenuLink)`
   }
 `
 const MenuButton = styled.div`
-  min-height: 35px;
-  min-width: 35px;
-  background: url(${menu}) center no-repeat;
-  background-size: contain;
-  @media (max-width: 800px) {
-    cursor: pointer;
-  };
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 `
 const Flex = styled.div`
   flex: 1;
@@ -99,7 +94,7 @@ export const Header: React.SFC<IHeaderProps> = ({ links, user, isSmallScreen, cl
   return (
     <Wrapper>
       <Show if={isSmallScreen}>
-        <MenuButton onClick={openSidebar} />
+        <MenuButton className="material-icons" onClick={openSidebar}>menu</MenuButton>
       </Show>
       <Show if={!isSmallScreen}>
         <StyledToggle />
