@@ -175,6 +175,31 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   word-break: break-all;
 }
 
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #a0a0a0;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c6 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -230,31 +255,6 @@ exports[`Storyshots Comments Simple Comments 1`] = `
 .c10 {
   font-weight: bold;
   margin-left: 5px;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 50px;
-  min-height: 50px;
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  background-color: #C4C4C4;
-}
-
-.c6 {
-  line-height: 32px;
-  font-size: 32px;
 }
 
 .c1 {
@@ -1839,6 +1839,31 @@ exports[`Storyshots Story Single story 1`] = `
   color: #828282;
 }
 
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #a0a0a0;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c8 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1894,31 +1919,6 @@ exports[`Storyshots Story Single story 1`] = `
 .c12 {
   font-weight: bold;
   margin-left: 5px;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 50px;
-  min-height: 50px;
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  background-color: #C4C4C4;
-}
-
-.c8 {
-  line-height: 32px;
-  font-size: 32px;
 }
 
 .c1 {
@@ -2176,6 +2176,31 @@ exports[`Storyshots Story Story info 1`] = `
   border-radius: 2px;
 }
 
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #a0a0a0;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c7 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2231,31 +2256,6 @@ exports[`Storyshots Story Story info 1`] = `
 .c11 {
   font-weight: bold;
   margin-left: 5px;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 50px;
-  min-height: 50px;
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  background-color: #C4C4C4;
-}
-
-.c7 {
-  line-height: 32px;
-  font-size: 32px;
 }
 
 .c4 {
@@ -2633,7 +2633,7 @@ exports[`Storyshots User Avatar 1`] = `
   align-items: center;
   min-width: 50px;
   min-height: 50px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #a0a0a0;
   border-radius: 50%;
   background-color: #C4C4C4;
 }
@@ -2653,7 +2653,7 @@ exports[`Storyshots User Avatar 1`] = `
   align-items: center;
   min-width: 33px;
   min-height: 33px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #a0a0a0;
   border-radius: 50%;
   background-color: #C4C4C4;
 }
@@ -2673,7 +2673,7 @@ exports[`Storyshots User Avatar 1`] = `
   align-items: center;
   min-width: 50px;
   min-height: 50px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #a0a0a0;
   border-radius: 50%;
   background-color: lime;
 }
@@ -2693,7 +2693,7 @@ exports[`Storyshots User Avatar 1`] = `
   align-items: center;
   min-width: 33px;
   min-height: 33px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #a0a0a0;
   border-radius: 50%;
   background-color: lightblue;
 }
@@ -2768,6 +2768,31 @@ exports[`Storyshots User Avatar 1`] = `
 `;
 
 exports[`Storyshots User User info 1`] = `
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #a0a0a0;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c7 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2793,28 +2818,7 @@ exports[`Storyshots User User info 1`] = `
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 50px;
-  min-height: 50px;
   border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  background-color: #C4C4C4;
-}
-
-.c6 {
-  line-height: 32px;
-  font-size: 32px;
 }
 
 .c1 {
@@ -2857,10 +2861,10 @@ exports[`Storyshots User User info 1`] = `
       Eugene
     </div>
     <div
-      className="c5"
+      className="c5 c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         🦖
       </div>
@@ -2875,10 +2879,10 @@ exports[`Storyshots User User info 1`] = `
       Very long name Very long nameVery long nameVery long name
     </div>
     <div
-      className="c5"
+      className="c5 c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         🐉
       </div>
@@ -2888,6 +2892,31 @@ exports[`Storyshots User User info 1`] = `
 `;
 
 exports[`Storyshots User User post info 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #a0a0a0;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c4 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2943,31 +2972,6 @@ exports[`Storyshots User User post info 1`] = `
 .c8 {
   font-weight: bold;
   margin-left: 5px;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 50px;
-  min-height: 50px;
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  background-color: #C4C4C4;
-}
-
-.c4 {
-  line-height: 32px;
-  font-size: 32px;
 }
 
 .c1 {

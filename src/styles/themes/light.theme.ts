@@ -5,6 +5,7 @@ const colors = {
   activeLink: '#349884',
   activeText: '#FFFFFF',
   avatarBackground: '#C4C4C4',
+  avatarBorder: '#a0a0a0',
   basicBackground: '#edeef0',
   controlsBackground: '#349884',
   controlsColor: '#FFFFFF',

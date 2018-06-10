@@ -25,6 +25,9 @@ const Name = styled.div`
   white-space: nowrap;
   text-transform: capitalize;
 `
+const StyledAvatar = styled(Avatar)`
+  border: 2px solid #FFFFFF;
+`
 
 @observer
 export class UserInfo extends React.Component<IUserInfo> {
@@ -33,7 +36,7 @@ export class UserInfo extends React.Component<IUserInfo> {
     return (
       <Wrapper className={className}>
         <Name>{user.name}</Name>
-        <Avatar>{user.avatar}</Avatar>
+        <StyledAvatar>{user.avatar}</StyledAvatar>
       </Wrapper>
     )
   }

@@ -11,7 +11,7 @@ interface IAvatar {
 interface ISmall {
   small?: boolean
   className?: string
-  theme?: { colors: { activeText: string, avatarBackground: string } }
+  theme?: { colors: { avatarBorder: string, avatarBackground: string } }
   background?: string
 }
 
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   align-items: center;
   min-width: ${(p: ISmall) => p.small ? '33px' : '50px'};
   min-height: ${(p: ISmall) => p.small ? '33px' : '50px'};
-  border: 2px solid ${(p: ISmall) => p!.theme!.colors.activeText};
+  border: 2px solid ${(p: ISmall) => p!.theme!.colors.avatarBorder};
   border-radius: 50%;
   background-color: ${(p: ISmall) => p.background || p!.theme!.colors.avatarBackground};
 `
