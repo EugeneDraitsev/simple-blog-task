@@ -197,12 +197,22 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
   <button
     className="c1"
   >
-    🍔 Emoji
+    <span
+      aria-label="img"
+      role="img"
+    >
+      🍔 Emoji
+    </span>
   </button>
   <button
     className="c2"
   >
-    🍔 Emoji
+    <span
+      aria-label="img"
+      role="img"
+    >
+      🍔 Emoji
+    </span>
   </button>
 </div>
 `;
@@ -2852,7 +2862,12 @@ exports[`Storyshots User Avatar 1`] = `
     <div
       className="c2"
     >
-      🐊
+      <span
+        aria-label="img"
+        role="img"
+      >
+        🐊
+      </span>
     </div>
   </div>
   <div
@@ -2861,7 +2876,12 @@ exports[`Storyshots User Avatar 1`] = `
     <div
       className="c4"
     >
-      🐣
+      <span
+        aria-label="img"
+        role="img"
+      >
+        🐣
+      </span>
     </div>
   </div>
   <div
@@ -2870,7 +2890,12 @@ exports[`Storyshots User Avatar 1`] = `
     <div
       className="c2"
     >
-      🌔
+      <span
+        aria-label="img"
+        role="img"
+      >
+        🌔
+      </span>
     </div>
   </div>
   <div
@@ -2879,7 +2904,12 @@ exports[`Storyshots User Avatar 1`] = `
     <div
       className="c4"
     >
-      🌎
+      <span
+        aria-label="img"
+        role="img"
+      >
+        🌎
+      </span>
     </div>
   </div>
 </div>
