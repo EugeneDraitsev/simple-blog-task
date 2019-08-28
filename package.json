@@ -15,7 +15,7 @@
     "lint:fix": "eslint \"src/**\" --fix",
     "tsc": "tsc",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public -o build/storybook",
+    "build-storybook": "build-storybook -s public",
     "deploy": "surge build simple-mobx-blog.surge.sh",
     "deploy:storybook": "surge storybook-static simple-mobx-blog-storybook.surge.sh"
   },
