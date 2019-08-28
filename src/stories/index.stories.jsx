@@ -35,8 +35,8 @@ storiesOf('Buttons', module)
       <Button disabled>Disabled</Button>
       <PrimaryButton disabled>Disabled</PrimaryButton>
       <DangerButton disabled>Disabled</DangerButton>
-      <Button>🍔 Emoji</Button>
-      <PrimaryButton>🍔 Emoji</PrimaryButton>
+      <Button><span role="img" aria-label="img">🍔 Emoji</span></Button>
+      <PrimaryButton><span role="img" aria-label="img">🍔 Emoji</span></PrimaryButton>
     </StoriesWrapper>
   ))
 

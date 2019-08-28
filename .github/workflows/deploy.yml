@@ -20,7 +20,7 @@ jobs:
       - run: yarn deploy
       - run: yarn build-storybook
       - run: cp storybook-static/index.html storybook-static/200.html
-      - run: yarn deploy
+      - run: yarn deploy:storybook
         env:
           SURGE_LOGIN: ${{secrets.SURGE_LOGIN}}
           SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}

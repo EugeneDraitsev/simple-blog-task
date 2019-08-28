@@ -65,7 +65,9 @@ class WriteContainer extends React.Component<IWriteProps> {
 
     return (
       <Wrapper>
-        <PrimaryButton onClick={this.addNewStory}>Add New Story 📝</PrimaryButton>
+        <PrimaryButton onClick={this.addNewStory}>
+          Add New Story <span role="img" aria-label="img">📝</span>
+        </PrimaryButton>
         <StoriesWrapper>
           <Show if={Boolean(usersPosts.length)}>
             <div>

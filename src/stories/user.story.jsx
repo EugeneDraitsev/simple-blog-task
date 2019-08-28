@@ -18,10 +18,18 @@ const StoriesWrapper = styled.div`
 export default () => storiesOf('User', module)
   .add('Avatar', () => (
     <StoriesWrapper>
-      <Avatar>🐊</Avatar>
-      <Avatar small>🐣</Avatar>
-      <Avatar background="lime">🌔</Avatar>
-      <Avatar background="lightblue" small>🌎</Avatar>
+      <Avatar>
+        <span role="img" aria-label="img">🐊</span>
+      </Avatar>
+      <Avatar small>
+        <span role="img" aria-label="img">🐣</span>
+      </Avatar>
+      <Avatar background="lime">
+        <span role="img" aria-label="img">🌔</span>
+      </Avatar>
+      <Avatar background="lightblue" small>
+        <span role="img" aria-label="img">🌎</span>
+      </Avatar>
     </StoriesWrapper>
   ))
   .add('User info', () => {

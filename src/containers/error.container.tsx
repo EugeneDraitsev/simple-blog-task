@@ -21,7 +21,7 @@ const Text = styled.div`
 const ErrorContainer: React.SFC = () => (
   <Wrapper>
     <ErrorCode>404</ErrorCode>
-    <Text>Page Not Found 😿</Text>
+    <Text>Page Not Found <span role="img" aria-label="img">😿</span></Text>
   </Wrapper>
 )
 
