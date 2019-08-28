@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 interface IVisible {
@@ -8,14 +8,14 @@ interface IVisible {
 const Wrapper = styled.div`
   position: fixed;
   display: inline-block;
-  visibility: ${(props: IVisible) => props.isOpen ? 'visible' : 'hidden'};
+  visibility: ${(props: IVisible) => (props.isOpen ? 'visible' : 'hidden')};
   max-width: 80vw;
   width: 400px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: ${p => p.theme.colors.primaryBackground};
-  color: ${p => p.theme.colors.primaryText};
+  background-color: ${(p) => p.theme.colors.primaryBackground};
+  color: ${(p) => p.theme.colors.primaryText};
   border-radius: 4px;
   padding: 20px;
   z-index: 4;
@@ -39,12 +39,12 @@ const Icon = styled.div`
 `
 const Overlay = styled.div`
   display: inline-block;
-  opacity: ${(props: IVisible) => props.isOpen ? 1 : 0};
-  visibility: ${(props: IVisible) => props.isOpen ? 'visible' : 'hidden'};
+  opacity: ${(props: IVisible) => (props.isOpen ? 1 : 0)};
+  visibility: ${(props: IVisible) => (props.isOpen ? 'visible' : 'hidden')};
   position: fixed;
   top: 0;
   left: 0;
-  background-color: ${p => p.theme.colors.overlay};
+  background-color: ${(p) => p.theme.colors.overlay};
   width: 100vw;
   height: 100vh;
   transition: opacity 0.3s;
@@ -63,6 +63,7 @@ export interface IPopupProps {
 }
 
 export class Modal extends React.PureComponent<IPopupProps> {
+  // eslint-disable-next-line react/static-property-placement
   public static defaultProps = {
     closeOnEsc: true,
     closeOnOverlay: true,
@@ -92,9 +93,11 @@ export class Modal extends React.PureComponent<IPopupProps> {
         <Overlay isOpen={Boolean(isOpen && overlay)} onClick={onRequestClose} />
         <Wrapper className={className} isOpen={isOpen}>
           <Header>
-            {title && <HeaderTitle>
+            {title && (
+            <HeaderTitle>
               {title}
-            </HeaderTitle>}
+            </HeaderTitle>
+            )}
             <Separator />
             <Icon className="material-icons" onClick={onRequestClose}>close</Icon>
           </Header>

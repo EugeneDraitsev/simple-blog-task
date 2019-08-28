@@ -16,6 +16,6 @@ export class CommentsStore {
 
   @action
   public deleteComment = (id: number): void => {
-    this.comments = this.comments.filter(comment => comment.id !== id)
+    this.comments = this.comments.filter((comment) => comment.id !== id)
   }
 }

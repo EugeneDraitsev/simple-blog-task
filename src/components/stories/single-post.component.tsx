@@ -1,10 +1,10 @@
 import { isEmpty } from 'lodash'
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Card, Show } from '../'
+import { Card, Show } from '..'
 import { CommentModel, StoryModel, UserModel } from '../../models'
 import { AddComment, Comment } from '../comment'
-import { StoryInfo } from './'
+import { StoryInfo } from '.'
 
 interface ISinglePost {
   story: StoryModel
@@ -46,31 +46,27 @@ const NoComments = styled.div`
   width: 100%;
   text-align: center;
   margin-bottom: 30px;
-  color: ${p => p.theme.colors.secondaryText};
+  color: ${(p) => p.theme.colors.secondaryText};
 `
 
-export class SingleStory extends React.Component<ISinglePost> {
-  public render() {
-    const { className, story, user, comments } = this.props
-    const storyComments = comments.filter(x => x.storyId === story.id)
+export function SingleStory(props: ISinglePost) {
+  const { className, story, user, comments } = props
+  const storyComments = comments.filter((x) => x.storyId === story.id)
 
-    return (
-      <Wrapper className={className}>
-        <Title>{story.title}</Title>
-        <Text dangerouslySetInnerHTML={{ __html: story.text }} />
-        <StoryInfo story={story} user={user} />
-        <Comments>
-          {storyComments.map(comment =>
-            <Comment key={comment.id} comment={comment} user={user} />)
-          }
-        </Comments>
-        <Show if={isEmpty(storyComments)}>
-          <NoComments>
-            There are no comments here yet.
-          </NoComments>
-        </Show>
-        <AddComment story={story} user={user} />
-      </Wrapper>
-    )
-  }
+  return (
+    <Wrapper className={className}>
+      <Title>{story.title}</Title>
+      <Text dangerouslySetInnerHTML={{ __html: story.text }} />
+      <StoryInfo story={story} user={user} />
+      <Comments>
+        {storyComments.map((comment) => <Comment key={comment.id} comment={comment} user={user} />)}
+      </Comments>
+      <Show if={isEmpty(storyComments)}>
+        <NoComments>
+          There are no comments here yet.
+        </NoComments>
+      </Show>
+      <AddComment story={story} user={user} />
+    </Wrapper>
+  )
 }

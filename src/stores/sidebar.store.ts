@@ -2,6 +2,7 @@ import { action, observable } from 'mobx'
 
 export class SidebarStore {
   @observable public isOpen: boolean
+
   @observable public isSmallScreen: boolean
 
   constructor() {

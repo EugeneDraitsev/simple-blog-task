@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Button, DangerButton } from '../'
+import { Button, DangerButton } from '..'
 import { Modal } from './modal.compontent'
 
 const ModalContent = styled.div`
@@ -11,7 +11,7 @@ const ModalContent = styled.div`
   width: 100%;
 `
 const AnimatedModal = styled(Modal)`
-  transform: ${props => props.isOpen ? 'translate(-50%, -50%) scale(1)' : 'translate(-100vw, -50%) scale(0) '};
+  transform: ${(props) => (props.isOpen ? 'translate(-50%, -50%) scale(1)' : 'translate(-100vw, -50%) scale(0) ')};
   transition: all 0.3s;
 `
 const ButtonWrapper = styled.div`

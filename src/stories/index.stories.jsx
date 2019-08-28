@@ -1,40 +1,32 @@
 import React from 'react'
-import styled from 'styled-components'
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
+
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { storiesOf } from '@storybook/react'
 
 import { ButtonsModalStory, ModalStory } from './modal.story'
 import getStoriesStory from './stories.story'
 import getUserStory from './user.story'
 import getCommentsStory from './comments.story'
-import { Spinner, Button, DangerButton, PrimaryButton, Toggle } from '../src/components'
-import light from '../src/styles/themes/light.theme'
-import dark from '../src/styles/themes/dark.theme'
-import '../src/styles/global.styles'
+import { Spinner, Button, DangerButton, PrimaryButton, Toggle } from '../components'
+import dark from '../styles/themes/dark.theme'
 
 const StoriesWrapper = styled.div`
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${p => p.theme.colors.primaryBackground};
-  color: ${p => p.theme.colors.primaryText};
+  background-color: ${(p) => p.theme.colors.primaryBackground};
+  color: ${(p) => p.theme.colors.primaryText};
 `
 
-const StyledDecorator = story => (
-  <ThemeProvider theme={light}>
-    {story()}
-  </ThemeProvider>
-)
-
-const DarkStyledDecorator = story => (
+const DarkStyledDecorator = (story) => (
   <ThemeProvider theme={dark}>
     {story()}
   </ThemeProvider>
 )
 
 storiesOf('Buttons', module)
-  .addDecorator(StyledDecorator)
   .add('Simple buttons', () => (
     <StoriesWrapper>
       <Button>Default</Button>
@@ -49,7 +41,6 @@ storiesOf('Buttons', module)
   ))
 
 storiesOf('Toggle', module)
-  .addDecorator(StyledDecorator)
   .add('Awesome toggle 🌚🌞', () => (
     <StoriesWrapper>
       <Toggle />
@@ -57,14 +48,12 @@ storiesOf('Toggle', module)
   ))
 
 storiesOf('Modal', module)
-  .addDecorator(StyledDecorator)
   .add('Simple modal', () => <ModalStory overlay />)
   .add('Modal with title', () => <ModalStory overlay title="test title" />)
   .add('Modal with animation', () => <ModalStory animated overlay title="test title" />)
   .add('Modal with buttons', () => <ButtonsModalStory />)
 
 storiesOf('Spinner', module)
-  .addDecorator(StyledDecorator)
   .add('Spinners 🌀', () => (
     <StoriesWrapper>
       <Spinner />

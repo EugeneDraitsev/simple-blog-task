@@ -1,5 +1,5 @@
 import { inject, observer } from 'mobx-react'
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Avatar, Button, Card, PrimaryButton } from '../components'
 import { STORE_USERS } from '../constants'
@@ -57,9 +57,9 @@ const NameInput = styled.input`
   padding: 10px;
   text-transform: capitalize;
   outline: none;
-  background: ${props => props.theme.colors.primaryBackground};
-  color: ${props => props.theme.colors.primaryText};
-  border: ${props => `1px solid ${props.theme.colors.secondaryBackground}`};
+  background: ${(props) => props.theme.colors.primaryBackground};
+  color: ${(props) => props.theme.colors.primaryText};
+  border: ${(props) => `1px solid ${props.theme.colors.secondaryBackground}`};
   max-width: calc(100% - 80px);
 `
 const AvatarContainer = styled.div`
@@ -83,7 +83,7 @@ const DarkButton = styled(PrimaryButton)`
   margin-left: 10px;
 `
 
-@inject(stores => ({
+@inject((stores: any) => ({
   user: stores[STORE_USERS].user,
   usersStore: stores[STORE_USERS],
 }))
@@ -107,8 +107,8 @@ class SettingsContainer extends React.Component<IWriteProps> {
         <Content>
           <Title>You can change your name and avatar here</Title>
           <NameContainer>
-            <NameInput maxLength={120} value={name} onChange={e => this.setState({ name: e.target.value })} />
-            <PrimaryButton disabled={!Boolean(name)} onClick={() => usersStore.changeName(name)}>
+            <NameInput maxLength={120} value={name} onChange={(e) => this.setState({ name: e.target.value })} />
+            <PrimaryButton disabled={!name} onClick={() => usersStore.changeName(name)}>
               Save
             </PrimaryButton>
           </NameContainer>

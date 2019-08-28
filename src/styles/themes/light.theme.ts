@@ -1,5 +1,4 @@
-// tslint:disable:max-line-length
-
+/* eslint-disable max-len */
 const colors = {
   activeBackground: '#FFFFFF',
   activeLink: '#349884',

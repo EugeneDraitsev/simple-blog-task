@@ -1,4 +1,4 @@
-import initStoryShots from '@storybook/addon-storyshots'
+import initStoryshots from '@storybook/addon-storyshots'
 import 'jest-styled-components'
 
-initStoryShots({})
+initStoryshots({ /* configuration options */ })

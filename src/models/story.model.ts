@@ -1,31 +1,38 @@
 import { computed, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 import { STORE_COMMENTS, STORE_USERS } from '../constants'
-import { CommentModel, UserModel } from './'
-import { stores } from './../'
+import { CommentModel, UserModel } from '.'
+import { stores } from '..'
 
 export class StoryModel {
   public static generateId() {
-    return this.nextId = (this.nextId || 0) + 1
+    const id = (this.nextId || 0) + 1
+    this.nextId = id
+    return id
   }
 
   private static nextId = 0
 
   @persist @observable public readonly id: number
+
   @persist @observable public title: string
+
   @persist @observable public text: string
+
   @persist @observable public authorId: number
+
   @persist @observable public views: number
+
   @persist('object') @observable public date: Date
 
   @computed get comments(): CommentModel[] {
-    const comments: CommentModel[] = stores[STORE_COMMENTS].comments
-    return comments.filter(comment => comment.storyId === this.id)
+    const { comments } = stores[STORE_COMMENTS]
+    return comments.filter((comment) => comment.storyId === this.id)
   }
 
   @computed get author(): UserModel {
-    const users: UserModel[] = stores[STORE_USERS].users
-    return users.find(user => user.id === this.authorId) || stores[STORE_USERS].user
+    const { users } = stores[STORE_USERS]
+    return users.find((user) => user.id === this.authorId) || stores[STORE_USERS].user
   }
 
   @computed get textPreview() {

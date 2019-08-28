@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Spinner } from './'
+import { Spinner } from '.'
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: calc(100vh - 70px);
-  color: ${props => props.theme.colors.primaryText}
+  color: ${(props) => props.theme.colors.primaryText}
 `
 
 export const Loading = () => (

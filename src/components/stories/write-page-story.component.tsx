@@ -1,9 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { Card, DangerButton, DeleteModal, PrimaryButton } from '../'
+import { Card, DangerButton, DeleteModal, PrimaryButton } from '..'
 import { StoryModel, UserModel } from '../../models'
-import { CommentViewsInfo } from './/comment-views-info.component'
+import { CommentViewsInfo } from './comment-views-info.component'
 
 interface IWritePagePost {
   story: StoryModel
@@ -63,7 +63,9 @@ export class WritePageStory extends React.Component<IWritePagePost> {
   }
 
   public openModal = () => this.setState({ isOpen: true })
+
   public closeModal = () => this.setState({ isOpen: false })
+
   public removePost = () => {
     const { removePost, story } = this.props
     removePost(story.id)
@@ -71,6 +73,7 @@ export class WritePageStory extends React.Component<IWritePagePost> {
 
   public render() {
     const { className, story } = this.props
+    const { isOpen } = this.state
 
     return (
       <Wrapper className={className}>
@@ -83,7 +86,7 @@ export class WritePageStory extends React.Component<IWritePagePost> {
             <PrimaryButton>Edit</PrimaryButton>
           </NavLink>
         </Buttons>
-        <DeleteModal isOpen={this.state.isOpen} onDelete={this.removePost} onRequestClose={this.closeModal}>
+        <DeleteModal isOpen={isOpen} onDelete={this.removePost} onRequestClose={this.closeModal}>
           Are you really want to delete your story?
         </DeleteModal>
       </Wrapper>

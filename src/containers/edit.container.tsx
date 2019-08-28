@@ -1,5 +1,5 @@
 import { inject, observer } from 'mobx-react'
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import StoryEdit from '../components/editor/editor.component'
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   };
 `
 
-@inject(stores => ({
+@inject((stores: any) => ({
   feed: stores[STORE_FEED].feed,
   feedStore: stores[STORE_FEED],
   router: stores[STORE_ROUTER],
@@ -41,7 +41,7 @@ class EditContainer extends React.Component<IEditProps> {
     const story = this.findPost()
 
     if (!story || story.authorId !== user.id) {
-      return router.push('/404')
+      router.push('/404')
     }
   }
 
@@ -49,12 +49,19 @@ class EditContainer extends React.Component<IEditProps> {
     const { feedStore } = this.props
     const story = this.findPost()
 
-    if (feedStore.draftStories.map(x => x.id).includes(story!.id)) {
+    if (feedStore.draftStories.map((x) => x.id).includes(story!.id)) {
       feedStore.deleteDraftStory(story!.id)
       feedStore.addStory(story!)
     }
 
     this.props.feedStore.editStory(story!.id, { title, text })
+  }
+
+  private findPost = () => {
+    const { feed, match, feedStore: { draftStories } } = this.props
+
+    const id = Number(match.params.id)
+    return feed.find((x) => x!.id === id) || draftStories.find((x) => x!.id === id)
   }
 
   public render() {
@@ -66,13 +73,6 @@ class EditContainer extends React.Component<IEditProps> {
         <StoryEdit savePost={this.savePost} story={story!} user={user} />
       </Wrapper>
     )
-  }
-
-  private findPost = () => {
-    const { feed, match, feedStore: { draftStories } } = this.props
-
-    const id = Number(match.params.id)
-    return feed.find(x => x!.id === id) || draftStories.find(x => x!.id === id)
   }
 }
 

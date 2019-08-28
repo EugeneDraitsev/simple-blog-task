@@ -41,8 +41,44 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
 }
 
 .c3 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
   background: #ca5a5a;
   color: #FFFFFF;
+}
+
+.c3:hover {
+  background: #cdcdcd;
+}
+
+.c3[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
 }
 
 .c3:hover {
@@ -55,8 +91,44 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
 }
 
 .c2 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
   background: #349884;
   color: #FFFFFF;
+}
+
+.c2:hover {
+  background: #cdcdcd;
+}
+
+.c2[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
 }
 
 .c2:hover {
@@ -95,12 +167,12 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
     Default
   </button>
   <button
-    className="c2 c1"
+    className="c2"
   >
     Primary
   </button>
   <button
-    className="c3 c1"
+    className="c3"
   >
     Danger
   </button>
@@ -111,13 +183,13 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
     Disabled
   </button>
   <button
-    className="c2 c1"
+    className="c2"
     disabled={true}
   >
     Disabled
   </button>
   <button
-    className="c3 c1"
+    className="c3"
     disabled={true}
   >
     Disabled
@@ -128,7 +200,7 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
     🍔 Emoji
   </button>
   <button
-    className="c2 c1"
+    className="c2"
   >
     🍔 Emoji
   </button>
@@ -136,7 +208,7 @@ exports[`Storyshots Buttons Simple buttons 1`] = `
 `;
 
 exports[`Storyshots Comments Simple Comments 1`] = `
-.c3 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,9 +217,6 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   color: #000000;
   box-shadow: 0 1px 0 0 #d7d8db,0 0 0 1px #e3e4e8;
   border-radius: 2px;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,7 +235,7 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   padding: 20px;
 }
 
-.c12 {
+.c10 {
   font-size: 16px;
   max-width: calc(100% - 64px);
   font-weight: 300;
@@ -175,7 +244,7 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   word-break: break-all;
 }
 
-.c5 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,12 +264,12 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   background-color: #C4C4C4;
 }
 
-.c6 {
+.c4 {
   line-height: 32px;
   font-size: 32px;
 }
 
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,7 +277,7 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   width: 175px;
 }
 
-.c7 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -227,7 +296,7 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   margin-left: 10px;
 }
 
-.c8 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,7 +308,7 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   max-width: 115px;
 }
 
-.c9 {
+.c7 {
   font-size: 14px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -247,17 +316,17 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   white-space: nowrap;
 }
 
-.c11 {
+.c9 {
   font-size: 12px;
   color: #828282;
 }
 
-.c10 {
+.c8 {
   font-weight: bold;
   margin-left: 5px;
 }
 
-.c1 {
+.c0 {
   min-height: calc(100vh - 20px);
   margin-top: 20px;
   display: -webkit-box;
@@ -272,9 +341,6 @@ exports[`Storyshots Comments Simple Comments 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c0 {
   width: 800px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -282,135 +348,135 @@ exports[`Storyshots Comments Simple Comments 1`] = `
 }
 
 @media (max-width:800px) {
-  .c2 {
+  .c1 {
     margin: 0 0 20px 0;
   }
 }
 
 <div
-  className="c0 c1"
+  className="c0"
 >
   <div
-    className="c2 c3"
+    className="c1"
   >
     <div
-      className="c4"
+      className="c2"
     >
       <div
-        className="c5"
+        className="c3"
       >
         <div
-          className="c6"
+          className="c4"
         >
           🌿
         </div>
       </div>
       <div
-        className="c7"
+        className="c5"
       >
         <div
-          className="c8"
+          className="c6"
         >
           <div
-            className="c9"
+            className="c7"
           >
             Author
           </div>
           <div
-            className="c10"
+            className="c8"
           >
             (you)
           </div>
         </div>
         <div
-          className="c11"
+          className="c9"
         >
           09.05.2018 03:17
         </div>
       </div>
     </div>
     <div
-      className="c12"
+      className="c10"
     >
       Nisi aute ex esse fugiat ipsum qui deserunt est mollit ullamco aliquip irure. Commodo cillum reprehenderit laborum sit.
     </div>
   </div>
   <div
-    className="c2 c3"
+    className="c1"
   >
     <div
-      className="c4"
+      className="c2"
     >
       <div
-        className="c5"
+        className="c3"
       >
         <div
-          className="c6"
+          className="c4"
         >
           🐦
         </div>
       </div>
       <div
-        className="c7"
+        className="c5"
       >
         <div
-          className="c8"
+          className="c6"
         >
           <div
-            className="c9"
+            className="c7"
           >
             Est
           </div>
         </div>
         <div
-          className="c11"
+          className="c9"
         >
           09.05.2018 03:17
         </div>
       </div>
     </div>
     <div
-      className="c12"
+      className="c10"
     >
       Voluptate magna sint exercitation tempor. Sint nulla enim irure voluptate Lorem incididunt et occaecat nostrud sit quis laborum.
     </div>
   </div>
   <div
-    className="c2 c3"
+    className="c1"
   >
     <div
-      className="c4"
+      className="c2"
     >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          🐟
+        </div>
+      </div>
       <div
         className="c5"
       >
         <div
           className="c6"
         >
-          🐟
-        </div>
-      </div>
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
           <div
-            className="c9"
+            className="c7"
           >
             Id Amet
           </div>
         </div>
         <div
-          className="c11"
+          className="c9"
         >
           09.05.2018 03:17
         </div>
       </div>
     </div>
     <div
-      className="c12"
+      className="c10"
     >
       Laborum Lorem duis eiusmod minim irure sit reprehenderit esse ea nisi duis nostrud mollit. Sit sunt commodo labore quis elit incididunt veniam culpa Lorem dolore labore culpa.
     </div>
@@ -446,6 +512,8 @@ exports[`Storyshots Dark theme Dark modal 1`] = `
   user-select: none;
   -webkit-transition: 0.3s background-color;
   transition: 0.3s background-color;
+  background: #ca5a5a;
+  color: #FFFFFF;
 }
 
 .c13:hover {
@@ -458,16 +526,11 @@ exports[`Storyshots Dark theme Dark modal 1`] = `
   cursor: auto;
 }
 
-.c14 {
-  background: #ca5a5a;
-  color: #FFFFFF;
-}
-
-.c14:hover {
+.c13:hover {
   background: #b63b3b;
 }
 
-.c14[disabled] {
+.c13[disabled] {
   background: #e3a7a7;
   cursor: auto;
 }
@@ -582,7 +645,43 @@ exports[`Storyshots Dark theme Dark modal 1`] = `
 }
 
 .c12 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
   margin-right: 10px;
+}
+
+.c12:hover {
+  background: #cdcdcd;
+}
+
+.c12[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
 }
 
 .c0 {
@@ -660,13 +759,13 @@ exports[`Storyshots Dark theme Dark modal 1`] = `
               className="c11"
             />
             <button
-              className="c12 c13"
+              className="c12"
               onClick={[Function]}
             >
               Cancel
             </button>
             <button
-              className="c14 c13"
+              className="c13"
               onClick={[Function]}
             >
               Delete
@@ -1019,6 +1118,8 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
   user-select: none;
   -webkit-transition: 0.3s background-color;
   transition: 0.3s background-color;
+  background: #ca5a5a;
+  color: #FFFFFF;
 }
 
 .c13:hover {
@@ -1031,16 +1132,11 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
   cursor: auto;
 }
 
-.c14 {
-  background: #ca5a5a;
-  color: #FFFFFF;
-}
-
-.c14:hover {
+.c13:hover {
   background: #b63b3b;
 }
 
-.c14[disabled] {
+.c13[disabled] {
   background: #e3a7a7;
   cursor: auto;
 }
@@ -1155,7 +1251,43 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
 }
 
 .c12 {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E6E6E6;
+  color: #828282;
+  font-family: Roboto,sans-serif;
+  padding: 20px;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
   margin-right: 10px;
+}
+
+.c12:hover {
+  background: #cdcdcd;
+}
+
+.c12[disabled] {
+  background: #808080;
+  color: #e8e8e8;
+  cursor: auto;
 }
 
 .c0 {
@@ -1233,13 +1365,13 @@ exports[`Storyshots Modal Modal with buttons 1`] = `
               className="c11"
             />
             <button
-              className="c12 c13"
+              className="c12"
               onClick={[Function]}
             >
               Cancel
             </button>
             <button
-              className="c14 c13"
+              className="c13"
               onClick={[Function]}
             >
               Delete
@@ -1714,7 +1846,7 @@ exports[`Storyshots Spinner Spinners 🌀 1`] = `
 `;
 
 exports[`Storyshots Story Single story 1`] = `
-.c24 {
+.c22 {
   cursor: pointer;
   display: inline-block;
   min-height: 1em;
@@ -1741,44 +1873,30 @@ exports[`Storyshots Story Single story 1`] = `
   user-select: none;
   -webkit-transition: 0.3s background-color;
   transition: 0.3s background-color;
+  background: #349884;
+  color: #FFFFFF;
 }
 
-.c24:hover {
+.c22:hover {
   background: #cdcdcd;
 }
 
-.c24[disabled] {
+.c22[disabled] {
   background: #808080;
   color: #e8e8e8;
   cursor: auto;
 }
 
-.c23 {
-  background: #349884;
-  color: #FFFFFF;
-}
-
-.c23:hover {
+.c22:hover {
   background: #277263;
 }
 
-.c23[disabled] {
+.c22[disabled] {
   background: #67cbb7;
   cursor: auto;
 }
 
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #F8F8F8;
-  color: #000000;
-  box-shadow: 0 1px 0 0 #d7d8db,0 0 0 1px #e3e4e8;
-  border-radius: 2px;
-}
-
-.c19 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1798,7 +1916,7 @@ exports[`Storyshots Story Single story 1`] = `
   transition: background-color 0.5s;
 }
 
-.c20 {
+.c19 {
   width: calc(100% - 20px);
   overflow: hidden;
   min-height: 50px;
@@ -1816,7 +1934,7 @@ exports[`Storyshots Story Single story 1`] = `
   color: #000000;
 }
 
-.c21 {
+.c20 {
   margin-top: 10px;
   width: calc(100% + 2px);
   display: -webkit-box;
@@ -1833,13 +1951,13 @@ exports[`Storyshots Story Single story 1`] = `
   align-items: center;
 }
 
-.c22 {
+.c21 {
   margin-right: 20px;
   font-size: 12px;
   color: #828282;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1859,12 +1977,12 @@ exports[`Storyshots Story Single story 1`] = `
   background-color: #C4C4C4;
 }
 
-.c8 {
+.c7 {
   line-height: 32px;
   font-size: 32px;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1872,7 +1990,7 @@ exports[`Storyshots Story Single story 1`] = `
   width: 175px;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1891,7 +2009,7 @@ exports[`Storyshots Story Single story 1`] = `
   margin-left: 10px;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1903,7 +2021,7 @@ exports[`Storyshots Story Single story 1`] = `
   max-width: 115px;
 }
 
-.c11 {
+.c10 {
   font-size: 14px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1911,17 +2029,25 @@ exports[`Storyshots Story Single story 1`] = `
   white-space: nowrap;
 }
 
-.c13 {
+.c12 {
   font-size: 12px;
   color: #828282;
 }
 
-.c12 {
+.c11 {
   font-weight: bold;
   margin-left: 5px;
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F8F8F8;
+  color: #000000;
+  box-shadow: 0 1px 0 0 #d7d8db,0 0 0 1px #e3e4e8;
+  border-radius: 2px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1941,321 +2067,29 @@ exports[`Storyshots Story Single story 1`] = `
   padding: 20px;
 }
 
-.c3 {
+.c2 {
   font-size: 48px;
   text-transform: capitalize;
   word-break: break-all;
 }
 
-.c4 {
+.c3 {
   max-width: 100%;
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
 }
 
-.c17 {
+.c16 {
   margin-top: 30px;
   width: 100%;
 }
 
-.c18 {
+.c17 {
   width: 100%;
   text-align: center;
   margin-bottom: 30px;
   color: #828282;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 10px;
-}
-
-.c15 {
-  font-size: 24px;
-  line-height: 24px;
-  margin: 0 10px;
-}
-
-.c16 {
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.c0 {
-  min-height: calc(100vh - 20px);
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-@media (max-width:800px) {
-  .c19 {
-    width: 100%;
-    padding: 0 2px;
-    margin: 0;
-  }
-}
-
-@media (max-width:800px) {
-  .c1 {
-    margin: 0 0 20px 0;
-  }
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1 c2"
-  >
-    <div
-      className="c3"
-    >
-      Sint Excepteur Duis
-    </div>
-    <div
-      className="c4"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<p>Laborum Lorem duis eiusmod minim irure sit reprehenderit esse ea nisi duis nostrud mollit. Sit sunt commodo labore quis elit incididunt veniam culpa Lorem dolore labore culpa. Voluptate dolore adipisicing dolore sint id id anim cupidatat nulla pariatur exercitation laborum irure. Excepteur sit dolor qui pariatur anim eu esse.</p><p>Ipsum aute labore culpa laboris laborum. Tempor velit incididunt fugiat laboris culpa amet aliqua ad est elit do laboris nulla Lorem. Est magna eiusmod irure duis Lorem culpa nostrud do cupidatat exercitation.</p><p>Laborum amet laborum eiusmod officia tempor laborum culpa Lorem dolore sit. Eiusmod quis aliquip ea labore minim nisi culpa sit ullamco quis in velit. Occaecat aliquip fugiat sint dolore in et dolor ad. Esse minim pariatur sit ea ullamco proident. Ipsum et amet excepteur qui aliqua qui aliqua laboris sit amet anim nisi exercitation exercitation. Lorem labore qui velit laborum ex irure dolore adipisicing.</p><p>Nostrud exercitation occaecat nisi officia ipsum et nisi incididunt ad. Ex nostrud occaecat proident eiusmod anim culpa officia aute. Dolor nostrud ex aliquip sunt. Commodo esse voluptate sit quis excepteur aliquip ea eu pariatur.</p><p>Laboris mollit eiusmod labore ullamco non mollit incididunt ullamco voluptate anim id adipisicing. Tempor eu occaecat aliquip nostrud eiusmod ipsum magna labore aute. Dolor proident amet excepteur Lorem deserunt consectetur sit in officia id mollit excepteur. Veniam occaecat adipisicing anim consectetur enim magna excepteur elit in ex Lorem est qui. Anim officia in reprehenderit exercitation in nisi cillum Lorem tempor velit excepteur anim. Excepteur adipisicing exercitation nulla commodo duis cillum quis dolor culpa nostrud esse. In ullamco sint elit velit id ut elit fugiat pariatur exercitation do esse adipisicing veniam.</p><p>Deserunt occaecat anim ipsum ex. Ullamco ea ullamco nulla dolor elit incididunt voluptate ex anim voluptate minim. Occaecat minim in pariatur ex enim elit deserunt dolor magna sit amet velit dolor commodo. Proident veniam sit aute ipsum veniam ipsum consectetur dolor eiusmod proident.</p><p>Ipsum exercitation ut non nulla. Lorem voluptate amet ad quis est velit fugiat exercitation reprehenderit. Et ut minim esse aliquip enim proident incididunt amet. Nulla qui ad eu deserunt aliquip.</p><p>Minim duis nisi voluptate elit cillum minim officia id proident nostrud aliqua quis. Voluptate mollit Lorem dolore nulla reprehenderit. Magna cillum proident sint mollit duis duis consectetur labore laborum dolor. Duis anim do esse dolore non velit in adipisicing est proident dolore mollit. Culpa labore cupidatat est excepteur Lorem consequat pariatur consectetur qui anim.</p><p>In exercitation cillum exercitation elit do non commodo culpa sint sunt nostrud est aute ea. Duis fugiat reprehenderit duis occaecat irure occaecat consequat nostrud culpa fugiat commodo dolore voluptate. Ipsum occaecat enim cupidatat exercitation. Enim anim consectetur exercitation eu labore fugiat labore nostrud proident nostrud amet in. Cupidatat labore veniam duis nulla ad aute quis eiusmod. Laboris sunt sint sint nostrud sit magna eu sit dolore.</p><p>Dolor irure laboris ad reprehenderit aute id non non aute anim officia. Id reprehenderit nostrud nulla culpa occaecat nulla exercitation reprehenderit laborum sunt culpa velit duis eu. Nostrud in velit in excepteur ex eiusmod. Quis laboris deserunt consectetur commodo quis nulla est sunt eu qui enim in.</p><p>Tempor ea mollit magna nulla aute sunt labore ea qui sunt sunt do aute. Reprehenderit id nostrud pariatur dolore ut et in ut est id fugiat duis id est. Sint do quis culpa amet commodo ad sit voluptate eiusmod nisi id laborum qui. Consequat culpa fugiat pariatur duis eu aute reprehenderit aliqua irure.</p><p>Sint ullamco exercitation sit veniam enim reprehenderit aliqua ut laborum cillum deserunt. Incididunt velit sint nulla veniam reprehenderit voluptate culpa voluptate qui ipsum nulla. Occaecat esse do exercitation tempor do eu nostrud aute enim veniam dolor ullamco et. Dolor excepteur labore occaecat ea. Enim enim laboris culpa in aute anim. Labore amet duis ex est. Qui officia consequat non ad.</p>",
-        }
-      }
-    />
-    <div
-      className="c5"
-    >
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
-        >
-          <div
-            className="c8"
-          >
-            🌿
-          </div>
-        </div>
-        <div
-          className="c9"
-        >
-          <div
-            className="c10"
-          >
-            <div
-              className="c11"
-            >
-              Author
-            </div>
-            <div
-              className="c12"
-            >
-              (you)
-            </div>
-          </div>
-          <div
-            className="c13"
-          >
-            09.05.2018 03:17
-          </div>
-        </div>
-      </div>
-      <div
-        className="c14"
-      >
-        <div
-          className="material-icons c15"
-        >
-          comment
-        </div>
-        <div
-          className="c16"
-        >
-          3
-        </div>
-        <div
-          className="material-icons c15"
-        >
-          remove_red_eye
-        </div>
-        <div
-          className="c16"
-        >
-          14
-        </div>
-      </div>
-    </div>
-    <div
-      className="c17"
-    />
-    <div
-      className="c18"
-    >
-      There are no comments here yet.
-    </div>
-    <div
-      className="c19"
-    >
-      <textarea
-        className="c20"
-        onChange={[Function]}
-        value=""
-      />
-      <div
-        className="c21"
-      >
-        <div
-          className="c22"
-        >
-          0
-           / 1000
-        </div>
-        <button
-          className="c23 c24"
-          disabled={true}
-          onClick={[Function]}
-        >
-          Add Comment
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Story Story info 1`] = `
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #F8F8F8;
-  color: #000000;
-  box-shadow: 0 1px 0 0 #d7d8db,0 0 0 1px #e3e4e8;
-  border-radius: 2px;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 50px;
-  min-height: 50px;
-  border: 2px solid #a0a0a0;
-  border-radius: 50%;
-  background-color: #C4C4C4;
-}
-
-.c7 {
-  line-height: 32px;
-  font-size: 32px;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 175px;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 45px;
-  margin-left: 10px;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  max-width: 115px;
-}
-
-.c10 {
-  font-size: 14px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 100px;
-  white-space: nowrap;
-}
-
-.c12 {
-  font-size: 12px;
-  color: #828282;
-}
-
-.c11 {
-  font-weight: bold;
-  margin-left: 5px;
 }
 
 .c4 {
@@ -2304,7 +2138,7 @@ exports[`Storyshots Story Story info 1`] = `
   font-weight: 300;
 }
 
-.c1 {
+.c0 {
   min-height: calc(100vh - 20px);
   margin-top: 20px;
   display: -webkit-box;
@@ -2321,20 +2155,39 @@ exports[`Storyshots Story Story info 1`] = `
   justify-content: center;
 }
 
-.c0 {
-  width: 400px;
+@media (max-width:800px) {
+  .c18 {
+    width: 100%;
+    padding: 0 2px;
+    margin: 0;
+  }
 }
 
-.c2 {
-  padding: 20px;
+@media (max-width:800px) {
+  .c1 {
+    margin: 0 0 20px 0;
+  }
 }
 
 <div
-  className="c0 c1"
+  className="c0"
 >
   <div
-    className="c2 c3"
+    className="c1"
   >
+    <div
+      className="c2"
+    >
+      Sint Excepteur Duis
+    </div>
+    <div
+      className="c3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>Laborum Lorem duis eiusmod minim irure sit reprehenderit esse ea nisi duis nostrud mollit. Sit sunt commodo labore quis elit incididunt veniam culpa Lorem dolore labore culpa. Voluptate dolore adipisicing dolore sint id id anim cupidatat nulla pariatur exercitation laborum irure. Excepteur sit dolor qui pariatur anim eu esse.</p><p>Ipsum aute labore culpa laboris laborum. Tempor velit incididunt fugiat laboris culpa amet aliqua ad est elit do laboris nulla Lorem. Est magna eiusmod irure duis Lorem culpa nostrud do cupidatat exercitation.</p><p>Laborum amet laborum eiusmod officia tempor laborum culpa Lorem dolore sit. Eiusmod quis aliquip ea labore minim nisi culpa sit ullamco quis in velit. Occaecat aliquip fugiat sint dolore in et dolor ad. Esse minim pariatur sit ea ullamco proident. Ipsum et amet excepteur qui aliqua qui aliqua laboris sit amet anim nisi exercitation exercitation. Lorem labore qui velit laborum ex irure dolore adipisicing.</p><p>Nostrud exercitation occaecat nisi officia ipsum et nisi incididunt ad. Ex nostrud occaecat proident eiusmod anim culpa officia aute. Dolor nostrud ex aliquip sunt. Commodo esse voluptate sit quis excepteur aliquip ea eu pariatur.</p><p>Laboris mollit eiusmod labore ullamco non mollit incididunt ullamco voluptate anim id adipisicing. Tempor eu occaecat aliquip nostrud eiusmod ipsum magna labore aute. Dolor proident amet excepteur Lorem deserunt consectetur sit in officia id mollit excepteur. Veniam occaecat adipisicing anim consectetur enim magna excepteur elit in ex Lorem est qui. Anim officia in reprehenderit exercitation in nisi cillum Lorem tempor velit excepteur anim. Excepteur adipisicing exercitation nulla commodo duis cillum quis dolor culpa nostrud esse. In ullamco sint elit velit id ut elit fugiat pariatur exercitation do esse adipisicing veniam.</p><p>Deserunt occaecat anim ipsum ex. Ullamco ea ullamco nulla dolor elit incididunt voluptate ex anim voluptate minim. Occaecat minim in pariatur ex enim elit deserunt dolor magna sit amet velit dolor commodo. Proident veniam sit aute ipsum veniam ipsum consectetur dolor eiusmod proident.</p><p>Ipsum exercitation ut non nulla. Lorem voluptate amet ad quis est velit fugiat exercitation reprehenderit. Et ut minim esse aliquip enim proident incididunt amet. Nulla qui ad eu deserunt aliquip.</p><p>Minim duis nisi voluptate elit cillum minim officia id proident nostrud aliqua quis. Voluptate mollit Lorem dolore nulla reprehenderit. Magna cillum proident sint mollit duis duis consectetur labore laborum dolor. Duis anim do esse dolore non velit in adipisicing est proident dolore mollit. Culpa labore cupidatat est excepteur Lorem consequat pariatur consectetur qui anim.</p><p>In exercitation cillum exercitation elit do non commodo culpa sint sunt nostrud est aute ea. Duis fugiat reprehenderit duis occaecat irure occaecat consequat nostrud culpa fugiat commodo dolore voluptate. Ipsum occaecat enim cupidatat exercitation. Enim anim consectetur exercitation eu labore fugiat labore nostrud proident nostrud amet in. Cupidatat labore veniam duis nulla ad aute quis eiusmod. Laboris sunt sint sint nostrud sit magna eu sit dolore.</p><p>Dolor irure laboris ad reprehenderit aute id non non aute anim officia. Id reprehenderit nostrud nulla culpa occaecat nulla exercitation reprehenderit laborum sunt culpa velit duis eu. Nostrud in velit in excepteur ex eiusmod. Quis laboris deserunt consectetur commodo quis nulla est sunt eu qui enim in.</p><p>Tempor ea mollit magna nulla aute sunt labore ea qui sunt sunt do aute. Reprehenderit id nostrud pariatur dolore ut et in ut est id fugiat duis id est. Sint do quis culpa amet commodo ad sit voluptate eiusmod nisi id laborum qui. Consequat culpa fugiat pariatur duis eu aute reprehenderit aliqua irure.</p><p>Sint ullamco exercitation sit veniam enim reprehenderit aliqua ut laborum cillum deserunt. Incididunt velit sint nulla veniam reprehenderit voluptate culpa voluptate qui ipsum nulla. Occaecat esse do exercitation tempor do eu nostrud aute enim veniam dolor ullamco et. Dolor excepteur labore occaecat ea. Enim enim laboris culpa in aute anim. Labore amet duis ex est. Qui officia consequat non ad.</p>",
+        }
+      }
+    />
     <div
       className="c4"
     >
@@ -2394,6 +2247,273 @@ exports[`Storyshots Story Story info 1`] = `
         </div>
         <div
           className="c15"
+        >
+          14
+        </div>
+      </div>
+    </div>
+    <div
+      className="c16"
+    />
+    <div
+      className="c17"
+    >
+      There are no comments here yet.
+    </div>
+    <div
+      className="c18"
+    >
+      <textarea
+        className="c19"
+        onChange={[Function]}
+        value=""
+      />
+      <div
+        className="c20"
+      >
+        <div
+          className="c21"
+        >
+          0
+           / 1000
+        </div>
+        <button
+          className="c22"
+          disabled={true}
+          onClick={[Function]}
+        >
+          Add Comment
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Story Story info 1`] = `
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  border: 2px solid #a0a0a0;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.c5 {
+  line-height: 32px;
+  font-size: 32px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 175px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 115px;
+}
+
+.c8 {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100px;
+  white-space: nowrap;
+}
+
+.c10 {
+  font-size: 12px;
+  color: #828282;
+}
+
+.c9 {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.c12 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0 10px;
+}
+
+.c13 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.c0 {
+  min-height: calc(100vh - 20px);
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 400px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F8F8F8;
+  color: #000000;
+  box-shadow: 0 1px 0 0 #d7d8db,0 0 0 1px #e3e4e8;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+          >
+            🌿
+          </div>
+        </div>
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          >
+            <div
+              className="c8"
+            >
+              Author
+            </div>
+            <div
+              className="c9"
+            >
+              (you)
+            </div>
+          </div>
+          <div
+            className="c10"
+          >
+            09.05.2018 03:17
+          </div>
+        </div>
+      </div>
+      <div
+        className="c11"
+      >
+        <div
+          className="material-icons c12"
+        >
+          comment
+        </div>
+        <div
+          className="c13"
+        >
+          3
+        </div>
+        <div
+          className="material-icons c12"
+        >
+          remove_red_eye
+        </div>
+        <div
+          className="c13"
         >
           14
         </div>
@@ -2595,9 +2715,7 @@ exports[`Storyshots Toggle Awesome toggle 🌚🌞 1`] = `
     className="c1"
   >
     <input
-      checked={undefined}
       className="c2"
-      onChange={undefined}
       type="checkbox"
     />
     <div
@@ -2768,7 +2886,7 @@ exports[`Storyshots User Avatar 1`] = `
 `;
 
 exports[`Storyshots User User info 1`] = `
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2788,12 +2906,12 @@ exports[`Storyshots User User info 1`] = `
   background-color: #C4C4C4;
 }
 
-.c7 {
+.c6 {
   line-height: 32px;
   font-size: 32px;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2806,7 +2924,7 @@ exports[`Storyshots User User info 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c3 {
   color: #FFFFFF;
   width: 100px;
   text-align: right;
@@ -2817,11 +2935,11 @@ exports[`Storyshots User User info 1`] = `
   text-transform: capitalize;
 }
 
-.c5 {
+.c4 {
   border: 2px solid #FFFFFF;
 }
 
-.c1 {
+.c0 {
   min-height: calc(100vh - 20px);
   margin-top: 20px;
   display: -webkit-box;
@@ -2836,53 +2954,50 @@ exports[`Storyshots User User info 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.c2 {
+.c1 {
   background: #349884;
   margin-top: 20px;
 }
 
 <div
-  className="c0 c1"
+  className="c0"
 >
   <div
-    className="c2 c3"
+    className="c1 c2"
   >
     <div
-      className="c4"
+      className="c3"
     >
       Eugene
     </div>
     <div
-      className="c5 c6"
+      className="c4 c5"
     >
       <div
-        className="c7"
+        className="c6"
       >
         🦖
       </div>
     </div>
   </div>
   <div
-    className="c2 c3"
+    className="c1 c2"
   >
     <div
-      className="c4"
+      className="c3"
     >
       Very long name Very long nameVery long nameVery long name
     </div>
     <div
-      className="c5 c6"
+      className="c4 c5"
     >
       <div
-        className="c7"
+        className="c6"
       >
         🐉
       </div>
@@ -2892,7 +3007,7 @@ exports[`Storyshots User User info 1`] = `
 `;
 
 exports[`Storyshots User User post info 1`] = `
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2912,12 +3027,12 @@ exports[`Storyshots User User post info 1`] = `
   background-color: #C4C4C4;
 }
 
-.c4 {
+.c3 {
   line-height: 32px;
   font-size: 32px;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2925,7 +3040,7 @@ exports[`Storyshots User User post info 1`] = `
   width: 175px;
 }
 
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2944,7 +3059,7 @@ exports[`Storyshots User User post info 1`] = `
   margin-left: 10px;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2956,7 +3071,7 @@ exports[`Storyshots User User post info 1`] = `
   max-width: 115px;
 }
 
-.c7 {
+.c6 {
   font-size: 14px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -2964,17 +3079,17 @@ exports[`Storyshots User User post info 1`] = `
   white-space: nowrap;
 }
 
-.c9 {
+.c8 {
   font-size: 12px;
   color: #828282;
 }
 
-.c8 {
+.c7 {
   font-weight: bold;
   margin-left: 5px;
 }
 
-.c1 {
+.c0 {
   min-height: calc(100vh - 20px);
   margin-top: 20px;
   display: -webkit-box;
@@ -2989,115 +3104,112 @@ exports[`Storyshots User User post info 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
 <div
-  className="c0 c1"
+  className="c0"
 >
   <div
-    className="c2"
+    className="c1"
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         ⚽
       </div>
     </div>
     <div
-      className="c5"
+      className="c4"
     >
       <div
-        className="c6"
+        className="c5"
       >
         <div
-          className="c7"
+          className="c6"
         >
           User
         </div>
         <div
-          className="c8"
+          className="c7"
         >
           (you)
         </div>
       </div>
       <div
-        className="c9"
+        className="c8"
       >
         09.05.2018 03:17
       </div>
     </div>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         ⛄
       </div>
     </div>
     <div
-      className="c5"
+      className="c4"
     >
       <div
-        className="c6"
+        className="c5"
       >
         <div
-          className="c7"
+          className="c6"
         >
           Looooong name
         </div>
         <div
-          className="c8"
+          className="c7"
         >
           (you)
         </div>
       </div>
       <div
-        className="c9"
+        className="c8"
       >
         09.05.2018 03:17
       </div>
     </div>
   </div>
   <div
-    className="c2"
+    className="c1"
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         🐥
       </div>
     </div>
     <div
-      className="c5"
+      className="c4"
     >
       <div
-        className="c6"
+        className="c5"
       >
         <div
-          className="c7"
+          className="c6"
         >
           Not you
         </div>
       </div>
       <div
-        className="c9"
+        className="c8"
       >
         09.05.2018 03:17
       </div>

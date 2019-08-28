@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { StoryModel } from '../../models'
 
@@ -23,12 +23,11 @@ const Value = styled.div`
   font-weight: 300;
 `
 
-export const CommentViewsInfo: React.SFC<ICommentViewsInfo> =
-  ({ className, story }) => (
-    <Wrapper className={className}>
-      <Icon className="material-icons">comment</Icon>
-      <Value>{story.comments.length}</Value>
-      <Icon className="material-icons">remove_red_eye</Icon>
-      <Value>{story.views}</Value>
-    </Wrapper>
-  )
+export const CommentViewsInfo = ({ className, story }: ICommentViewsInfo) => (
+  <Wrapper className={className}>
+    <Icon className="material-icons">comment</Icon>
+    <Value>{story.comments.length}</Value>
+    <Icon className="material-icons">remove_red_eye</Icon>
+    <Value>{story.views}</Value>
+  </Wrapper>
+)

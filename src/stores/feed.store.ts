@@ -1,9 +1,11 @@
+/* eslint-disable no-param-reassign */
 import { action, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 import { StoryModel } from '../models'
 
 export class FeedStore {
   @persist('list', StoryModel) @observable public feed: StoryModel[] = []
+
   @observable public draftStories: StoryModel[] = []
 
   constructor(feed: StoryModel[]) {
@@ -25,7 +27,7 @@ export class FeedStore {
   public addViews = (id: number): void => {
     this.feed = this.feed.map((story) => {
       if (story.id === id) {
-        story.views = story.views + 1
+        story.views += 1
       }
       return story
     })
@@ -48,11 +50,11 @@ export class FeedStore {
 
   @action
   public deleteStory = (id: number): void => {
-    this.feed = this.feed.filter(story => story.id !== id)
+    this.feed = this.feed.filter((story) => story.id !== id)
   }
 
   @action
   public deleteDraftStory = (id: number): void => {
-    this.feed = this.feed.filter(story => story.id !== id)
+    this.feed = this.feed.filter((story) => story.id !== id)
   }
 }

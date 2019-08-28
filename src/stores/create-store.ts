@@ -1,7 +1,7 @@
 import { History } from 'history'
 import { STORE_COMMENTS, STORE_FEED, STORE_ROUTER, STORE_SIDEBAR, STORE_USERS } from '../constants'
 import { generateInitialData } from '../utils'
-import { CommentsStore, RouterStore, SidebarStore, UsersStore } from './'
+import { CommentsStore, RouterStore, SidebarStore, UsersStore } from '.'
 import { FeedStore } from './feed.store'
 
 export interface IStores {
@@ -12,7 +12,7 @@ export interface IStores {
   [STORE_USERS]: UsersStore
 }
 
-export async function createStores(history: History) {
+export const createStores = async (history: History) => {
   const { usersStore, feedStore, commentsStore } = await generateInitialData()
 
   const sidebarStore = new SidebarStore()

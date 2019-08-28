@@ -1,5 +1,5 @@
 import { capitalize, chain, isEmpty, random, times } from 'lodash'
-import * as loremIpsum from 'lorem-ipsum'
+import { loremIpsum } from 'lorem-ipsum'
 import { create } from 'mobx-persist'
 import { CommentModel, StoryModel, UserModel } from '../models'
 import { CommentsStore, FeedStore, UsersStore } from '../stores'
@@ -7,15 +7,6 @@ import { CommentsStore, FeedStore, UsersStore } from '../stores'
 const USERS = 5
 const STORIES = 15
 const COMMENTS = [0, 4]
-
-export const generateInitialData = async () => {
-  // Load or generate stores
-  const usersStore = await getUsersStore()
-  const feedStore = await getFeedStore()
-  const commentsStore = await getCommentsStore(usersStore, feedStore)
-
-  return { usersStore, feedStore, commentsStore }
-}
 
 const getUsersStore = async () => {
   const hydrate = create({})
@@ -32,18 +23,15 @@ const getUsersStore = async () => {
 
   if (isEmpty(usersStore.users)) {
     usersStore.addUser(usersStore.user)
-    const names = times(USERS).map(() =>
-      loremIpsum(({ count: random(1, 3), units: 'words' })))
+    const names = times(USERS).map(() => loremIpsum(({ count: random(1, 3), units: 'words' })))
 
-    const capitalizedNames = names.map(x =>
-      chain(x)
-        .split(' ')
-        .map(capitalize)
-        .join(' ')
-        .value(),
-    )
+    const capitalizedNames = names.map((x) => chain(x)
+      .split(' ')
+      .map(capitalize)
+      .join(' ')
+      .value())
 
-    capitalizedNames.forEach(name => usersStore.addUser(new UserModel(name)))
+    capitalizedNames.forEach((name) => usersStore.addUser(new UserModel(name)))
   }
 
   return usersStore
@@ -60,14 +48,13 @@ const getFeedStore = async () => {
   if (isEmpty(feedStore.feed)) {
     // generate start feed data
     const texts = times(STORIES).map(() => loremIpsum(
-      { count: random(6, 17), format: 'html', units: 'paragraphs' }))
+      { count: random(6, 17), format: 'html', units: 'paragraphs' },
+    ))
 
-    const titles = times(STORIES).map(() =>
-      loremIpsum(({ count: Math.round(3 * Math.random()) + 1, units: 'words' })))
+    const titles = times(STORIES).map(() => loremIpsum(({ count: Math.round(3 * Math.random()) + 1, units: 'words' })))
 
     // put data into feed
-    titles.forEach((title, i) =>
-      feedStore.addStory(new StoryModel(title, texts[i], i ? random(1, USERS) : 1)))
+    titles.forEach((title, i) => feedStore.addStory(new StoryModel(title, texts[i], i ? random(1, USERS) : 1)))
   }
 
   return feedStore
@@ -86,15 +73,22 @@ const getCommentsStore = async (usersStore: UsersStore, feedStore: FeedStore) =>
     feedStore.feed.forEach((story) => {
       const amount = random(COMMENTS[0], COMMENTS[1])
 
-      const storyCommentsText = times(amount).map(() =>
-        loremIpsum(({ count: random(2, 3), units: 'sentences' })))
+      const storyCommentsText = times(amount).map(() => loremIpsum(({ count: random(2, 3), units: 'sentences' })))
 
       // put data into comments
-      storyCommentsText.forEach(x =>
-        commentsStore.addComment(new CommentModel(x, random(1, USERS), story.id)))
-
+      storyCommentsText.forEach((x) => commentsStore.addComment(new CommentModel(x, random(1, USERS), story.id)))
     })
   }
 
   return commentsStore
+}
+
+
+export const generateInitialData = async () => {
+  // Load or generate stores
+  const usersStore = await getUsersStore()
+  const feedStore = await getFeedStore()
+  const commentsStore = await getCommentsStore(usersStore, feedStore)
+
+  return { usersStore, feedStore, commentsStore }
 }

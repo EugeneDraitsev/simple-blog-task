@@ -3,29 +3,46 @@ import { configure, addDecorator } from '@storybook/react'
 import { Provider } from 'mobx-react'
 import { createStores } from '../src/stores'
 import { createBrowserHistory } from 'history'
+import { useAsync } from 'react-use'
+import { ThemeProvider } from 'styled-components'
 
-// automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /.stories.jsx$/)
+import Theme from '../src/styles/themes/light.theme'
+import GlobalStyles from '../src/styles/global.styles'
 
-
-const createRoot = async () => {
+const StoreDecorator = ({ story }) => {
   const history = createBrowserHistory()
-  const stores = await createStores(history)
+  const { value } = useAsync(async () => await createStores(history), [])
 
-  addDecorator((story) => (
-    <Provider {...stores}>
-      {story()}
-    </Provider>
-  ))
-
-  function loadStories() {
-    req.keys().forEach(filename => req(filename))
+  if (value) {
+    return (
+      <Provider {...value}>
+        {story()}
+      </Provider>
+    )
   }
 
-  configure(loadStories, module)
+  return (
+    <>
+      {story()}
+    </>
+  )
 }
 
-createRoot()
+const StyledDecorator = ({ story }) => (
+  <ThemeProvider theme={Theme}>
+    <>
+      <GlobalStyles />
+      {story()}
+    </>
+  </ThemeProvider>
+)
 
 
+addDecorator((story) => <StoreDecorator story={story} />)
+addDecorator((story) => <StyledDecorator story={story} />)
 
+function loadStories() {
+  require('../src/stories')
+}
+
+configure(loadStories, module)

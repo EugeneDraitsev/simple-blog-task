@@ -1,10 +1,10 @@
 import { lighten } from 'polished'
-import * as React from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { Card } from '../'
+import { Card } from '..'
 import { StoryModel, UserModel } from '../../models'
-import { StoryInfo } from './'
+import { StoryInfo } from '.'
 
 interface IUserInfo {
   story: StoryModel
@@ -26,8 +26,8 @@ const Wrapper = styled(Card)`
   transition: all 0.3s;
   border: 1px solid transparent;
   &:hover {
-    background: ${props => lighten(0.1, props.theme.colors.primaryBackground)};
-    border: ${props => `1px solid ${lighten(0.2, props.theme.colors.primaryBorder)}`};
+    background: ${(props) => lighten(0.1, props.theme.colors.primaryBackground)};
+    border: ${(props) => `1px solid ${lighten(0.2, props.theme.colors.primaryBorder)}`};
   }
   @media (max-width: 800px) {
      margin: 0 0 20px 0;
@@ -58,18 +58,16 @@ const StyledLink = styled(NavLink)`
   width: 100%;
 `
 
-export class FeedStory extends React.Component<IUserInfo> {
-  public render() {
-    const { className, story, user } = this.props
+export function FeedStory(props: IUserInfo) {
+  const { className, story, user } = props
 
-    return (
-      <Wrapper className={className}>
-        <StyledLink to={`/story/${story.id}`}>
-          <Title>{story.title}</Title>
-          <Text dangerouslySetInnerHTML={{ __html: story.textPreview }} />
-          <StoryInfo story={story} user={user} />
-        </StyledLink>
-      </Wrapper>
-    )
-  }
+  return (
+    <Wrapper className={className}>
+      <StyledLink to={`/story/${story.id}`}>
+        <Title>{story.title}</Title>
+        <Text dangerouslySetInnerHTML={{ __html: story.textPreview }} />
+        <StoryInfo story={story} user={user} />
+      </StyledLink>
+    </Wrapper>
+  )
 }

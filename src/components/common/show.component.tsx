@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 interface IShow {
   children?: React.ReactChild
@@ -6,7 +6,8 @@ interface IShow {
 }
 
 export const Show: React.SFC<IShow> = (props): any => {
-  if (Boolean(props.if)) {
+  // eslint-disable-next-line react/destructuring-assignment
+  if (props.if) {
     return props.children
   }
   return null

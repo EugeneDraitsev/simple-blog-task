@@ -1,9 +1,10 @@
-import * as React from 'react'
+/* eslint-disable react/destructuring-assignment */
+import React from 'react'
 import { Slide, toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Draft, { draftToHtml, draftToRaw, htmlToDraft } from 'react-wysiwyg-typescript'
 import styled from 'styled-components'
-import { Card, PrimaryButton } from '../'
+import { Card, PrimaryButton } from '..'
 import { StoryModel, UserModel } from '../../models'
 
 interface IEditProps {
@@ -27,10 +28,10 @@ const Wrapper = styled(Card)`
      margin: 0 0 20px 0;
   }
   .rdw-editor-wrapper, .rdw-editor-toolbar, .rdw-dropdown-selectedtext {
-    background: ${props => props.theme.colors.primaryBackground};
+    background: ${(props) => props.theme.colors.primaryBackground};
   }
   .rdw-option-wrapper {
-    background: ${props => props.theme.colors.avatarBackground};
+    background: ${(props) => props.theme.colors.avatarBackground};
   }
   .rdw-editor-toolbar {
     margin-bottom: 10px;
@@ -43,8 +44,8 @@ const Wrapper = styled(Card)`
     overflow: hidden;
   }
   .Toastify__toast-body, .Toastify__toast, .Toastify__close-button {
-    color: ${props => props.theme.colors.primaryText};
-    background: ${props => props.theme.colors.primaryBackground};
+    color: ${(props) => props.theme.colors.primaryText};
+    background: ${(props) => props.theme.colors.primaryBackground};
   }
   .Toastify__toast-body {
     margin-left: 10px;
@@ -60,9 +61,9 @@ const Title = styled.input`
   font-size: 48px;
   text-transform: capitalize;
   outline: none;
-  background: ${props => props.theme.colors.primaryBackground};
-  border: ${props => `1px solid ${props.theme.colors.secondaryBackground}`};
-  color: ${props => props.theme.colors.primaryText};
+  background: ${(props) => props.theme.colors.primaryBackground};
+  border: ${(props) => `1px solid ${props.theme.colors.secondaryBackground}`};
+  color: ${(props) => props.theme.colors.primaryText};
 `
 const Buttons = styled.div`
   margin-top: 10px;
@@ -77,7 +78,8 @@ class StoryEdit extends React.Component<IEditProps> {
     editorState: htmlToDraft(this.props.story.text),
     title: this.props.story.title,
   }
-  public toastId: number
+
+  public toastId: any
 
   public onSaveClick = () => {
     const { savePost } = this.props
@@ -106,10 +108,10 @@ class StoryEdit extends React.Component<IEditProps> {
     return (
       <Wrapper>
         <ToastContainer transition={Slide} />
-        <Title maxLength={120} value={title} onChange={e => this.setState({ title: e.target.value })} />
+        <Title maxLength={120} value={title} onChange={(e) => this.setState({ title: e.target.value })} />
         <Draft
           editorState={editorState}
-          onEditorStateChange={state => this.setState({ editorState: state })}
+          onEditorStateChange={(state) => this.setState({ editorState: state })}
           toolbar={toolbar}
         />
         <Buttons>

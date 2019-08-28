@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { CommentViewsInfo, UserPostInfo } from '../'
+import { CommentViewsInfo, UserPostInfo } from '..'
 import { StoryModel, UserModel } from '../../models'
 
 interface IPostInfo {
@@ -17,20 +17,18 @@ const Wrapper = styled.div`
   width: 100%;
 `
 
-export class StoryInfo extends React.Component<IPostInfo> {
-  public render() {
-    const { className, story, user } = this.props
+export function StoryInfo(props: IPostInfo) {
+  const { className, story, user } = props
 
-    return (
-      <Wrapper className={className}>
-        <UserPostInfo
-          name={story.author.name}
-          avatar={story.author.avatar}
-          formattedDate={story.formattedDate}
-          isYou={story.author.id === user.id}
-        />
-        <CommentViewsInfo story={story}/>
-      </Wrapper>
-    )
-  }
+  return (
+    <Wrapper className={className}>
+      <UserPostInfo
+        name={story.author.name}
+        avatar={story.author.avatar}
+        formattedDate={story.formattedDate}
+        isYou={story.author.id === user.id}
+      />
+      <CommentViewsInfo story={story} />
+    </Wrapper>
+  )
 }

@@ -1,14 +1,8 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { UserPostInfo } from '../'
+import { UserPostInfo } from '..'
 import { CommentModel, UserModel } from '../../models'
-import { Card } from '../card/'
-
-interface IComment {
-  comment: CommentModel
-  user: UserModel
-  className?: string
-}
+import { Card } from '../card'
 
 const Wrapper = styled(Card)`
   display: flex;
@@ -32,15 +26,20 @@ const Text = styled.div`
   word-break: break-all;
 `
 
-export const Comment: React.SFC<IComment> =
-  ({ className, user, comment, comment: { author } }) => (
-    <Wrapper className={className}>
-      <UserPostInfo
-        name={author.name}
-        avatar={author.avatar}
-        formattedDate={comment.formattedDate}
-        isYou={author.id === user.id}
-      />
-      <Text>{comment.text}</Text>
-    </Wrapper>
-  )
+interface CommentProps {
+  comment: CommentModel
+  user: UserModel
+  className?: string
+}
+
+export const Comment = ({ className, user, comment, comment: { author } }: CommentProps) => (
+  <Wrapper className={className}>
+    <UserPostInfo
+      name={author.name}
+      avatar={author.avatar}
+      formattedDate={comment.formattedDate}
+      isYou={author.id === user.id}
+    />
+    <Text>{comment.text}</Text>
+  </Wrapper>
+)

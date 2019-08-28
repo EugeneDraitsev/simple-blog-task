@@ -1,19 +1,22 @@
-import * as React from 'react'
+// eslint-disable-next-line max-classes-per-file
+import React from 'react'
 import styled from 'styled-components'
 
-import { Show, Modal, DeleteModal } from './../src/components'
+import { Show } from '../components/common/show.component'
+import { Modal } from '../components/modal/modal.compontent'
+import { DeleteModal } from '../components/modal/delete-modal.compontent'
 
 const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${p => p.theme.colors.primaryBackground};
-  color: ${p => p.theme.colors.primaryText};
+  background-color: ${(p) => p.theme.colors.primaryBackground};
+  color: ${(p) => p.theme.colors.primaryText};
 `
 const Button = styled.div`
   padding: 20px;
-  color: ${p => p.theme.colors.primaryText};
+  color: ${(p) => p.theme.colors.primaryText};
   font-size: 40px;
   text-align: center;
   cursor: pointer;
@@ -31,7 +34,7 @@ const TestText = styled.div`
 `
 
 const AnimatedModal = styled(Modal)`
- transform: ${(props) => props.isOpen ? 'translate(-50%, -50%) scale(1)' : 'translate(-100vw, -50%) scale(0) '};
+ transform: ${(props) => (props.isOpen ? 'translate(-50%, -50%) scale(1)' : 'translate(-100vw, -50%) scale(0) ')};
  transition: all 0.3s;
 `
 
@@ -41,10 +44,12 @@ export class ModalStory extends React.Component {
   }
 
   closeModal = () => this.setState({ isOpen: false })
+
   openModal = () => this.setState({ isOpen: true })
 
   render() {
     const { isOpen } = this.state
+    // eslint-disable-next-line react/prop-types
     const { animated, children } = this.props
     const ModalComponent = animated ? AnimatedModal : Modal
 
@@ -75,6 +80,7 @@ export class ButtonsModalStory extends React.Component {
   }
 
   openModal = () => this.setState({ isOpen: true })
+
   closeModal = () => this.setState({ isOpen: false })
 
   render() {

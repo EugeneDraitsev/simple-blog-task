@@ -1,5 +1,5 @@
-// tslint:disable:max-line-length
-import * as React from 'react'
+/* eslint-disable max-len */
+import React from 'react'
 import styled from 'styled-components'
 
 const crater = (top: string, left: string, size: string) => `
@@ -69,22 +69,22 @@ const Figure = styled.div`
   transform: scale(0.4);
   transition: all 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   &:after {
-    ${ cloudBubble('-65px', '-42px', '15px', '15px', '70deg') };
+    ${cloudBubble('-65px', '-42px', '15px', '15px', '70deg')};
   }
   &:before {
-    ${ cloudBubble('-25px', '-10px', '30px', '30px', '30deg') };
+    ${cloudBubble('-25px', '-10px', '30px', '30px', '30deg')};
   }
 `
 const FigureAlt = styled.div`
-  ${ crater('5px', '2px', '2px') };
+  ${crater('5px', '2px', '2px')};
   box-shadow: 42px -7px 0 -3px #FCFCFC, 75px -10px 0 -3px #FCFCFC, 54px 4px 0 -4px #FCFCFC, 83px 7px 0 -2px #FCFCFC, 63px 18px 0 -4px #FCFCFC, 44px 28px 0 -2px #FCFCFC, 78px 23px 0 -3px #FCFCFC;
   transition: all .12s cubic-bezier(0.250, 0.460, 0.450, 0.940);
   transform: scale(0);
   &:before {
-    ${ crater('-6px', '18px', '7px') };
+    ${crater('-6px', '18px', '7px')};
   }
   &:after {
-    ${ crater('19px', '15px', '2px') };
+    ${crater('19px', '15px', '2px')};
   }
 `
 const Input = styled.input`
@@ -125,15 +125,13 @@ interface IToggle {
   onChange?: () => void
 }
 
-export const Toggle = ({ className, checked, onChange }: IToggle) => {
-  return (
-    <Wrapper className={className}>
-      <Input checked={checked} onChange={onChange} type="checkbox" />
-      <Background />
-      <Switch>
-        <Figure />
-        <FigureAlt />
-      </Switch>
-    </Wrapper>
-  )
-}
+export const Toggle = ({ className, checked, onChange }: IToggle) => (
+  <Wrapper className={className}>
+    <Input checked={checked} onChange={onChange} type="checkbox" />
+    <Background />
+    <Switch>
+      <Figure />
+      <FigureAlt />
+    </Switch>
+  </Wrapper>
+)

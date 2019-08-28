@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: calc(100vh - 70px);
-  color: ${props => props.theme.colors.primaryText}
+  color: ${(props) => props.theme.colors.primaryText}
 `
 const ErrorCode = styled.div`
   font-size: 64px;

@@ -1,5 +1,5 @@
 import { inject, observer } from 'mobx-react'
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { SingleStory } from '../components/stories'
 import { STORE_COMMENTS, STORE_FEED, STORE_ROUTER, STORE_USERS } from '../constants'
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   };
 `
 
-@inject(stores => ({
+@inject((stores: any) => ({
   comments: stores[STORE_COMMENTS].comments,
   feedStore: stores[STORE_FEED],
   router: stores[STORE_ROUTER],
@@ -43,7 +43,13 @@ class StoryContainer extends React.Component<IPostProps> {
       return router.push('/404')
     }
 
-    this.props.feedStore.addViews(Number(this.props.match.params.id))
+    return this.props.feedStore.addViews(Number(this.props.match.params.id))
+  }
+
+  private findPost = () => {
+    const { feedStore: { feed } } = this.props
+    const id = Number(this.props.match.params.id)
+    return feed.find((x) => x!.id === id)
   }
 
   public render() {
@@ -59,12 +65,6 @@ class StoryContainer extends React.Component<IPostProps> {
         <SingleStory story={story || new StoryModel('', '', user.id)} user={user} comments={comments} />
       </Wrapper>
     )
-  }
-
-  private findPost = () => {
-    const { feedStore: { feed } } = this.props
-    const id = Number(this.props.match.params.id)
-    return feed.find(x => x!.id === id)
   }
 }
 

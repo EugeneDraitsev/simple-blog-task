@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Show } from '../common'
-import { Avatar } from './'
+import { Avatar } from '.'
 
 interface IUserPostInfo {
   avatar: string
@@ -37,25 +37,24 @@ const Name = styled.div`
 `
 const Date = styled.div`
   font-size: 12px;
-  color: ${props => props.theme.colors.secondaryText}
+  color: ${(props) => props.theme.colors.secondaryText}
 `
 const You = styled.div`
   font-weight: bold;
   margin-left: 5px;
 `
 
-export const UserPostInfo: React.SFC<IUserPostInfo> =
-  ({ className, avatar, name, isYou, formattedDate }) => (
-    <Wrapper className={className}>
-      <Avatar>{avatar}</Avatar>
-      <Info>
-        <NameWrapper>
-          <Name>{name}</Name>
-          <Show if={isYou}>
-            <You>(you)</You>
-          </Show>
-        </NameWrapper>
-        <Date>{formattedDate}</Date>
-      </Info>
-    </Wrapper>
-  )
+export const UserPostInfo = ({ className, avatar, name, isYou, formattedDate }: IUserPostInfo) => (
+  <Wrapper className={className}>
+    <Avatar>{avatar}</Avatar>
+    <Info>
+      <NameWrapper>
+        <Name>{name}</Name>
+        <Show if={isYou}>
+          <You>(you)</You>
+        </Show>
+      </NameWrapper>
+      <Date>{formattedDate}</Date>
+    </Info>
+  </Wrapper>
+)

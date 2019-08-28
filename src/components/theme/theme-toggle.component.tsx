@@ -1,6 +1,6 @@
 import { inject, observer } from 'mobx-react'
-import * as React from 'react'
-import { Toggle } from '../'
+import React from 'react'
+import { Toggle } from '..'
 import { STORE_USERS } from '../../constants'
 import { UsersStore } from '../../stores'
 
@@ -9,7 +9,7 @@ interface IThemeToggle {
   className?: string
 }
 
-@inject(stores => ({ usersStore: stores[STORE_USERS] }))
+@inject((stores: any) => ({ usersStore: stores[STORE_USERS] }))
 @observer
 export class ThemeToggle extends React.Component<IThemeToggle> {
   public toggleTheme = () => {

@@ -1,9 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { Show, ThemeToggle, UserInfo } from '../../'
+import { Show, ThemeToggle, UserInfo } from '../..'
 import { UserModel } from '../../../models'
-import { MenuLink } from './'
+import { MenuLink } from '.'
 
 interface ILink {
   to: string
@@ -27,9 +27,9 @@ const Wrapper = styled.div`
   align-items: center;
   height: 70px;
   width: 100%;
-  box-shadow: ${props => props.theme.headerShadow};
+  box-shadow: ${(props) => props.theme.headerShadow};
   padding: 0 0 0 20px;
-  background: ${props => props.theme.headerGradient};
+  background: ${(props) => props.theme.headerGradient};
   z-index: 3;
 `
 const Links = styled.div`
@@ -58,7 +58,7 @@ const HeaderLink = styled(MenuLink)`
     content: '';
     width: 100%;
     height: 5px;
-    background-color: ${props => props.theme.colors.activeText}};
+    background-color: ${(props) => props.theme.colors.activeText}};
   }
   &.active:before {
     display: block;
@@ -83,27 +83,25 @@ const getLinks = (links: ILink[], closeSidebar: () => void, isSmallScreen: boole
   if (!isSmallScreen) {
     return (
       <Links>
-        {links.map(link => <HeaderLink closeSidebar={closeSidebar} key={link.title} link={link} />)}
+        {links.map((link) => <HeaderLink closeSidebar={closeSidebar} key={link.title} link={link} />)}
       </Links>
     )
   }
   return null
 }
 
-export const Header: React.SFC<IHeaderProps> = ({ links, user, isSmallScreen, closeSidebar, openSidebar }) => {
-  return (
-    <Wrapper>
-      <Show if={isSmallScreen}>
-        <MenuButton className="material-icons" onClick={openSidebar}>menu</MenuButton>
-      </Show>
-      <Show if={!isSmallScreen}>
-        <StyledToggle />
-      </Show>
-      {getLinks(links, closeSidebar, isSmallScreen)}
-      <Flex />
-      <Link to="/settings">
-        <UserInfo user={user} />
-      </Link>
-    </Wrapper>
-  )
-}
+export const Header: React.SFC<IHeaderProps> = ({ links, user, isSmallScreen, closeSidebar, openSidebar }: any) => (
+  <Wrapper>
+    <Show if={isSmallScreen}>
+      <MenuButton className="material-icons" onClick={openSidebar}>menu</MenuButton>
+    </Show>
+    <Show if={!isSmallScreen}>
+      <StyledToggle />
+    </Show>
+    {getLinks(links, closeSidebar, isSmallScreen)}
+    <Flex />
+    <Link to="/settings">
+      <UserInfo user={user} />
+    </Link>
+  </Wrapper>
+)

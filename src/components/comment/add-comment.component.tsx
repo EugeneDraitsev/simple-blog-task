@@ -1,8 +1,8 @@
 import { inject, observer } from 'mobx-react'
 import { opacify } from 'polished'
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { PrimaryButton } from '../'
+import { PrimaryButton } from '..'
 import { STORE_COMMENTS } from '../../constants'
 import { CommentModel, StoryModel, UserModel } from '../../models'
 import { CommentsStore } from '../../stores'
@@ -41,9 +41,9 @@ const Textarea = styled.textarea`
   outline: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border: ${props => `1px solid ${opacify(0.6, props.theme.colors.secondaryText)}`};
-  background: ${props => props.theme.colors.activeBackground};
-  color: ${props => props.theme.colors.primaryText};
+  border: ${(props) => `1px solid ${opacify(0.6, props.theme.colors.secondaryText)}`};
+  background: ${(props) => props.theme.colors.activeBackground};
+  color: ${(props) => props.theme.colors.primaryText};
 `
 const Footer = styled.div`
   margin-top: 10px;
@@ -55,10 +55,10 @@ const Footer = styled.div`
 const Counter = styled.div`
   margin-right: 20px;
   font-size: 12px;
-  color: ${props => props.theme.colors.secondaryText};
+  color: ${(props) => props.theme.colors.secondaryText};
 `
 
-@inject(stores => ({ commentsStore: stores[STORE_COMMENTS] }))
+@inject((stores: any) => ({ commentsStore: stores[STORE_COMMENTS] }))
 @observer
 export class AddComment extends React.Component<IAddComment> {
   public state = {
@@ -81,7 +81,6 @@ export class AddComment extends React.Component<IAddComment> {
 
     commentsStore!.addComment(new CommentModel(comment, user.id, story.id))
     this.setState({ comment: '' })
-
   }
 
   public render() {

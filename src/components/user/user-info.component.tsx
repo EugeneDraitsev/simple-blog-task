@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react'
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { UserModel } from '../../models'
-import { Avatar } from './'
+import { Avatar } from '.'
 
 interface IUserInfo {
   user: UserModel
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   align-items: center;
 `
 const Name = styled.div`
-  color: ${props => props.theme.colors.activeText};
+  color: ${(props) => props.theme.colors.activeText};
   width: 100px;
   text-align: right;
   padding-right: 10px;

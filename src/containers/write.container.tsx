@@ -1,5 +1,5 @@
 import { inject, observer } from 'mobx-react'
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Show } from '../components/common'
 import { PrimaryButton } from '../components/controls'
@@ -44,7 +44,7 @@ const Text = styled.div`
   font-weight: 300;
 `
 
-@inject(stores => ({
+@inject((stores: any) => ({
   feed: stores[STORE_FEED].feed,
   feedStore: stores[STORE_FEED],
   router: stores[STORE_ROUTER],
@@ -61,7 +61,7 @@ class WriteContainer extends React.Component<IWriteProps> {
 
   public render() {
     const { feed, user, feedStore } = this.props
-    const usersPosts = feed.filter(story => story.author.id === user.id)
+    const usersPosts = feed.filter((story) => story.author.id === user.id)
 
     return (
       <Wrapper>
@@ -69,7 +69,7 @@ class WriteContainer extends React.Component<IWriteProps> {
         <StoriesWrapper>
           <Show if={Boolean(usersPosts.length)}>
             <div>
-              {usersPosts.map(story => (
+              {usersPosts.map((story) => (
                 <WritePageStory
                   removePost={feedStore.deleteStory}
                   key={story.id}
@@ -79,8 +79,8 @@ class WriteContainer extends React.Component<IWriteProps> {
               ))}
             </div>
           </Show>
-          <Show if={!Boolean(usersPosts.length)}>
-            <Text>You don't have any stories yet</Text>
+          <Show if={!usersPosts.length}>
+            <Text>You don&apos;t have any stories yet</Text>
           </Show>
         </StoriesWrapper>
       </Wrapper>

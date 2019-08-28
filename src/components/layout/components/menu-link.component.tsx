@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -32,7 +32,7 @@ const LinkContent = styled(NavLink)`
     content: '';
     width: 5px;
     height: 54px;
-    background-color: ${props => props.theme.colors.activeText}};
+    background-color: ${(props) => props.theme.colors.activeText}};
   }
   &.active:before {
     display: block;
@@ -45,10 +45,8 @@ interface IMenuLinkProps {
   closeSidebar: () => void
 }
 
-export const MenuLink: React.SFC<IMenuLinkProps> = ({ className, link, closeSidebar }) => {
-  return (
-    <LinkContent className={className} to={link.to} onClick={closeSidebar}>
-      {link.title}
-    </LinkContent>
-  )
-}
+export const MenuLink: React.SFC<IMenuLinkProps> = ({ className, link, closeSidebar }: any) => (
+  <LinkContent className={className} to={link.to} onClick={closeSidebar}>
+    {link.title}
+  </LinkContent>
+)
