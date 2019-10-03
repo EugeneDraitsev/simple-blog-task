@@ -1,6 +1,6 @@
 import { inject, observer } from 'mobx-react'
 import React from 'react'
-import { Toggle } from '..'
+import { Toggle } from '../controls'
 import { STORE_USERS } from '../../constants'
 import { UsersStore } from '../../stores'
 

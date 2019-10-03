@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { createBrowserHistory } from 'history'
 import { configure } from 'mobx'
 import { inject, observer, Provider } from 'mobx-react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components/macro'
 
 import { STORE_USERS } from './constants'
 import RootContainer from './containers/root.container'

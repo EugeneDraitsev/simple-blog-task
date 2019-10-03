@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Card, DangerButton, DeleteModal, PrimaryButton } from '..'
 import { StoryModel, UserModel } from '../../models'
 import { CommentViewsInfo } from './comment-views-info.component'

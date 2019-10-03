@@ -1,6 +1,6 @@
 import { inject, observer } from 'mobx-react'
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import StoryEdit from '../components/editor/editor.component'
 import { STORE_FEED, STORE_ROUTER, STORE_USERS } from '../constants'

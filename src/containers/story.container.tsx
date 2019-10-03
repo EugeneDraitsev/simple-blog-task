@@ -1,6 +1,6 @@
 import { inject, observer } from 'mobx-react'
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { SingleStory } from '../components/stories'
 import { STORE_COMMENTS, STORE_FEED, STORE_ROUTER, STORE_USERS } from '../constants'
 import { CommentModel, StoryModel, UserModel } from '../models'

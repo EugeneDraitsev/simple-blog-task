@@ -1,6 +1,6 @@
 import { inject, observer } from 'mobx-react'
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Avatar, Button, Card, PrimaryButton } from '../components'
 import { STORE_USERS } from '../constants'
 import { UserModel } from '../models'

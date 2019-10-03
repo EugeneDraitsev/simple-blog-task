@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { CommentViewsInfo, UserPostInfo } from '..'
 import { StoryModel, UserModel } from '../../models'
 

@@ -1,9 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
-import { Show, ThemeToggle, UserInfo } from '../..'
+import styled from 'styled-components/macro'
+import { Show } from '../../common'
+import { UserInfo } from '../../user'
+import { ThemeToggle } from '../../theme'
 import { UserModel } from '../../../models'
-import { MenuLink } from '.'
+import { MenuLink } from './menu-link.component'
 
 interface ILink {
   to: string

@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react'
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { UserModel } from '../../models'
 import { Avatar } from '.'
 

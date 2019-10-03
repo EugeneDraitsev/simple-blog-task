@@ -1,39 +1,17 @@
 import { History } from 'history'
 import React from 'react'
-import Loadable from 'react-loadable'
-import { Router } from 'react-router'
-import { Redirect, Route, Switch } from 'react-router-dom'
-import { Loading, SidebarLayout } from '../components'
+import loadable from '@loadable/component'
+import { Router, Redirect, Route, Switch } from 'react-router-dom'
 
-const FeedRoute = Loadable({
-  loader: () => import('./feed.container'),
-  loading: Loading,
-})
+import { Loading } from '../components/common'
+import { SidebarLayout } from '../components/layout'
 
-const PostRoute = Loadable({
-  loader: () => import('./story.container'),
-  loading: Loading,
-})
-
-const WriteRoute = Loadable({
-  loader: () => import('./write.container'),
-  loading: Loading,
-})
-
-const EditRoute = Loadable({
-  loader: () => import('./edit.container'),
-  loading: Loading,
-})
-
-const ErrorRoute = Loadable({
-  loader: () => import('./error.container'),
-  loading: Loading,
-})
-
-const SettingsRoute = Loadable({
-  loader: () => import('./settings.container'),
-  loading: Loading,
-})
+const FeedRoute = loadable(() => import('./feed.container'), { fallback: <Loading /> })
+const PostRoute = loadable(() => import('./story.container'), { fallback: <Loading /> })
+const WriteRoute = loadable(() => import('./write.container'), { fallback: <Loading /> })
+const EditRoute = loadable(() => import('./edit.container'), { fallback: <Loading /> })
+const ErrorRoute = loadable(() => import('./error.container'), { fallback: <Loading /> })
+const SettingsRoute = loadable(() => import('./settings.container'), { fallback: <Loading /> })
 
 interface IProps {
   history: History

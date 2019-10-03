@@ -24,4 +24,4 @@ yarn storybook
 yarn build-storybook
 ```
 
-![screnshot](https://s3.eu-central-1.amazonaws.com/bb-image-drai/Simple+Blog+2018-08-07+15-50-28.png)
+![screnshot](.github/preview.png)

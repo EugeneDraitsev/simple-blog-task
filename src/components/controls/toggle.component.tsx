@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 const crater = (top: string, left: string, size: string) => `
   content: '';

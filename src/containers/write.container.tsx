@@ -1,6 +1,6 @@
 import { inject, observer } from 'mobx-react'
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Show } from '../components/common'
 import { PrimaryButton } from '../components/controls'
 import { WritePageStory } from '../components/stories'

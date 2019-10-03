@@ -2,8 +2,9 @@ import { inject, observer } from 'mobx-react'
 import React from 'react'
 import { push as Menu } from 'react-burger-menu'
 import { withRouter } from 'react-router-dom'
-import styled from 'styled-components'
-import { ThemeToggle } from '..'
+import styled from 'styled-components/macro'
+
+import { ThemeToggle } from '../theme'
 import { STORE_ROUTER, STORE_SIDEBAR, STORE_USERS } from '../../constants'
 import { Header, MenuLink } from './components'
 

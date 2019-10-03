@@ -1,9 +1,10 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react'
 import { Slide, toast, ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 import Draft, { draftToHtml, draftToRaw, htmlToDraft } from 'react-wysiwyg-typescript'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
+import 'react-toastify/dist/ReactToastify.css'
+
 import { Card, PrimaryButton } from '..'
 import { StoryModel, UserModel } from '../../models'
 

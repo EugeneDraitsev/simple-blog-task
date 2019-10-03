@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { UserPostInfo } from '..'
 import { CommentModel, UserModel } from '../../models'
 import { Card } from '../card'

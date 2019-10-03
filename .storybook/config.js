@@ -4,7 +4,7 @@ import { Provider } from 'mobx-react'
 import { createStores } from '../src/stores'
 import { createBrowserHistory } from 'history'
 import { useAsync } from 'react-use'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components/macro'
 
 import Theme from '../src/styles/themes/light.theme'
 import GlobalStyles from '../src/styles/global.styles'

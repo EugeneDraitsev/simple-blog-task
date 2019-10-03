@@ -1,7 +1,7 @@
 import { inject, observer } from 'mobx-react'
 import { opacify } from 'polished'
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { PrimaryButton } from '..'
 import { STORE_COMMENTS } from '../../constants'
 import { CommentModel, StoryModel, UserModel } from '../../models'

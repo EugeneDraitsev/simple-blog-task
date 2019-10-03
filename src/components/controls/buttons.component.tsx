@@ -1,5 +1,5 @@
 import { darken, lighten } from 'polished'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 export const Button = styled.button`
   cursor: pointer;
