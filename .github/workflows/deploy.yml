@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Deploy action
+        env:
+          SURGE_LOGIN: ${{secrets.SURGE_LOGIN}}
+          SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
       - run: yarn
@@ -22,5 +26,4 @@ jobs:
       - run: cp storybook-static/index.html storybook-static/200.html
       - run: yarn deploy:storybook
         env:
-          SURGE_LOGIN: ${{secrets.SURGE_LOGIN}}
-          SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
+
