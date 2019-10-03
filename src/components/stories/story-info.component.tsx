@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { CommentViewsInfo, UserPostInfo } from '..'
+import { UserPostInfo } from '../user'
+import { CommentViewsInfo } from '.'
 import { StoryModel, UserModel } from '../../models'
 
 interface IPostInfo {

@@ -8,7 +8,9 @@ import { ButtonsModalStory, ModalStory } from './modal.story'
 import getStoriesStory from './stories.story'
 import getUserStory from './user.story'
 import getCommentsStory from './comments.story'
-import { Spinner, Button, DangerButton, PrimaryButton, Toggle } from '../components'
+import { Spinner } from '../components/common/spinner.component'
+import { Button, DangerButton, PrimaryButton } from '../components/controls/buttons.component'
+import { Toggle } from '../components/controls/toggle.component'
 import dark from '../styles/themes/dark.theme'
 
 const StoriesWrapper = styled.div`

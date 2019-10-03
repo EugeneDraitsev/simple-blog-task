@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { Button, DangerButton } from '..'
+import { Button, DangerButton } from '../controls/buttons.component'
 import { Modal } from './modal.compontent'
 
 const ModalContent = styled.div`

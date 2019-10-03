@@ -4,7 +4,8 @@ import styled from 'styled-components'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { storiesOf } from '@storybook/react'
 
-import { Card, StoryInfo } from '../components'
+import { Card } from '../components/card'
+import { StoryInfo } from '../components/stories'
 import { SingleStory } from '../components/stories/single-post.component'
 
 const StoriesWrapper = styled.div`

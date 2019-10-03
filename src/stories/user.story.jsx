@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { storiesOf } from '@storybook/react'
 
-import { Avatar, UserPostInfo, UserInfo } from '../components'
+import { Avatar, UserPostInfo, UserInfo } from '../components/user'
 
 const StoriesWrapper = styled.div`
   min-height: calc(100vh - 20px);

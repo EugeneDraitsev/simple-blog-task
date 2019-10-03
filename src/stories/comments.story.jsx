@@ -5,7 +5,7 @@ import styled from 'styled-components'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { storiesOf } from '@storybook/react'
 
-import { Comment } from '../components'
+import { Comment } from '../components/comment'
 
 const StoriesWrapper = styled.div`
   min-height: calc(100vh - 20px);
