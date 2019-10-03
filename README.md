@@ -2,7 +2,7 @@
 
 ![Deploy Latest Master](https://github.com/EugeneDraitsev/simple-blog-task/workflows/Deploy%20Latest%20Master/badge.svg)
 
-**Demo:** [simple-mobx-blog.surge.sh](http://simple-mobx-blog.surge.sh/)
+**Demo:** [simple-mobx-blog.surge.sh](https://simple-mobx-blog.surge.sh/)
 
 **Storybook:** [simple-mobx-blog-storybook.surge.sh](http://simple-mobx-blog-storybook.surge.sh/)
 
