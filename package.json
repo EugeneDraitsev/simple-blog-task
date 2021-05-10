@@ -22,7 +22,7 @@
   "dependencies": {
     "@loadable/component": "^5.10.3",
     "history": "^4.10.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lorem-ipsum": "^2.0.3",
     "mobx": "^5.14.0",
     "mobx-persist": "^0.4.1",
